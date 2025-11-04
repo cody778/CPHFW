@@ -1,0 +1,65 @@
+@font-face {
+  font-family: KBH;
+  src: url('./Fonts/OTF/KBH-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: KBH Tekst;
+  src: url('./Fonts/KBH\ TEKST\ OpenType/KBHTekst.otf') format('opentype');
+}
+
+:root {
+    --main-color:#1C1C1C;
+    --accent-color:#67478C;
+    --background-color:#FBFBFB;
+}
+
+
+/*=============================  Main Text setup  ==========================================*/
+.body {
+  font-family: KBH Tekst, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  color: var(--main-color);
+}
+
+.h1 {
+    font-family: KBH, sans-serif;
+    font-size: 30px;
+    color: var(--main-color);
+}
+
+.h1-color {
+    font-family: KBH, sans-serif;
+    font-size: 30px;
+    color: var(--accent-color);
+}
+
+.h2 {
+    font-family: KBH, sans-serif;
+    font-size: 20px;
+    color: var(--main-color);
+}
+
+.h2-color {
+    font-family: KBH, sans-serif;
+    font-size: 20px;
+    color: var(--accent-color);
+}
+
+.text {
+    font-family: KBH Tekst, sans-serif;
+    font-size: 16px;
+    color: var(--main-color);
+    line-height: 1.5;
+}
+
+.text-color {
+    font-family: KBH Tekst, sans-serif;
+    font-size: 16px;
+    color: var(--accent-color);
+    line-height: 1.5;
+}
+
