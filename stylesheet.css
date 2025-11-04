@@ -14,6 +14,12 @@
     --background-color:#FBFBFB;
 }
 
+main {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
 
 /*=============================  Main Text setup  ==========================================*/
 .body {
@@ -21,6 +27,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: hidden;
   background-color: var(--background-color);
   color: var(--main-color);
 }
@@ -62,4 +69,143 @@
     color: var(--accent-color);
     line-height: 1.5;
 }
+/*=============================  Header setup  ==========================================*/
 
+header {
+  text-align: left;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: baseline;
+  border-bottom: 1px solid var(--main-color);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+header .powered {
+  margin-left: 10px;
+  color: var(--main-color);
+  font-size: 0.9rem;
+}
+
+header .powered span {
+  font-weight: bold;
+}
+
+/*=============================  Events page Content setup  ==========================================*/
+
+
+.sidebar {
+  width: 25%;
+}
+
+.map-box,
+.qr-box {
+  background: var(--background-color);
+  border: 1px solid var(--main-color);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.map-box img,
+.qr-box img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.qr-box ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.qr-box li::before {
+  content: "• ";
+  color: var(--accent-color);
+}
+
+.schedule {
+  flex-grow: 1;
+  background: #aaaaaa;
+  border: 1px solid var(--main-color);
+  border-radius: 8px;
+  padding: 1rem;
+  position: relative;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #555;
+  padding-bottom: 4px;
+}
+
+.tabs button.active {
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.events {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0.5rem 1rem;
+  align-items: start;
+}
+
+.time-label {
+  text-align: right;
+  font-weight: bold;
+  color: #555;
+  padding-top: 1rem;
+}
+
+.event {
+  background: var(--background-color);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.event::before {
+  content: attr(data-type);
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 0.75rem;
+  color: var(--accent-color);
+}
+
+/*=============================  Footer setup  ==========================================*/
+
+footer {
+  text-align: right;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+/*=============================  Responsive design  ==========================================*/
+
+@media (max-width: 768px) {
+ 
+  .VG-section {
+    background-size: contain; 
+    width: 100%;
+  }
+}
