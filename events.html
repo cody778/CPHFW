@@ -111,42 +111,84 @@ const eventsContainer = document.querySelector('.events');
 // Define different event sets for each day
 const schedules = {
   "27 January": [
-    { time: "10:00", title: "Caro Edition", type: "Show" },
-    { time: "11:00", title: "Talk Show Title", type: "Talk" },
-    { time: "12:00", title: "Polza Collective", type: "Show" },
-    { time: "13:00", title: "TG", type: "Show" },
-    { time: "14:00", title: "Workshop Title", type: "Workshop" },
+    {
+      time: "10:00",
+      title: "Caro Edition",
+      type: "Show",
+      date: "27 Jan 2026",
+      host: "Caro Collective",
+      venue: "Bella Center CPH",
+      description: "Caro Edition brings avant-garde minimalism to Copenhagen's runway with sustainable fabrics and bold tailoring.",
+      image: "caro-show.jpg"
+    },
+     {
+      time: "10:00",
+      title: "Get fucked cunt",
+      type: "Show",
+      date: "27 Jan 2026",
+      host: "Caro Collective",
+      venue: "Bella Center CPH",
+      description: "Caro Edition brings avant-garde minimalism to Copenhagen's runway with sustainable fabrics and bold tailoring.",
+      image: "caro-show.jpg"
+    },
+    {
+      time: "11:00",
+      title: "Talk Show Title",
+      type: "Talk",
+      date: "27 Jan 2026",
+      host: "Kim from Kolding Design School",
+      venue: "Ilum Studio 2F",
+      description: "A conversation about the intersection of design, culture, and sustainability in fashion.",
+      image: "talk-show.jpg"
+    }
   ],
   "28 January": [
-    { time: "09:30", title: "Morning Mix", type: "Show" },
-    { time: "10:30", title: "Sustainable Talks", type: "Talk" },
-    { time: "11:30", title: "Nordic Streetwear", type: "Show" },
-    { time: "13:00", title: "Panel: Future of Fashion", type: "Talk" },
-  ],
-  "29 January": [
-    { time: "10:00", title: "Runway Collective", type: "Show" },
-    { time: "11:00", title: "Behind the Design", type: "Workshop" },
-    { time: "12:30", title: "Green Threads", type: "Talk" },
-    { time: "14:00", title: "Evening Glam", type: "Show" },
-  ],
-  "30 January": [
-    { time: "09:00", title: "Closing Ceremony", type: "Show" },
-    { time: "10:30", title: "Designer Meet & Greet", type: "Workshop" },
-    { time: "12:00", title: "Final Talk", type: "Talk" },
-  ],
+    {
+      time: "09:30",
+      title: "Morning Mix",
+      type: "Show",
+      date: "28 Jan 2026",
+      host: "Studio North",
+      venue: "Forum CPH",
+      description: "Early morning runway show with laid-back silhouettes.",
+      image: "morning-mix.jpg"
+    }
+  ]
 };
+
 
 // Helper to render events
 function renderEvents(day) {
   const events = schedules[day];
-  eventsContainer.innerHTML = events.map(e => `
-    <div class="time-label">${e.time}</div>
-    <div class="event">
-      <h4>${e.title}</h4>
-      <p>${e.type}</p>
+
+  // Group events by time
+  const grouped = events.reduce((acc, event) => {
+    if (!acc[event.time]) acc[event.time] = [];
+    acc[event.time].push(event);
+    return acc;
+  }, {});
+
+  eventsContainer.innerHTML = Object.entries(grouped).map(([time, group]) => `
+    <div class="time-label">${time}</div>
+    <div class="event-row">
+      ${group.map(e => `
+        <div class="event"
+          data-title="${e.title}"
+          data-type="${e.type}"
+          data-date="${e.date}"
+          data-time="${e.time}"
+          data-host="${e.host}"
+          data-venue="${e.venue}"
+          data-description="${e.description}"
+          data-image="${e.image}">
+            <h4>${e.title}</h4>
+            <p>${e.type}</p>
+        </div>
+      `).join('')}
     </div>
   `).join('');
 }
+
 
 // Tab click logic
 tabs.forEach(tab => {
