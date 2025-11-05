@@ -32,9 +32,9 @@ main {
   color: var(--main-color);
 }
 
-.h1 {
+h1 {
     font-family: KBH, sans-serif;
-    font-size: 30px;
+    font-size: clamp(10px, 5vw, 40px);
     color: var(--main-color);
 }
 
