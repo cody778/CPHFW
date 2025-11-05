@@ -87,7 +87,6 @@ header {
   padding: 1rem 2rem;
   display: flex;
   align-items: baseline;
-  border-bottom: 1px solid var(--main-color);
   
 }
 
@@ -150,6 +149,7 @@ header .powered span {
   display: flex;
   flex-direction: column;
   height: 60vh;
+  overflow: hidden;
 }
 
 .tabs {
@@ -175,12 +175,12 @@ header .powered span {
 /* Make only the events list scrollable */
 .events {
   display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 0.5rem 0.5rem;
+  grid-template-columns: 90px 1fr;
+  gap: 0.75rem 1rem;
   align-items: start;
-  justify-content: start;
 
   overflow-y: auto;
+  height: 100%S;
   padding-right: 0.5rem;
   scrollbar-width: thin;
   scrollbar-color: var(--accent-color) transparent;
@@ -196,7 +196,8 @@ header .powered span {
 
 .time-label {
   text-align: right;
-  font-weight: bold;
+  font-weight: 600;
+  font-family: KBH, sans-serif;
   color: #555;
   padding-top: 3rem;
 }
@@ -209,7 +210,10 @@ header .powered span {
   position: relative;
   max-width: 25%;
   font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.15s ease;
 }
+
 
 .event::before {
   content: attr(data-type);
@@ -219,6 +223,19 @@ header .powered span {
   font-size: 0.75rem;
   color: var(--accent-color);
 }
+
+.event-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+/* When multiple events share the same time,
+   each event auto-scales to fit evenly */
+.event-row .event {
+  flex: 1;
+}
+
 /* ======================= MODAL STYLING ===== */
 .event-modal {
   position: fixed;
@@ -470,8 +487,8 @@ header .powered span {
 .swipe-controls {
   position: absolute;
   bottom: 2rem;
-  width: 90%;
-  max-width: 900px;
+  width: 80%;
+  max-width: 800px;
   display: flex;
   justify-content: space-between;
 }
@@ -511,6 +528,7 @@ header .powered span {
   text-align: center;
   border-radius: 8px;
 }
+/* ============================  Map Page content setup  ==========================================*/
 
 
 /*=============================  Footer setup  ==========================================*/
@@ -534,12 +552,19 @@ footer a.active {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: var(--background-color);
-  padding: 0.5 rem 2 rem ;
+  background: transparent;
+  padding: 0.5rem 2rem ;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 1rem;
+  box-sizing: border-box;
+  pointer-events: none; /* disable all pointer events by default */
+}
+
+/* re-enable  footer buttons */
+.sticky-footer * {
+  pointer-events: auto;
 }
 
 .back-btn {
