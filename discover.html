@@ -12,13 +12,86 @@
 </header>
 <body>
 <main>
-<!-- Functional code here pls do not touch anything else  -->
+    <!-- Functional code here pls do not touch anything else  -->
+    <div class="discover-container">
+    <div class="brand-swipe-card">
+        <img id="brandImage" src="" alt="Brand image">
+    </div>
 
+    <div class="swipe-controls">
+        <button id="noBtn">NO</button>
+        <button id="yesBtn">YES</button>
+    </div>
+    </div>
+
+    <!-- Recommendation Popup -->
+    <div id="recommendPopup" class="popup">
+    <div class="popup-content">
+        <h2>Your Match:</h2>
+        <h1 id="recommendedBrand"></h1>
+        <button onclick="location.href='brands.html'">Continue</button>
+    </div>
+    </div>
 </main>
 
 <footer class="sticky-footer">
     <button class="back-btn" onclick="history.back()">←</button>
     <h1><a href="index.html">HOME > </a></h1>  <h1><a class="active">DISCOVER</a></h1>
 </footer>
+
+<script>
+const brands = [
+  { name: "Alis", img: "brand1.jpg" },
+  { name: "66°North", img: "brand2.jpg" },
+  { name: "Bonnetje", img: "brand3.jpg" },
+  { name: "Anne Sophie Madsen", img: "brand4.jpg" },
+  { name: "Aiayu", img: "brand5.jpg" },
+  { name: "Baum und Pferdgarten", img: "brand6.jpg" },
+  { name: "Berner Kühl", img: "brand7.jpg" },
+  { name: "Marimekko", img: "brand8.jpg" },
+  { name: "Birrot", img: "brand9.jpg" },
+  { name: "Forza Collective", img: "brand10.jpg" }
+];
+
+let index = 0;
+let likes = [];
+
+const imageEl = document.getElementById("brandImage");
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
+const popup = document.getElementById("recommendPopup");
+const recommendedBrand = document.getElementById("recommendedBrand");
+
+function showImage() {
+  imageEl.src = brands[index].img;
+}
+
+yesBtn.addEventListener("click", () => {
+  likes.push(brands[index].name);
+  next();
+});
+
+noBtn.addEventListener("click", () => {
+  next();
+});
+
+function next() {
+  index++;
+  if (index < brands.length) {
+    showImage();
+  } else {
+    finish();
+  }
+}
+
+function finish() {
+  const match = likes.length ? likes[Math.floor(Math.random() * likes.length)] : brands[Math.floor(Math.random() * brands.length)].name;
+  recommendedBrand.textContent = match;
+  popup.classList.add("active");
+}
+
+showImage();
+</script>
+
 </body>
 </html>
