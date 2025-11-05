@@ -42,43 +42,168 @@
         <button>29 January</button>
         <button>30 January</button>
       </nav>
-
+      <!-- Events List  - this is how we will populate the events please add correct relevant information -->
       <div class="events">
         <div class="time-label">10.00</div>
-        <div class="event show">
-          <h4>Caro Edition</h4>
-          <p>Show</p>
+        <div class="event" 
+            data-title="Caro Edition"
+            data-type="Show"
+            data-date="27 Jan 2026"
+            data-time="10:00"
+            data-host="Caro Collective"
+            data-venue="Bella Center CPH"
+            data-description="Caro Edition brings avant-garde minimalism to Copenhagen's runway with sustainable fabrics and bold tailoring."
+            data-image="caro-show.jpg">
+            <h4>Caro Edition</h4>
+            <p>Show</p>
         </div>
 
         <div class="time-label">11.00</div>
-        <div class="event talk">
-          <h4>Talk Show Title</h4>
-          <p>Talk</p>
+        <div class="event" 
+            data-title="Talk Show Title"
+            data-type="Talk"
+            data-date="27 Jan 2026"
+            data-time="11:00"
+            data-host="Kim from Kolding Design School"
+            data-venue="Ilum Studio 2F"
+            data-description="A conversation about the intersection of design, culture, and sustainability in fashion."
+            data-image="talk-show.jpg">
+            <h4>Talk Show Title</h4>
+            <p>Talk</p>
         </div>
-
-        <div class="time-label">12.00</div>
-        <div class="event show">
-          <h4>Polza Collective</h4>
-          <p>Show</p>
-        </div>
-
-        <div class="time-label">13.00</div>
-        <div class="event show">
-          <h4>TG</h4>
-          <p>Show</p>
-        </div>
-
-        <div class="time-label">14.00</div>
-        <div class="event workshop">
-          <h4>Workshop Title</h4>
-          <p>Workshop</p>
         </div>
       </div>
     </section>
+
+    <!-- Event Detail Modal this is how the content of each event card will be organised-->
+    <div class="event-modal" id="eventModal">
+    <div class="event-modal-content">
+        <button class="close-btn" id="closeModal">&times;</button>
+        <div class="modal-body">
+        <div class="modal-image">
+            <img src="" alt="Event image">
+        </div>
+        <div class="modal-info">
+            <p class="type"></p>
+            <h2 class="title"></h2>
+            <p class="datetime"></p>
+            <p class="hosted">Hosted by <span></span></p>
+            <p class="venue"><strong>Venue:</strong> <a href="#"></a></p>
+            <p class="description"></p>
+            <p class="note"><em>This Fashion Week event is available on a first-come, first-served basis. Early same-day reservations are recommended.</em></p>
+        </div>
+        </div>
+    </div>
+    </div>
+
   </main>
 
-  <footer>
-    <a href="#">HOME</a> > <a href="#" class="active">EXPLORE THE EVENT</a>
-  </footer>
+
+<footer class="sticky-footer">
+    <button class="back-btn" onclick="history.back()">←</button>
+    <h1><a href="index.html">HOME > </a></h1>  <h1><a class="active">EVENTS</a></h1>
+</footer>
+
+<script>
+const tabs = document.querySelectorAll('.tabs button');
+const eventsContainer = document.querySelector('.events');
+
+// Define different event sets for each day
+const schedules = {
+  "27 January": [
+    { time: "10:00", title: "Caro Edition", type: "Show" },
+    { time: "11:00", title: "Talk Show Title", type: "Talk" },
+    { time: "12:00", title: "Polza Collective", type: "Show" },
+    { time: "13:00", title: "TG", type: "Show" },
+    { time: "14:00", title: "Workshop Title", type: "Workshop" },
+  ],
+  "28 January": [
+    { time: "09:30", title: "Morning Mix", type: "Show" },
+    { time: "10:30", title: "Sustainable Talks", type: "Talk" },
+    { time: "11:30", title: "Nordic Streetwear", type: "Show" },
+    { time: "13:00", title: "Panel: Future of Fashion", type: "Talk" },
+  ],
+  "29 January": [
+    { time: "10:00", title: "Runway Collective", type: "Show" },
+    { time: "11:00", title: "Behind the Design", type: "Workshop" },
+    { time: "12:30", title: "Green Threads", type: "Talk" },
+    { time: "14:00", title: "Evening Glam", type: "Show" },
+  ],
+  "30 January": [
+    { time: "09:00", title: "Closing Ceremony", type: "Show" },
+    { time: "10:30", title: "Designer Meet & Greet", type: "Workshop" },
+    { time: "12:00", title: "Final Talk", type: "Talk" },
+  ],
+};
+
+// Helper to render events
+function renderEvents(day) {
+  const events = schedules[day];
+  eventsContainer.innerHTML = events.map(e => `
+    <div class="time-label">${e.time}</div>
+    <div class="event">
+      <h4>${e.title}</h4>
+      <p>${e.type}</p>
+    </div>
+  `).join('');
+}
+
+// Tab click logic
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    renderEvents(tab.textContent.trim());
+  });
+});
+
+// Initialize with the first day
+renderEvents("27 January");
+
+const modal = document.getElementById('eventModal');
+const closeModal = document.getElementById('closeModal');
+
+// Grab modal elements
+const modalImage = modal.querySelector('.modal-image img');
+const modalType = modal.querySelector('.type');
+const modalTitle = modal.querySelector('.title');
+const modalDateTime = modal.querySelector('.datetime');
+const modalHost = modal.querySelector('.hosted span');
+const modalVenue = modal.querySelector('.venue a');
+const modalDescription = modal.querySelector('.description');
+const modalNote = modal.querySelector('.note');
+
+eventsContainer.addEventListener('click', e => {
+  const card = e.target.closest('.event');
+  if (!card) return;
+
+  // Extract card data
+  const title = card.dataset.title;
+  const type = card.dataset.type;
+  const date = card.dataset.date;
+  const time = card.dataset.time;
+  const host = card.dataset.host;
+  const venue = card.dataset.venue;
+  const description = card.dataset.description;
+  const image = card.dataset.image || 'default-placeholder.jpg';
+
+  // Populate modal
+  modalType.textContent = type;
+  modalTitle.textContent = title;
+  modalDateTime.innerHTML = `<strong>Date:</strong> ${date} &nbsp;|&nbsp; <strong>Time:</strong> ${time}`;
+  modalHost.textContent = host;
+  modalVenue.textContent = venue;
+  modalVenue.href = "#";
+  modalDescription.textContent = description;
+  modalImage.src = image;
+  modal.classList.add('active');
+});
+
+closeModal.addEventListener('click', () => modal.classList.remove('active'));
+window.addEventListener('click', e => {
+  if (e.target === modal) modal.classList.remove('active');
+});
+</script>
+
 </body>
 </html>
