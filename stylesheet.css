@@ -1,10 +1,45 @@
+/* Light */
 @font-face {
-  font-family: KBH;
+  font-family: 'KBH-Light';
+  src: url('./Fonts/OTF/KBH-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Light Italic */
+@font-face {
+  font-family: 'KBH-LightItalic';
+  src: url('./Fonts/OTF/KBH-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Regular */
+@font-face {
+  font-family: 'KBH-Regular';
+  src: url('./Fonts/OTF/KBH-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'KBH-Medium';
   src: url('./Fonts/OTF/KBH-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* DemiBold */
+@font-face {
+  font-family: 'KBH-DemiBold';
+  src: url('./Fonts/OTF/KBH-DemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: KBH Tekst;
+  font-family: 'KBH Tekst';
   src: url('./Fonts/KBH\ TEKST\ OpenType/KBHTekst.otf') format('opentype');
 }
 
@@ -25,10 +60,6 @@ main {
   padding: 2rem; 
 }
 
-body.no-scroll {
-  overflow: hidden;
-}
-
 .body {
   font-family: KBH Tekst, sans-serif;
   margin: 0;
@@ -37,6 +68,10 @@ body.no-scroll {
   overflow: hidden;
   background-color: var(--background-color);
   color: var(--main-color);
+}
+
+.active {
+    color: var(--accent-color);
 }
 
 /*=============================  Main Text setup  ==========================================*/
@@ -106,6 +141,23 @@ header .powered {
 
 header .powered span {
   font-weight: bold;
+}
+
+/*=============================  Index.html Content setup  ==========================================*/
+
+.home-menu{
+  font-family: 'KBH-Regular';
+  font-size: 42px;
+}
+
+.logo-box{
+  display:flex;
+  align-content: flex-start;
+}
+
+.info-zalando{
+  width:100%;
+  height:100%;
 }
 
 /*=============================  Events page Content setup  ==========================================*/
