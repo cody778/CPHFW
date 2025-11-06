@@ -69,6 +69,35 @@ main {
   background-color: var(--background-color);
   color: var(--main-color);
 }
+.label-right {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(-20deg);
+  background: transparent;
+  color: black;
+  font-family: KBH-Regular, sans-serif;
+  font-size: 1rem;
+  padding: 4px 40px;
+  font-weight: regular;
+  white-space: nowrap;
+  bottom: 2rem;
+  z-index: -1;
+}
+
+.label-left {
+  position: absolute;
+  left: 20%;
+  transform: translateX(-50%) rotate(60deg);
+  background: transparent;
+  color: black;
+  font-family: KBH-Regular, sans-serif;
+  font-size: 1rem;
+  padding: 4px 40px;
+  font-weight: regular;
+  white-space: nowrap;
+  bottom: 2rem;
+  z-index: -1;
+}
 
 .active {
     color: var(--accent-color);
@@ -454,10 +483,20 @@ header .powered span {
 
 /*=========== Individual Brand Page setup =============*/
 
+.brand-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  width: 35%;
+  
+}
+
 .brand-gallery img {
   width: 100%;
+  aspect-ratio: 1/1;
   border-radius: 4px;
   object-fit: cover;
+  display: block;
 }
 
 .brand-info {
@@ -469,7 +508,7 @@ header .powered span {
 }
 
 .brand-logo {
-  width: 120px;
+  width: 150px;
   height: auto;
 }
 
