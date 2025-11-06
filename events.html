@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
-    <title>CPHFW - Main Menu</title>
+    <title>Events</title>
 </head>
 <header>
+  <!-- will change it to logo img later -->
     <h1><a href="index.html">COPENHAGEN FASHION WEEK</a></h1>
     <p class="powered">powered by <span>Zalando</span></p>
   </header>
@@ -15,22 +16,24 @@
 <main>
     <aside class="sidebar">
       <section class="map">
-        <h2>Find my location</h2>
-        <div class="map-box">
-          <img src="map-placeholder.png" alt="Map showing location">
-        </div>
+        <h2 class="event-head">Find my location</h2>
+        <a href="/map.html">
+          <img class="map-small"src="/map/map small.png" alt="Map showing location">
+        </a> 
       </section>
 
       <section class="qr-section">
-        <h3>Not sure where to go?</h3>
+        <h2 class="event-head">Not sure where to go?</h2>
         <div class="qr-box">
           <p>Scan the QR code & get your mobile guide</p>
-          <img src="qr-placeholder.png" alt="QR code">  
+          <div class="qr-flexbox">
+             <img class="test-QR" img src="/map/testQR.png" alt="QR code">  
           <ul>
             <li>Explore all events at a glance</li>
             <li>Get full event details</li>
             <li>Plan your day</li>
           </ul>
+          </div>
         </div>
       </section>
     </aside>
