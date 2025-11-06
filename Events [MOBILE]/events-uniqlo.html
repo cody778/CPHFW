@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uniqlo's Soufflé House</title>
+  <link rel="stylesheet" href="/stylesheet.css" />
+
+  <style>
+    /* Title box under header */
+    body {
+      margin: 0;
+      overflow: auto !important;
+      padding-right: 3rem;
+    }
+
+    .event-title-box {
+      position: relative;
+      border: none;
+      padding: 1.5rem;
+      margin: 1rem;
+    }
+
+    .event-title-box h1 {
+      margin: 0.5rem 0 0;
+      font-family: KBH, sans-serif;
+      font-size: 1.8rem;
+      line-height: 1.2;
+      position: relative;
+      z-index: 2;
+    }
+
+    .event-title-box ::before {
+        content: "";
+        position: absolute;
+        top: -300px;
+        left: -10px;
+        width: 50%;
+        height: 50%;
+        padding-top: 100%;
+        border: 2px solid var(--main-color);
+        z-index: 1;
+        transform: translateY(10%);
+        pointer-events: none;
+    }
+
+    /* Purple button */
+    .primary-btn {
+      display: block;
+      width: calc(100% - 2rem);
+      margin: 2rem auto;
+      background: var(--accent-color);
+      color: var(--background-color);
+      text-align: center;
+      padding: 1rem 0;
+      font-family: KBH, sans-serif;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Main event info box */
+    .event-detail-card {
+      border: 1px solid var(--main-color);
+      padding: 1.5rem;
+      margin: 1rem;
+    }
+
+    .event-detail-card img {
+      width: 100%;
+      height: auto;
+      margin: 1rem 0;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+
+    .event-detail-card h2 {
+      font-family: KBH, sans-serif;
+      font-size: 1.4rem;
+      margin: 0;
+      margin-bottom: 1rem;
+    }
+
+    .event-meta p {
+      margin: 0.3rem 0;
+      font-size: 0.95rem;
+      font-family: KBH Tekst, sans-serif;
+    }
+
+    /* "MORE ON" links */
+    .more-links {
+      margin: 3rem 1rem;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .more-links a.more-toggle {
+      display: inline-block;
+      margin: 1.2rem auto;
+      font-family: KBH, sans-serif;
+      font-size: 1.4rem;
+      text-decoration: none;
+      color: var(--main-color);
+      cursor: pointer;
+    }
+
+    .more-links a.more-toggle span {
+      color: var(--accent-color);
+    }
+
+    .more-links .more-content {
+      text-align: left;
+      margin: 1rem auto;
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--main-color);
+      border-radius: 4px;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="events-header">
+    <button class="back-btn"onclick="history.back()">&gt; back</button>
+    <div class="menu-icon">
+      <div></div><div></div><div></div>
+    </div>
+  </header>
+
+  <!-- TITLE BOX -->
+  <div class="event-title-box">
+    <h1>Uniqlo's soufflé house</h1>
+  </div>
+
+  <!-- SCHEDULE BUTTON -->
+  <a href="#" class="primary-btn">VIEW YOUR SCHEDULE</a>
+
+  <!-- MAIN EVENT CONTENT -->
+  <section class="event-detail-card">
+    <h2>Uniqlo's soufflé house - A sensory escape</h2>
+
+    <img src="uniqlo.jpg" alt="Uniqlo Soufflé House" />
+
+    <p>The pop-up celebrates the brand's Soufflé Yarn line, and it's a true playground for the senses.</p>
+
+    <div class="event-meta">
+      <p><strong>DESIGNER:</strong> Vicky Montanari</p>
+      <p><strong>BRAND:</strong> UNIQLO</p>
+      <p><strong>WHERE:</strong> ROOM B, ARENA HALL</p>
+      <p><strong>WHEN:</strong> 09:00 - 27 jan</p>
+    </div>
+
+    <a href="#" class="primary-btn" style="margin-top:2rem;">ADD TO YOUR SCHEDULE</a>
+  </section>
+
+    <!-- MORE LINKS -->
+    <div class="more-links">
+    <a href="#" class="more-toggle" data-target="event-text">&gt; MORE ON <span>EVENT</span></a>
+    <div id="event-text" class="more-content" style="display:none; margin:1rem 0;">
+        Lose yourself in a “scarf forest,” unwind in an ASMR sound lounge, explore a scent library, and grab a drink in the cosiest fashion café in town. There's even a TikTok-ready corner for those chasing the perfect post. It's free, but you'll need the Uniqlo app to nab your slot.
+    </div>
+
+    <a href="#" class="more-toggle" data-target="uniqlo-text">&gt; MORE ON <span>UNIQLO</span></a>
+    <div id="uniqlo-text" class="more-content" style="display:none; margin:1rem 0;">
+        Uniqlo is a Japanese global apparel retailer known for high quality, affordable and minimalist clothing. It focuses on functional basics rather than fast fashion trends. The brand emphasizes simplicity, comfort and practicality across its collections.
+    </div>
+    </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <a href="#">INFO &gt; CONTACT</a>
+    <a href="#">PRIVACY POLICY</a>
+    <a href="#">COOKIE POLICY</a>
+    <div class="copyright">COPYRIGHT © COPENHAGEN FASHION WEEK 2025</div>
+  </div>
+
+  <div class="vertical-text">MOBILE &gt; EVENTS &gt; UNIQLO'S SOUFFLÉ HOUSE</div>
+
+</body>
+
+<script>
+  const toggles = document.querySelectorAll('.more-toggle');
+
+  toggles.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = btn.dataset.target;
+      const target = document.getElementById(targetId);
+      if (target.style.display === 'none') {
+        target.style.display = 'block';
+      } else {
+        target.style.display = 'none';
+      }
+    });
+  });
+</script>
+</html>

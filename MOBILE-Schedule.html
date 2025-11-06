@@ -5,157 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mobile Events</title>
   <link rel="stylesheet" href="stylesheet.css" />
+
   <style>
     /* Layout overrides for mobile events page */
     /* HEADER */
     body {
+      margin: 0;
       overflow: auto !important;
-    }
-
-    .back-btn {
-      color: var(--accent-color);
-      font-size: 0.9rem;
-      text-decoration: none;
-    }
-
-    .events-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 2rem 1.5rem 1rem;
-    }
-
-    .menu-icon {
-      width: 25px;
-      height: 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      cursor: pointer;
-    }
-
-    .menu-icon div {
-      background: var(--main-color);
-      height: 3px;
-      border-radius: 2px;
-    }
-
-     /* PAGE TITLE */
-    .page-title {
-      font-family: KBH, sans-serif;
-      font-size: 1.8rem;
-      text-align: center;
-      margin: 1rem 0 2rem;
-    }
-
-    .page-title span {
-      color: var(--accent-color);
-    }
-
-    /* EVENTS LIST */
-    .events-container {
-      padding: 1rem;
-      margin-top: 3rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .event-day {
-      background-color: #e8ddee;
-      border: 1px solid var(--main-color);
-      max-width: 300px;
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .event-date {
-      font-family: KBH, sans-serif;
-      font-size: 1.6rem;
-      color: var(--accent-color);
-    }
-
-    .event-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-    }
-
-    .event-item img {
-      width: 60px;
-      height: 60px;
-      object-fit: cover;
-      border-radius: 4px;
-    }
-
-    .event-info h3 {
-      font-size: 1rem;
-      margin: 0;
-      font-family: KBH, sans-serif;
-    }
-
-    .event-info p {
-      margin: 0.2rem 0;
-      font-size: 0.85rem;
-    }
-
-    .see-more {
-      text-align: center;
-      font-family: KBH, sans-serif;
-      font-size: 1.1rem;
-      color: var(--accent-color);
-      text-transform: uppercase;
-      margin-top: 0.5rem;
-      cursor: pointer;
-    }
-
-    /* FOOTER */
-    .footer {
-      background: var(--accent-color);
-      color: var(--background-color);
-      text-align: left;
-      padding: 1.5rem;
-      margin-top: 2rem;
-      font-size: 0.8rem;
-    }
-
-    .footer a {
-      display: block;
-      color: var(--background-color);
-      text-decoration: none;
-      margin-bottom: 0.3rem;
-      font-size: 0.8rem;
-    }
-
-    .copyright {
-      text-align: center;
-      font-size: 0.5rem;
-      color: var(--background-color);
-      margin-top: 1rem;
-    }
-
-    /* VERTICAL TEXT */
-    .vertical-text {
-      position: fixed;
-      right: -90px; 
-      top: 50%;
-      transform: translateY(-50%) rotate(-90deg);
-      font-family: KBH, sans-serif;
-      font-size: 1.5rem;
-      color: var(--accent-color);
-      letter-spacing: 1px;
-      margin: 0;
-      padding: 0;
-    }
+    }    
   </style>
 </head>
 
 <body>
   <header class="events-header">
-    <a href="#" class="back-btn">&gt; back</a>
+    <button class="back-btn"onclick="history.back()">&gt; back</button>
     <div class="menu-icon">
       <div></div><div></div><div></div>
     </div>
@@ -166,45 +29,69 @@
   <div class="events-container">
     <section class="event-day">
       <div class="event-date">27 <span>jan</span></div>
+    <a href="/Events [MOBILE]/events-uniqlo.html">
       <div class="event-item">
         <img src="uniqlo.jpg" alt="Uniqlo Event" />
         <div class="event-info">
           <h3>Uniqlo's soufflé house</h3>
-          <p class="active"><strong>WHERE:</strong> Room B, Arena Hall</p>
-          <p class="active"><strong>WHEN:</strong> 09:00 - 27 Jan</p>
+          <p><strong class="active">WHERE:</strong> Room B, Arena Hall</p>
+          <p><strong class="active">WHEN:</strong> 09:00 - 27 Jan</p>
         </div>
       </div>
+    </a>
+
       <div class="event-item">
         <img src="tarot.jpg" alt="Tarot Event" />
         <div class="event-info">
           <h3>Tarot cards and trends</h3>
-          <p class="active"><strong>WHERE:</strong> Room C, Arena Hall</p>
-          <p class="active"><strong>WHEN:</strong> 10:00 - 27 Jan</p>
+          <p><strong class="active">WHERE:</strong> Room C, Arena Hall</p>
+          <p><strong class="active">WHEN:</strong> 10:00 - 27 Jan</p>
         </div>
       </div>
-      <div class="see-more">SEE MORE</div>
+
+      <!-- Hidden extra events -->
+      <div class="extra-events">
+        <div class="event-item">
+          <img src="fashion1.jpg" alt="Fashion Event" />
+          <div class="event-info">
+            <h3>Fashion sustainability talk</h3>
+            <p><strong class="active">WHERE:</strong> Hall A, Main Wing</p>
+            <p><strong class="active">WHEN:</strong> 11:00 - 27 Jan</p>
+          </div>
+        </div>
+
+        <div class="event-item">
+          <img src="artshow.jpg" alt="Art Show" />
+          <div class="event-info">
+            <h3>Art Show: Modern Lines</h3>
+            <p><strong class="active">WHERE:</strong> Gallery Hall</p>
+            <p><strong class="active">WHEN:</strong> 12:00 - 27 Jan</p>
+          </div>
+        </div>
+
+        <div class="event-item">
+          <img src="music.jpg" alt="Music Event" />
+          <div class="event-info">
+            <h3>Live Jazz Performance</h3>
+            <p><strong class="active">WHERE:</strong> Lounge Room</p>
+            <p><strong class="active">WHEN:</strong> 14:00 - 27 Jan</p>
+          </div>
+        </div>
+
+        <div class="event-item">
+          <img src="cocktail.jpg" alt="Cocktail Event" />
+          <div class="event-info">
+            <h3>Cocktail Networking</h3>
+            <p><strong class="active">WHERE:</strong> VIP Terrace</p>
+            <p><strong class="active">WHEN:</strong> 16:00 - 27 Jan</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="see-more" onclick="toggleEvents(this)">SEE MORE</div>
     </section>
 
-    <section class="event-day">
-      <div class="event-date">28 <span>jan</span></div>
-      <div class="event-item">
-        <img src="uniqlo.jpg" alt="Uniqlo Event" />
-        <div class="event-info">
-          <h3>Uniqlo's soufflé house</h3>
-          <p class="active"><strong>WHERE:</strong> Room B, Arena Hall</p>
-          <p class="active"><strong>WHEN:</strong> 09:00 - 28 Jan</p>
-        </div>
-      </div>
-      <div class="event-item">
-        <img src="tarot.jpg" alt="Tarot Event" />
-        <div class="event-info">
-          <h3>Tarot cards and trends</h3>
-          <p class="active"><strong>WHERE:</strong> Room C, Arena Hall</p>
-          <p class="active"><strong>WHEN:</strong> 10:00 - 28 Jan</p>
-        </div>
-      </div>
-      <div class="see-more">SEE MORE</div>
-    </section>
+    
   </div>
 
   <div class="footer">
@@ -214,6 +101,17 @@
     <div class="copyright">COPYRIGHT © COPENHAGEN FASHION WEEK 2025</div>
   </div>
 
-  <div class="vertical-text">MOBILE &gt; EVENTS</div>
+  <div class="vertical-text">MOBILE &gt; <a class="active">EVENTS</a></div>
+
+  <script>
+    function toggleEvents(button) {
+      const section = button.closest('.event-day');
+      const extra = section.querySelector('.extra-events');
+      const isVisible = extra.style.display === 'block';
+
+      extra.style.display = isVisible ? 'none' : 'block';
+      button.textContent = isVisible ? 'SEE MORE' : 'SEE LESS';
+    }
+  </script>
 </body>
 </html>
