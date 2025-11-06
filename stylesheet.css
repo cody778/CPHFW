@@ -493,11 +493,11 @@ header .powered span {
 .ribbon {
   position: absolute;
   top: 10px;
-  left: -40px;
+  left: -48px;
   transform: rotate(-45deg);
   background: var(--accent-color);
   color: var(--background-color);
-  font-size: 0.7rem;
+  font-size: 0.4rem;
   padding: 4px 40px;
   font-weight: bold;
 }
@@ -564,6 +564,12 @@ header .powered span {
   border-radius: 3px;
 }
 
+/*=============================  404 Page  ==========================================*/
+.hanger-image {
+   max-width: 50%;
+    height: auto;
+}
+/* ============================  404 Page End  ==========================================*/
 
 /*=============================  Discover page Content setup  ==========================================*/
 .discover-container {
