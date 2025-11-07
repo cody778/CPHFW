@@ -183,10 +183,18 @@ header .powered span {
 .sidebar {
   width: 25%;
 }
-
+.event-header-box{
+  padding-bottom: 0px;
+  margin-bottom: -50px;
+}
 .event-head{
   font-family: 'KBH-Medium', sans-serif;
   font-size: 30px;
+  margin-bottom: 10px;
+}
+
+aside{
+  margin-left: 50px;
 }
 
 .qr-section .qr-box p {
@@ -195,15 +203,18 @@ header .powered span {
 
 .map-small{
   border:2px solid var(--accent-color);
-  max-width: 100%;   
+  width: 350px;
   height: auto;
 }
 
+.qr-section{
+  width: 350px;
+}
 .test-QR{
   max-width: 50%;
   height: auto;
 }
-/* this abovbe is what i coded */
+
 .qr-box {
   background: var(--background-color);
   border: 1px solid var(--main-color);
@@ -243,7 +254,9 @@ header .powered span {
 }
 
 .schedule {
+  margin-right: 50px;
   flex-grow: 1;
+  margin-top: 85px;
   background: #aaaaaa;
   border: 1px solid var(--main-color);
   padding: 1rem;
