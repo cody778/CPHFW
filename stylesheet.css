@@ -236,7 +236,7 @@ aside{
 }
 
 .map-small{
-  border:2px solid var(--accent-color);
+  border:1px solid var(--accent-color);
   width: 350px;
   height: auto;
 }
@@ -251,7 +251,7 @@ aside{
 
 .qr-box {
   background: var(--background-color);
-  border: 2px solid var(--accent-color);
+  border: 1px solid var(--accent-color);
   padding: 1rem;
   
 }
@@ -292,7 +292,7 @@ aside{
  
   flex-grow: 1;
   margin-top: 85px;
-  border: 1px solid var(--main-color);
+  border: 1px solid var(--accent-color);
   padding: 1rem;
   position: relative;
   display: flex;
