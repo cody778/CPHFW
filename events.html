@@ -56,10 +56,9 @@
             data-venue="Bella Center CPH"
             data-description="Caro Edition brings avant-garde minimalism to Copenhagen's runway with sustainable fabrics and bold tailoring."
             data-image="caro-show.jpg">
-            <h4>Caro Edition</h4>
-            <p>Show</p>
+         
         </div>
-
+        
         <div class="time-label">11.00</div>
         <div class="event" 
             data-title="Talk Show Title"
@@ -70,8 +69,7 @@
             data-venue="Ilum Studio 2F"
             data-description="A conversation about the intersection of design, culture, and sustainability in fashion."
             data-image="talk-show.jpg">
-            <h4>Talk Show Title</h4>
-            <p>Talk</p>
+            
         </div>
         </div>
       </div>
@@ -106,6 +104,13 @@
     <h1><a href="index.html">HOME > </a></h1>  <h1><a class="active">EVENTS</a></h1>
 </footer>
 
+
+
+
+
+
+
+<!-- javaScript starts -->
 <script>
 const tabs = document.querySelectorAll('.tabs button');
 const eventsContainer = document.querySelector('.events');
@@ -122,30 +127,266 @@ const schedules = {
       host: "Caro Collective",
       venue: "Bella Center CPH",
       description: "Caro Edition brings avant-garde minimalism to Copenhagen's runway with sustainable fabrics and bold tailoring.",
-      image: "caro-show.jpg"
+      image: "/Events/27 Jan/show 1.png"
     },
     //copy from here to create new events modify the information accordingly, all is prealigned and dynamic so just add new events as needed
     //with their needed time table and they will appear in the correct order and place
-     {
-      time: "10:00",
-      title: "Get fucked cunt",
+   
+    // made this empty box for now
+    { 
+      time: "11:00",
+      title: ".",         
+      type: "Empty",      
+      date: "27 Jan 2026",
+      host: "",
+      venue: "",
+      description: "",
+      image: ""           
+    },
+    {
+      time: "12:00",
+      title: "Polza Collection",
       type: "Show",
+      date: "27 Jan 2026",
+      host: "Kim from Kolding Design School",
+      venue: "Ilum Studio 2F",
+      description: "A conversation about the intersection of design, culture, and sustainability in fashion.",
+      image: "talk-show.jpg"
+    },
+     { 
+      time: "13:00",
+      title: ".",         
+      type: "Empty",      
+      date: "27 Jan 2026",
+      host: "",
+      venue: "",
+      description: "",
+      image: ""           
+    },
+    {
+      time: "14:00",
+      title: "TG Botanical",
+      type: "Show",
+      date: "27 Jan 2026",
+      host: "designer",
+      venue: "Ilum Studio 2F",
+      description: "A conversation about the intersection of design, culture, and sustainability in fashion.",
+      image: "talk-show.jpg"
+    },
+    { 
+      time: "15:00",
+      title: ".",         
+      type: "Empty",      
+      date: "27 Jan 2026",
+      host: "",
+      venue: "",
+      description: "",
+      image: ""           
+    },
+    { 
+      time: "16:00",
+      title: ".",         
+      type: "Empty",      
+      date: "27 Jan 2026",
+      host: "",
+      venue: "",
+      description: "",
+      image: ""           
+    },
+    { 
+      time: "17:00",
+      title: ".",         
+      type: "Empty",      
+      date: "27 Jan 2026",
+      host: "",
+      venue: "",
+      description: "",
+      image: ""           
+    },
+    { 
+      time: "18:00",
+      title: "Nordic Trauma",         
+      type: "show",      
+      date: "27 Jan 2026",
+      host: "Trauma",
+      venue: "Bella center",
+      description: "It's traumatic brand",
+      image: ""           
+    },
+    { 
+      time: "19:00",
+      title: ".",         
+      type: "Empty",      
+      date: "27 Jan 2026",
+      host: "",
+      venue: "",
+      description: "",
+      image: ""           
+    },
+    { 
+      time: "20:00",
+      title: ".",         
+      type: "Empty",      
+      date: "27 Jan 2026",
+      host: "",
+      venue: "",
+      description: "",
+      image: ""           
+    },
+    { 
+      time: "21:00",
+      title: ".",         
+      type: "Empty",      
+      date: "27 Jan 2026",
+      host: "",
+      venue: "",
+      description: "",
+      image: ""           
+    },
+    // second column
+    { 
+      time: "10:00",
+      title: ".",         
+      type: "Empty",      
+      date: "27 Jan 2026",
+      host: "",
+      venue: "",
+      description: "",
+      image: ""           
+    },
+ 
+        {
+      time: "11:00",
+      title: "Talk Show Title",
+      type: "Talk",
+      date: "27 Jan 2026",
+      host: "Conan",
+      venue: "Bella Center CPH",
+      description: "Caro Edition brings avant-garde minimalism to Copenhagen's runway with sustainable fabrics and bold tailoring.",
+      image: "caro-show.jpg"
+    },
+   { 
+      time: "12:00",
+      title: ".",         
+      type: "Empty",      
+      date: "27 Jan 2026",
+      host: "",
+      venue: "",
+      description: "",
+      image: ""           
+    },
+    { 
+      time: "13:00",
+      title: ".",         
+      type: "Empty",      
+      date: "27 Jan 2026",
+      host: "",
+      venue: "",
+      description: "",
+      image: ""           
+    },
+    { 
+      time: "14:00",
+      title: ".",         
+      type: "Empty",      
+      date: "27 Jan 2026",
+      host: "",
+      venue: "",
+      description: "",
+      image: ""           
+    },
+    { 
+      time: "15:00",
+      title: ".",         
+      type: "Empty",      
+      date: "27 Jan 2026",
+      host: "",
+      venue: "",
+      description: "",
+      image: ""           
+    },
+    {
+      time: "16:00",
+      title: "Movie Title",
+      type: "Film",
       date: "27 Jan 2026",
       host: "Caro Collective",
       venue: "Bella Center CPH",
       description: "Caro Edition brings avant-garde minimalism to Copenhagen's runway with sustainable fabrics and bold tailoring.",
       image: "caro-show.jpg"
     },
-    {
-      time: "11:00",
-      title: "Talk Show Title",
-      type: "Talk",
+        { 
+      time: "17:00",
+      title: ".",         
+      type: "Empty",      
       date: "27 Jan 2026",
-      host: "Kim from Kolding Design School",
-      venue: "Ilum Studio 2F",
-      description: "A conversation about the intersection of design, culture, and sustainability in fashion.",
-      image: "talk-show.jpg"
-    }
+      host: "",
+      venue: "",
+      description: "",
+      image: ""           
+    },
+            { 
+      time: "18:00",
+      title: ".",         
+      type: "Empty",      
+      date: "27 Jan 2026",
+      host: "",
+      venue: "",
+      description: "",
+      image: ""           
+    },
+            { 
+      time: "19:00",
+      title: ".",         
+      type: "Empty",      
+      date: "27 Jan 2026",
+      host: "",
+      venue: "",
+      description: "",
+      image: ""           
+    },
+            { 
+      time: "20:00",
+      title: ".",         
+      type: "Empty",      
+      date: "27 Jan 2026",
+      host: "",
+      venue: "",
+      description: "",
+      image: ""           
+    },
+    { 
+      time: "21:00",
+      title: "Party Host Name",         
+      type: "After party",      
+      date: "27 Jan 2026",
+      host: "",
+      venue: "",
+      description: "",
+      image: ""           
+    },
+    // 3rd column
+     { 
+      time: "13:00",
+      title: "Work Shop Title",         
+      type: "Work shop",      
+      date: "27 Jan 2026",
+      host: "",
+      venue: "",
+      description: "",
+      image: ""           
+    },
+     { 
+      time: "19:00",
+      title: "Interview Title",         
+      type: "Interview",      
+      date: "27 Jan 2026",
+      host: "",
+      venue: "",
+      description: "",
+      image: ""           
+    },
+
   ],
   "28 January": [
     {
@@ -187,7 +428,6 @@ function renderEvents(day) {
           data-description="${e.description}"
           data-image="${e.image}">
             <h4>${e.title}</h4>
-            <p>${e.type}</p>
         </div>
       `).join('')}
     </div>

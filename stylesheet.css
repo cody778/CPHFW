@@ -196,7 +196,7 @@ header .powered span {
 
 .footer-box{
   position: absolute;
-  top: -200px; /* footer를 header 위로 겹치게 */
+  top: -200px; 
   left: 68%;
   transform: translateX(-50%);
   display: flex;
@@ -218,7 +218,7 @@ header .powered span {
 }
 .event-head{
   font-family: 'KBH-Medium', sans-serif;
-  font-size: 30px;
+  font-size: 21px;
   margin-bottom: 10px;
 }
 
@@ -227,7 +227,7 @@ aside{
 }
 
 .qr-section .qr-box p {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .map-small{
