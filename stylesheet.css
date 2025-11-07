@@ -216,6 +216,11 @@ header .powered span {
   padding-bottom: 0px;
   margin-bottom: -50px;
 }
+
+.map .event-head{
+  margin-top: 120px;
+}
+
 .event-head{
   font-family: 'KBH-Medium', sans-serif;
   font-size: 21px;
@@ -246,7 +251,7 @@ aside{
 
 .qr-box {
   background: var(--background-color);
-  border: 1px solid var(--main-color);
+  border: 2px solid var(--accent-color);
   padding: 1rem;
   
 }
@@ -284,50 +289,59 @@ aside{
 
 .schedule {
   margin-right: 50px;
+ 
   flex-grow: 1;
   margin-top: 85px;
-  background: #aaaaaa;
   border: 1px solid var(--main-color);
   padding: 1rem;
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 60vh;
+  height: 68vh;
   overflow: hidden;
 }
 
 .tabs {
   display: flex;
+  justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 1rem;
 }
 
 .tabs button {
+  color: #676070;
+  font-family: 'KBH-Medium', sans-serif;
   background: none;
   border: none;
-  font-size: 1rem;
+  font-size: 23px;
   cursor: pointer;
-  color: #555;
   padding-bottom: 4px;
 }
 
 .tabs button.active {
   color: var(--accent-color);
-  border-bottom: 2px solid var(--accent-color);
+  background-color: #EBE2F7;
+  padding: 20px;
+
 }
 
 /* Make only the events list scrollable */
+.events-padding{
+  background-color: #EBE2F7;
+  padding-top: 20px;
+}
+
 .events {
   display: grid;
   grid-template-columns: 90px 1fr;
   gap: 0.75rem 1rem;
   align-items: start;
-
+  background-color: #EBE2F7;
   overflow-y: auto;
   height: 100%S;
   padding-right: 0.5rem;
   scrollbar-width: thin;
   scrollbar-color: var(--accent-color) transparent;
+  padding-bottom: 20px;
 }
 
 .events::-webkit-scrollbar {
@@ -342,8 +356,9 @@ aside{
   text-align: right;
   font-weight: 600;
   font-family: KBH, sans-serif;
-  color: #555;
+  color: #65478C;
   padding-top: 3rem;
+  padding-right: 15px;
 }
 
 .event {
@@ -390,6 +405,7 @@ aside{
   justify-content: center;
   z-index: 1000;
 }
+
 
 .event-modal.active {
   display: flex;
