@@ -362,26 +362,28 @@ aside{
 }
 
 .event {
-  background: var(--background-color);
+  /* background: var(--background-color);
+  margin-right: 30px;
+  margin-bottom: 10px;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
   position: relative;
   max-width: 25%;
-  font-size: 0.9rem;
+  font-size: 0.9rem; */
   cursor: pointer;
   transition: 0.15s ease;
 }
 
 
-.event::before {
+/* .event::before {
   content: attr(data-type);
   position: absolute;
   top: 8px;
   right: 8px;
   font-size: 0.75rem;
   color: var(--accent-color);
-}
+} */
 
 .event-row {
   display: flex;
@@ -396,6 +398,15 @@ aside{
 }
 
 /* ======================= MODAL STYLING ===== */
+
+.event-thumbnail{
+  width: 250px;
+  height: auto;
+}
+.event h4 {
+    display: none;
+}
+
 .event-modal {
   position: fixed;
   inset: 0;
@@ -479,6 +490,12 @@ aside{
 .modal-info a {
   color: var(--accent-color);
   text-decoration: underline;
+}
+/*=============================  Map page Content setup  ==========================================*/
+.big-map{
+  margin: 20px 50px 20px 100x;
+  width: 100vw;
+  height: auto;
 }
 
 /*=============================  Mobile pages Content setup  ==========================================*/
