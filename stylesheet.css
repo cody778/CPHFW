@@ -445,6 +445,11 @@ aside{
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   animation: popIn 0.25s ease-out;
 }
+/* to make empty type card not clickable */
+.event[data-type="Empty"],
+.event[data-type="Empty"] * {
+  pointer-events: none !important;
+}
 
 @keyframes popIn {
   from { transform: scale(0.95); opacity: 0; }
