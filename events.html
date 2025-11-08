@@ -45,11 +45,13 @@
         <button>30 January</button>
       </nav>
       <!-- Events List  - this is how we will populate the events please add correct relevant information -->
-      <div class="events-padding"></div>
+      <div class="events-padding-top">
+        <p><span class="circle-text">&#9679;</span>no guest request required</p>
+      </div>
       <div class="events">
             <!-- all contents are in JS  -->
         </div>
-      <div class="events-padding"></div>
+      <div class="events-padding-bottom"></div>
     </section>
 
     <!-- Event Detail Modal this is how the content of each event card will be organised-->
@@ -517,7 +519,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "11:00",
@@ -528,6 +531,7 @@ const schedules = {
   venue: "Copenhagen Contemporary",
   description: "This season, [title] unveils a collection that blurs the line between restraint and opulence. With silhouettes that flow like whispered movement and fabrics that reflect quiet luxury, each piece tells a story of modern sophistication.",
   image: "/Events/28 Jan/show 1.png",
+  thumbnail:"/Events/28 Jan/thumbnail 1.png",
   note: "Guest list only - ID required for entry"
 },
 {
@@ -538,7 +542,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "13:00",
@@ -549,6 +554,7 @@ const schedules = {
   venue: "Copenhagen Contemporary",
   description: "This season, [title] unveils a collection that blurs the line between restraint and opulence. With silhouettes that flow like whispered movement and fabrics that reflect quiet luxury, each piece tells a story of modern sophistication.",
   image: "/Events/28 Jan/show 2.png",
+  thumbnail:"/Events/28 Jan/thumbnail 2.png",
   note: "Guest list only - ID required for entry"
 },
 {
@@ -559,7 +565,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "15:00",
@@ -569,7 +576,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "16:00",
@@ -579,20 +587,11 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "17:00",
-  title: ".",
-  type: "empty",
-  date: "28 Jan 2026",
-  host: "",
-  venue: "",
-  description: "",
-  image: ""
-},
-{
-  time: "18:00",
   title: "Han Kjobenhavn",
   type: "Show",
   date: "28 Jan 2026",
@@ -600,8 +599,21 @@ const schedules = {
   venue: "Copenhagen Contemporary",
   description: "This season, [title] unveils a collection that blurs the line between restraint and opulence. With silhouettes that flow like whispered movement and fabrics that reflect quiet luxury, each piece tells a story of modern sophistication.",
   image: "/Events/28 Jan/show 3.png",
+  thumbnail:"/Events/28 Jan/thumbnail 3.png",
   note: "Guest list only - ID required for entry"
 },
+{
+  time: "18:00",
+  title: ".",
+  type: "empty",
+  date: "28 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+
 {
   time: "19:00",
   title: "Swedish school of textile",
@@ -611,6 +623,7 @@ const schedules = {
   venue: "Copenhagen Contemporary",
   description: "This season, [title] unveils a collection that blurs the line between restraint and opulence. With silhouettes that flow like whispered movement and fabrics that reflect quiet luxury, each piece tells a story of modern sophistication.",
   image: "/Events/28 Jan/show 4.png",
+  thumbnail:"/Events/28 Jan/thumbnail 4.png",
   note: "Guest list only - ID required for entry"
 },
 {
@@ -621,7 +634,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "21:00",
@@ -631,7 +645,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 // 2nd column
 
@@ -644,6 +659,7 @@ const schedules = {
   venue: "Nattergalevej 980 3.th",
   description: "Featuring 3 leading voices in fashion innovation. Dive into the future of textiles from cutting-edge materials to sustainable design practices.",
   image: "/Events/others/talk.png",
+  thumbnail:"/Events/others/talk thumbnail.png",
   note: "This talk show has limited seats. We recommend to take a seat 20 mins in advance. "
 },
 {
@@ -654,7 +670,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "12:00",
@@ -664,7 +681,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "13:00",
@@ -674,7 +692,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "14:00",
@@ -684,7 +703,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "15:00",
@@ -695,6 +715,7 @@ const schedules = {
   venue: "Social Media Hub",
   description: "Join us for an exclusive interview event featuring leading designers, and creative minds of Fashion Week. Hear firsthand insights on trends, inspirations, and the art of fashion in motion.",
   image: "/Events/others/interview.png",
+  thumbnail:"/Events/others/interview thumbnail.png",
   note: "Seats are available for all attendees. You can also join via live streaming."
 },
 {
@@ -705,7 +726,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "17:00",
@@ -715,7 +737,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "18:00",
@@ -725,7 +748,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "19:00",
@@ -735,7 +759,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "20:00",
@@ -745,7 +770,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "21:00",
@@ -755,9 +781,43 @@ const schedules = {
       host: "[title]",
       venue: "Tivoli restaurant",
       description: "Dance to live DJ sets, enjoy signature cocktails, and mingle with designers and industry insiders. Experience exclusive fashion after party, interactive installations, and surprises throughout the night.",
-  image: "/Events/others/after party.png"
+  image: "/Events/others/after party.png",
+  thumbnail:"/Events/others/party thumbnail.png",
 },
 // 3rd column
+{
+  time: "10:00",
+  title: ".",
+  type: "empty",
+  date: "28 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+{
+  time: "11:00",
+  title: ".",
+  type: "empty",
+  date: "28 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+{
+  time: "12:00",
+  title: ".",
+  type: "empty",
+  date: "28 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
 {
   time: "13:00",
   title: "Work Shop Title",
@@ -766,7 +826,52 @@ const schedules = {
       host: "Kim from Kolding design school",
       venue: "Illum Studio 2F",
       description: "Bring your ideas to life on paper. You will learn how to draw fashion sketches and see how your sketches come to life as actual garments.",
-  image: "/Events/others/work shop.png"
+  image: "/Events/others/work shop.png",
+  thumbnail:"/Events/others/work shop thumbnail.png",
+},
+{
+  time: "14:00",
+  title: ".",
+  type: "empty",
+  date: "28 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+{
+  time: "15:00",
+  title: ".",
+  type: "empty",
+  date: "28 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+{
+  time: "16:00",
+  title: ".",
+  type: "empty",
+  date: "28 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+{
+  time: "17:00",
+  title: ".",
+  type: "empty",
+  date: "28 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "18:00",
@@ -776,7 +881,41 @@ const schedules = {
       host: "Copenhagen Fashion Film Institute",
       venue: "Vega 3F",
       description: "Classic Fashion Film Screening. Step into the timeless world of fashion through iconic films and discover legendary designers, unforgettable style moments, and cinematic inspiration.",
-  image: "/Events/others/film.png"
+  image: "/Events/others/film.png",
+  thumbnail:"/Events/others/movie thumbnail.png",
+},
+{
+  time: "19:00",
+  title: ".",
+  type: "empty",
+  date: "28 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+{
+  time: "20:00",
+  title: ".",
+  type: "empty",
+  date: "28 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+{
+  time: "21:00",
+  title: ".",
+  type: "empty",
+  date: "28 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
   ],
   "29 January": [
@@ -788,7 +927,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "11:00",
@@ -799,6 +939,7 @@ const schedules = {
   venue: "Copenhagen Contemporary",
   description: "",
   image: "/Events/29 Jan/show 1.png",
+  thumbnail: "/Events/29 Jan/thumbnail 1.png",
   note: "Guest list only - ID required for entry"
 },
 {
@@ -809,7 +950,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "13:00",
@@ -820,6 +962,7 @@ const schedules = {
   venue: "Copenhagen Contemporary",
   description: "",
   image: "/Events/29 Jan/show 2.png",
+  thumbnail: "/Events/29 Jan/thumbnail 2.png",
   note: "Guest list only - ID required for entry"
 },
 {
@@ -830,7 +973,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "15:00",
@@ -840,7 +984,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "16:00",
@@ -850,7 +995,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "17:00",
@@ -861,6 +1007,7 @@ const schedules = {
   venue: "Copenhagen Contemporary",
   description: "",
   image: "/Events/29 Jan/show 3.png",
+  thumbnail: "/Events/29 Jan/thumbnail 3.png",
   note: "Guest list only - ID required for entry"
 },
 {
@@ -871,7 +1018,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "19:00",
@@ -882,6 +1030,7 @@ const schedules = {
   venue: "Copenhagen Contemporary",
   description: "",
   image: "/Events/29 Jan/show 4.png",
+  thumbnail: "/Events/29 Jan/thumbnail 4.png",
   note: "Guest list only - ID required for entry"
 },
 {
@@ -892,7 +1041,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "21:00",
@@ -902,7 +1052,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 }
 ,
 // 2nd column
@@ -914,7 +1065,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "11:00",
@@ -924,7 +1076,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "12:00",
@@ -934,7 +1087,8 @@ const schedules = {
       host: "Copenhagen Fashion Film Institute",
       venue: "Vega 3F",
       description: "Classic Fashion Film Screening. Step into the timeless world of fashion through iconic films and discover legendary designers, unforgettable style moments, and cinematic inspiration.",
-  image: "/Events/others/film.png"
+  image: "/Events/others/film.png",
+  thumbnail:"/Events/others/movie thumbnail.png",
 },
 {
   time: "13:00",
@@ -944,7 +1098,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "14:00",
@@ -955,6 +1110,7 @@ const schedules = {
   venue: "Social Media Hub",
   description: "Join us for an exclusive interview event featuring leading designers, and creative minds of Fashion Week. Hear firsthand insights on trends, inspirations, and the art of fashion in motion.",
   image: "/Events/others/interview.png",
+  thumbnail:"/Events/others/interview thumbnail.png",
   note: "Seats are available for all attendees. You can also join via live streaming."
 },
 {
@@ -965,7 +1121,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "16:00",
@@ -975,7 +1132,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "17:00",
@@ -985,7 +1143,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "18:00",
@@ -995,7 +1154,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "19:00",
@@ -1005,7 +1165,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "20:00",
@@ -1015,7 +1176,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "21:00",
@@ -1025,7 +1187,8 @@ const schedules = {
       host: "[title]",
       venue: "Tivoli restaurant",
       description: "Dance to live DJ sets, enjoy signature cocktails, and mingle with designers and industry insiders. Experience exclusive fashion after party, interactive installations, and surprises throughout the night.",
-  image: "/Events/others/after party.png"
+  image: "/Events/others/after party.png",
+  thumbnail:"/Events/others/party thumbnail.png",
 },
 //3rd column
 {
@@ -1036,7 +1199,74 @@ const schedules = {
       host: "Kim from Kolding design school",
       venue: "Illum Studio 2F",
       description: "Bring your ideas to life on paper. You will learn how to draw fashion sketches and see how your sketches come to life as actual garments.",
-  image: "/Events/others/work shop.png"
+  image: "/Events/others/work shop.png",
+  thumbnail:"/Events/others/work shop thumbnail.png",
+},
+{
+  time: "11:00",
+  title: ".",
+  type: "empty",
+  date: "29 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+{
+  time: "12:00",
+  title: ".",
+  type: "empty",
+  date: "29 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+{
+  time: "13:00",
+  title: ".",
+  type: "empty",
+  date: "29 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+{
+  time: "14:00",
+  title: ".",
+  type: "empty",
+  date: "29 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+{
+  time: "15:00",
+  title: ".",
+  type: "empty",
+  date: "29 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+{
+  time: "16:00",
+  title: ".",
+  type: "empty",
+  date: "29 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "17:00",
@@ -1047,9 +1277,53 @@ const schedules = {
   venue: "Nattergalevej 980 3.th",
   description: "Featuring 3 leading voices in fashion innovation. Dive into the future of textiles from cutting-edge materials to sustainable design practices.",
   image: "/Events/others/talk.png",
+  thumbnail:"/Events/others/talk thumbnail.png",
   note: "This talk show has limited seats. We recommend to take a seat 20 mins in advance. "
 },
-
+{
+  time: "18:00",
+  title: ".",
+  type: "empty",
+  date: "29 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+{
+  time: "19:00",
+  title: ".",
+  type: "empty",
+  date: "29 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+{
+  time: "20:00",
+  title: ".",
+  type: "empty",
+  date: "29 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+{
+  time: "21:00",
+  title: ".",
+  type: "empty",
+  date: "29 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
 
   ],
   "30 January":[
@@ -1061,7 +1335,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "11:00",
@@ -1072,6 +1347,7 @@ const schedules = {
   venue: "Copenhagen Contemporary",
   description: "This season, [title] unveils a collection that blurs the line between restraint and opulence. With silhouettes that flow like whispered movement and fabrics that reflect quiet luxury, each piece tells a story of modern sophistication.",
   image: "/Events/30 Jan/show 1.png",
+  thumbnail:"/Events/30 Jan/thumbnail 1.png",
   note: "Guest list only - ID required for entry"
 },
 {
@@ -1082,7 +1358,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "13:00",
@@ -1093,6 +1370,7 @@ const schedules = {
   venue: "Copenhagen Contemporary",
   description: "This season, [title] unveils a collection that blurs the line between restraint and opulence. With silhouettes that flow like whispered movement and fabrics that reflect quiet luxury, each piece tells a story of modern sophistication.",
   image: "/Events/30 Jan/show 2.png",
+  thumbnail:"/Events/30 Jan/thumbnail 2.png",
   note: "Guest list only - ID required for entry"
 },
 {
@@ -1103,7 +1381,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "15:00",
@@ -1113,7 +1392,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "16:00",
@@ -1124,6 +1404,7 @@ const schedules = {
   venue: "Copenhagen Contemporary",
   description: "This season, [title] unveils a collection that blurs the line between restraint and opulence. With silhouettes that flow like whispered movement and fabrics that reflect quiet luxury, each piece tells a story of modern sophistication.",
   image: "/Events/30 Jan/show 3.png",
+  thumbnail:"/Events/30 Jan/thumbnail 3.png",
   note: "Guest list only - ID required for entry"
 },
 {
@@ -1134,7 +1415,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "18:00",
@@ -1145,6 +1427,7 @@ const schedules = {
   venue: "Copenhagen Contemporary",
   description: "This season, [title] unveils a collection that blurs the line between restraint and opulence. With silhouettes that flow like whispered movement and fabrics that reflect quiet luxury, each piece tells a story of modern sophistication.",
   image: "/Events/30 Jan/show 4.png",
+  thumbnail:"/Events/30 Jan/thumbnail 4.png",
   note: "Guest list only - ID required for entry"
 },
 {
@@ -1155,7 +1438,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "20:00",
@@ -1165,7 +1449,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "21:00",
@@ -1175,7 +1460,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 // 2nd column/
 {
@@ -1187,6 +1473,7 @@ const schedules = {
   venue: "Nattergalevej 980 3.th",
   description: "Featuring 3 leading voices in fashion innovation. Dive into the future of textiles from cutting-edge materials to sustainable design practices.",
   image: "/Events/others/talk.png",
+  thumbnail:"/Events/others/talk thumbnail.png",
   note: "This talk show has limited seats. We recommend to take a seat 20 mins in advance. "
 },
 
@@ -1198,7 +1485,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "12:00",
@@ -1208,7 +1496,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "13:00",
@@ -1218,7 +1507,8 @@ const schedules = {
       host: "Kim from Kolding design school",
       venue: "Illum Studio 2F",
       description: "Bring your ideas to life on paper. You will learn how to draw fashion sketches and see how your sketches come to life as actual garments.",
-  image: "/Events/others/work shop.png"
+  image: "/Events/others/work shop.png",
+  thumbnail:"/Events/others/work shop thumbnail.png",
 },
 {
   time: "14:00",
@@ -1228,7 +1518,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "15:00",
@@ -1238,7 +1529,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "16:00",
@@ -1248,7 +1540,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "17:00",
@@ -1258,7 +1551,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "18:00",
@@ -1268,7 +1562,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "19:00",
@@ -1278,7 +1573,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "20:00",
@@ -1288,7 +1584,8 @@ const schedules = {
   host: "",
   venue: "",
   description: "",
-  image: ""
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "21:00",
@@ -1298,9 +1595,65 @@ const schedules = {
       host: "[title]",
       venue: "Tivoli restaurant",
       description: "Dance to live DJ sets, enjoy signature cocktails, and mingle with designers and industry insiders. Experience exclusive fashion after party, interactive installations, and surprises throughout the night.",
-  image: "/Events/others/after party.png"
+  image: "/Events/others/after party.png",
+  thumbnail:"/Events/others/party thumbnail.png",
 },
 // 3rd column
+{
+  time: "10:00",
+  title: ".",
+  type: "empty",
+  date: "30 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+{
+  time: "11:00",
+  title: ".",
+  type: "empty",
+  date: "30 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+{
+  time: "12:00",
+  title: ".",
+  type: "empty",
+  date: "30 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+{
+  time: "13:00",
+  title: ".",
+  type: "empty",
+  date: "30 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+{
+  time: "14:00",
+  title: ".",
+  type: "empty",
+  date: "30 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
 {
   time: "15:00",
   title: "Interview Title",
@@ -1310,7 +1663,41 @@ const schedules = {
   venue: "Social Media Hub",
   description: "Join us for an exclusive interview event featuring leading designers, and creative minds of Fashion Week. Hear firsthand insights on trends, inspirations, and the art of fashion in motion.",
   image: "/Events/others/interview.png",
+  thumbnail:"/Events/others/interview thumbnail.png",
   note: "Seats are available for all attendees. You can also join via live streaming."
+},
+{
+  time: "16:00",
+  title: ".",
+  type: "empty",
+  date: "30 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+{
+  time: "17:00",
+  title: ".",
+  type: "empty",
+  date: "30 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+{
+  time: "18:00",
+  title: ".",
+  type: "empty",
+  date: "30 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "19:00",
@@ -1320,7 +1707,30 @@ const schedules = {
       host: "Copenhagen Fashion Film Institute",
       venue: "Vega 3F",
       description: "Classic Fashion Film Screening. Step into the timeless world of fashion through iconic films and discover legendary designers, unforgettable style moments, and cinematic inspiration.",
-  image: "/Events/others/film.png"
+  image: "/Events/others/film.png",
+  thumbnail:"/Events/others/movie thumbnail.png",
+},
+{
+  time: "20:00",
+  title: ".",
+  type: "empty",
+  date: "30 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
+},
+{
+  time: "21:00",
+  title: ".",
+  type: "empty",
+  date: "30 Jan 2026",
+  host: "",
+  venue: "",
+  description: "",
+  image: "",
+  thumbnail:"/Events/others/default-placeholder.png",
 },
   ]
 };
