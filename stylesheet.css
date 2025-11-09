@@ -196,7 +196,7 @@ header .powered span {
 
 .footer-box{
   position: absolute;
-  top: -200px; /* footer를 header 위로 겹치게 */
+  top: -200px; 
   left: 68%;
   transform: translateX(-50%);
   display: flex;
@@ -212,30 +212,46 @@ header .powered span {
 .sidebar {
   width: 25%;
 }
+.event-header-box{
+  padding-bottom: 0px;
+  margin-bottom: -50px;
+}
+
+.map .event-head{
+  margin-top: 120px;
+}
 
 .event-head{
   font-family: 'KBH-Medium', sans-serif;
-  font-size: 30px;
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+aside{
+  margin-left: 50px;
 }
 
 .qr-section .qr-box p {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .map-small{
-  border:2px solid var(--accent-color);
-  max-width: 100%;   
+  border:1px solid var(--accent-color);
+  width: 350px;
   height: auto;
 }
 
+.qr-section{
+  width: 350px;
+}
 .test-QR{
   max-width: 50%;
   height: auto;
 }
-/* this abovbe is what i coded */
+
 .qr-box {
   background: var(--background-color);
-  border: 1px solid var(--main-color);
+  border: 1px solid var(--accent-color);
   padding: 1rem;
   
 }
@@ -272,49 +288,73 @@ header .powered span {
 }
 
 .schedule {
+  margin-right: 50px;
+ 
   flex-grow: 1;
-  background: #aaaaaa;
-  border: 1px solid var(--main-color);
+  margin-top: 85px;
+  border: 1px solid var(--accent-color);
   padding: 1rem;
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 60vh;
+  height: 68vh;
   overflow: hidden;
 }
 
 .tabs {
   display: flex;
+  justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 1rem;
 }
 
 .tabs button {
+  color: #676070;
+  font-family: 'KBH-Medium', sans-serif;
   background: none;
   border: none;
-  font-size: 1rem;
+  font-size: 23px;
   cursor: pointer;
-  color: #555;
   padding-bottom: 4px;
 }
 
 .tabs button.active {
   color: var(--accent-color);
-  border-bottom: 2px solid var(--accent-color);
+  background-color: #EBE2F7;
+  padding: 20px;
+
 }
 
+/* guest request text */
+.events-padding-top p {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.events-padding-top p span{
+  color: #8323FF;
+}
 /* Make only the events list scrollable */
+.events-padding-top{
+  background-color: #EBE2F7;
+  padding-top: 10px;
+}
+.events-padding-bottom{
+  background-color: #EBE2F7;
+  padding-top: 20px;
+}
+
 .events {
   display: grid;
   grid-template-columns: 90px 1fr;
   gap: 0.75rem 1rem;
   align-items: start;
-
+  background-color: #EBE2F7;
   overflow-y: auto;
   height: 100%S;
   padding-right: 0.5rem;
   scrollbar-width: thin;
   scrollbar-color: var(--accent-color) transparent;
+  padding-bottom: 20px;
 }
 
 .events::-webkit-scrollbar {
@@ -329,31 +369,34 @@ header .powered span {
   text-align: right;
   font-weight: 600;
   font-family: KBH, sans-serif;
-  color: #555;
+  color: #65478C;
   padding-top: 3rem;
+  padding-right: 15px;
 }
 
 .event {
-  background: var(--background-color);
+  /* background: var(--background-color);
+  margin-right: 30px;
+  margin-bottom: 10px;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
   position: relative;
   max-width: 25%;
-  font-size: 0.9rem;
+  font-size: 0.9rem; */
   cursor: pointer;
   transition: 0.15s ease;
 }
 
 
-.event::before {
+/* .event::before {
   content: attr(data-type);
   position: absolute;
   top: 8px;
   right: 8px;
   font-size: 0.75rem;
   color: var(--accent-color);
-}
+} */
 
 .event-row {
   display: flex;
@@ -362,12 +405,21 @@ header .powered span {
 }
 
 /* When multiple events share the same time,
-   each event auto-scales to fit evenly */
+   each event auto-scales to fit evenly, kachow */
 .event-row .event {
   flex: 1;
 }
 
 /* ======================= MODAL STYLING ===== */
+
+.event-thumbnail{
+  width: 250px;
+  height: auto;
+}
+.event h4 {
+    display: none;
+}
+
 .event-modal {
   position: fixed;
   inset: 0;
@@ -377,6 +429,7 @@ header .powered span {
   justify-content: center;
   z-index: 1000;
 }
+
 
 .event-modal.active {
   display: flex;
@@ -391,6 +444,11 @@ header .powered span {
   position: relative;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   animation: popIn 0.25s ease-out;
+}
+/* to make empty type card not clickable */
+.event[data-type="Empty"],
+.event[data-type="Empty"] * {
+  pointer-events: none !important;
 }
 
 @keyframes popIn {
@@ -451,6 +509,173 @@ header .powered span {
   color: var(--accent-color);
   text-decoration: underline;
 }
+/*=============================  Map page Content setup  ==========================================*/
+.big-map{
+  margin: 20px 50px 20px 100x;
+  width: 100vw;
+  height: auto;
+}
+
+/*=============================  Mobile pages Content setup  ==========================================*/
+
+.events-header {
+      all: unset;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 1.5rem 1rem;
+    }
+
+ .back-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-left: 18px;
+    font-family: KBH, sans-serif;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    cursor: pointer;
+    }
+
+    .menu-icon {
+      width: 35px;
+      height: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    .menu-icon div {
+      background: var(--main-color);
+      height: 3px;
+      border-radius: 2px;
+    }
+
+    /* PAGE TITLE */
+    .page-title {
+      font-family: KBH, sans-serif;
+      font-size: 1.8rem;
+      text-align: center;
+      margin: 1rem 0 2rem;
+    }
+
+    .page-title span {
+      color: var(--accent-color);
+    }
+
+    /* EVENTS LIST */
+    .events-container {
+      padding: 1rem;
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .event-day {
+      background-color: #e8ddee;
+      border: 1px solid var(--main-color);
+      max-width: 300px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .event-date {
+      font-family: KBH, sans-serif;
+      font-size: 1.6rem;
+      color: var(--accent-color);
+    }
+
+    .event-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .event-item img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .event-info h3 {
+      font-size: 1rem;
+      margin: 0;
+      font-family: KBH, sans-serif;
+    }
+
+    .event-info p {
+      margin: 0.2rem 0;
+      font-size: 0.85rem;
+    }
+
+    .see-more {
+      text-align: center;
+      font-family: KBH, sans-serif;
+      font-size: 1.1rem;
+      color: var(--accent-color);
+      text-transform: uppercase;
+      margin-top: 0.5rem;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    /* Hidden extra events */
+    .extra-events {
+      display: none;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    /* FOOTER */
+    .footer {
+      width: 100%;
+      background: var(--accent-color);
+      color: var(--background-color);
+      text-align: left;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      font-size: 0.8rem;
+    }
+
+    .footer a {
+      display: block;
+      color: var(--background-color);
+      text-decoration: none;
+      margin-bottom: 0.3rem;
+      font-size: 0.8rem;
+    }
+
+    .copyright {
+      text-align: center;
+      font-size: 0.5rem;
+      color: var(--background-color);
+      margin-top: 1rem;
+    }
+
+    /* VERTICAL TEXT */
+    .vertical-text {
+      white-space: nowrap;
+      position: fixed;
+      right: 0;
+      top: 20%;
+      transform: translateY(-50%) rotate(-90deg);
+      transform-origin: right center;
+      font-family: KBH, sans-serif;
+      font-size: 1.5rem;
+      color: var(--main-color);
+      letter-spacing: 1px;
+      margin-right: 2rem;
+      padding: 0;
+    }
 
 /*=============================  Brands page Content setup  ==========================================*/
 
@@ -714,7 +939,7 @@ footer a.active {
   pointer-events: auto;
 }
 
-.back-btn {
+.back-btn-main {
   position: absolute;
   left: 1rem;
   background: none;
