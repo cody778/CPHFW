@@ -436,18 +436,20 @@ aside{
 }
 
 .event-modal-content {
-  background: #fff;
+  background: var(--background-color);
   width: 70%;
-  max-width: 900px;
-  border-radius: 8px;
+  max-width: 800px;
+  border-radius: 2px;
   padding: 2rem;
   position: relative;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   animation: popIn 0.25s ease-out;
 }
 /* to make empty type card not clickable */
 .event[data-type="Empty"],
-.event[data-type="Empty"] * {
+.event[data-type="Empty"] *,
+.event[data-type="Empty"] *::before,
+.event[data-type="Empty"] *::after {
   pointer-events: none !important;
 }
 
@@ -464,7 +466,7 @@ aside{
   color: white;
   font-size: 1.5rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 2px;
   cursor: pointer;
   line-height: 1;
 }
@@ -473,41 +475,61 @@ aside{
   display: flex;
   gap: 2rem;
   align-items: flex-start;
+  align-items: center;
 }
 
 .modal-image img {
   width: 320px;
   height: auto;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 .modal-info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   flex: 1;
 }
 
 .modal-info .type {
-  text-transform: uppercase;
   font-weight: bold;
   font-size: 0.9rem;
-  color: #666;
+  color: var(--main-color);
 }
 
 .modal-info .title {
-  font-size: 2rem;
-  margin: 0.2rem 0 1rem 0;
+  font-size: 3rem;
+  margin: 0 0 1rem 0;
+   color: var(--main-color);
 }
 
 .modal-info .datetime,
 .modal-info .venue,
-.modal-info .hosted,
-.modal-info .description,
+.modal-info .hosted{
+  letter-spacing: 1px;
+  margin: 0.6rem 0;
+   color: var(--main-color);
+}
+
+.modal-info .description{
+  letter-spacing: 1px;
+   white-space: pre-line;
+  margin: 2rem 0;
+  font-size: 18px;
+   color: var(--main-color);
+}
+
 .modal-info .note {
-  margin: 0.4rem 0;
+   letter-spacing: 1px;
+   font-family: 'KBH-LightItalic', sans-serif;
+   margin-top: 2rem;
+   color: var(--main-color);
 }
 
 .modal-info a {
-  color: var(--accent-color);
+  color: var(--main-color);
   text-decoration: underline;
+  font-size: 16px;
 }
 /*=============================  Map page Content setup  ==========================================*/
 .big-map{
