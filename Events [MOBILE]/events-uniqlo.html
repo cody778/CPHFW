@@ -14,112 +14,6 @@
       padding-right: 3rem;
     }
 
-    .event-title-box {
-      position: relative;
-      border: none;
-      padding: 1.5rem;
-      margin: 1rem;
-    }
-
-    .event-title-box h1 {
-      margin: 0.5rem 0 0;
-      font-family: KBH, sans-serif;
-      font-size: 1.8rem;
-      line-height: 1.2;
-      position: relative;
-      z-index: 2;
-    }
-
-    .event-title-box ::before {
-        content: "";
-        position: absolute;
-        top: -300px;
-        left: -10px;
-        width: 50%;
-        height: 50%;
-        padding-top: 100%;
-        border: 2px solid var(--main-color);
-        z-index: 1;
-        transform: translateY(10%);
-        pointer-events: none;
-    }
-
-    /* Purple button */
-    .primary-btn {
-      display: block;
-      width: calc(100% - 2rem);
-      margin: 2rem auto;
-      background: var(--accent-color);
-      color: var(--background-color);
-      text-align: center;
-      padding: 1rem 0;
-      font-family: KBH, sans-serif;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-    }
-
-    /* Main event info box */
-    .event-detail-card {
-      border: 1px solid var(--main-color);
-      padding: 1.5rem;
-      margin: 1rem;
-    }
-
-    .event-detail-card img {
-      width: 100%;
-      height: auto;
-      margin: 1rem 0;
-      border-radius: 4px;
-      object-fit: cover;
-    }
-
-    .event-detail-card h2 {
-      font-family: KBH, sans-serif;
-      font-size: 1.4rem;
-      margin: 0;
-      margin-bottom: 1rem;
-    }
-
-    .event-meta p {
-      margin: 0.3rem 0;
-      font-size: 0.95rem;
-      font-family: KBH Tekst, sans-serif;
-    }
-
-    /* "MORE ON" links */
-    .more-links {
-      margin: 3rem 1rem;
-      max-width: 500px;
-      text-align: center;
-    }
-
-    .more-links a.more-toggle {
-      display: inline-block;
-      margin: 1.2rem auto;
-      font-family: KBH, sans-serif;
-      font-size: 1.4rem;
-      text-decoration: none;
-      color: var(--main-color);
-      cursor: pointer;
-    }
-
-    .more-links a.more-toggle span {
-      color: var(--accent-color);
-    }
-
-    .more-links .more-content {
-      text-align: left;
-      margin: 1rem auto;
-      padding: 0.8rem 1rem;
-      border: 1px solid var(--main-color);
-      border-radius: 4px;
-      max-width: 100%;
-      box-sizing: border-box;
-    }
-
   </style>
 </head>
 
@@ -128,7 +22,7 @@
   <!-- HEADER -->
   <header class="events-header">
     <button class="back-btn"onclick="history.back()">&gt; back</button>
-    <div class="menu-icon">
+    <div class="menu-icon" id="burger">
       <div></div><div></div><div></div>
     </div>
   </header>
@@ -139,7 +33,7 @@
   </div>
 
   <!-- SCHEDULE BUTTON -->
-  <a href="#" class="primary-btn">VIEW YOUR SCHEDULE</a>
+  <a href="/MOBILE-Schedule.html" class="primary-btn">VIEW YOUR SCHEDULE</a>
 
   <!-- MAIN EVENT CONTENT -->
   <section class="event-detail-card">
@@ -156,7 +50,7 @@
       <p><strong>WHEN:</strong> 09:00 - 27 jan</p>
     </div>
 
-    <a href="#" class="primary-btn" style="margin-top:2rem;">ADD TO YOUR SCHEDULE</a>
+    <a href="/MOBILE-Schedule.html" class="primary-btn" onclick="addToSchedule('event-uniqlo')">ADD TO YOUR SCHEDULE</a>
   </section>
 
     <!-- MORE LINKS -->
@@ -182,9 +76,36 @@
 
   <div class="vertical-text">MOBILE &gt; EVENTS &gt; UNIQLO'S SOUFFLÉ HOUSE</div>
 
-</body>
+<!-- Menu panel -->
+<div class="menu-container" id="menuPanel">
+  <div class="menu-close" id="menuClose">×</div>
+  <div class="menu-hero"></div>
+  <div class="menu-buttons">
+    <a href="/MOBILE-Events.html" class="menu-btn active">Events</a>
+    <a href="/MOBILE-Schedule.html" class="menu-btn">My Picks</a>
+  </div>
+</div>
 
 <script>
+const burger = document.getElementById('burger');
+const menu = document.getElementById('menuPanel');
+const closeBtn = document.getElementById('menuClose');
+
+// Open menu
+burger.addEventListener('click', () => {
+  menu.classList.add('active');
+});
+
+// Close menu
+closeBtn.addEventListener('click', () => {
+  menu.classList.remove('active');
+});
+
+// Optional: close when clicking outside menu
+menu.addEventListener('click', (e) => {
+  if(e.target === menu) menu.classList.remove('active');
+});
+
   const toggles = document.querySelectorAll('.more-toggle');
 
   toggles.forEach(btn => {
@@ -199,5 +120,15 @@
       }
     });
   });
+
+function addToSchedule(id) {
+  // save the event ID to localStorage
+  let savedEvents = JSON.parse(localStorage.getItem('mySchedule') || '[]');
+  if (!savedEvents.includes(id)) {
+    savedEvents.push(id);
+    localStorage.setItem('mySchedule', JSON.stringify(savedEvents));
+  }
+}
 </script>
+</body>
 </html>

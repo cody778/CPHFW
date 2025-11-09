@@ -3,115 +3,244 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mobile Events</title>
-  <link rel="stylesheet" href="stylesheet.css" />
-
+  <link rel="stylesheet" href="/stylesheet.css" />
+  <title>Your Schedule</title>
   <style>
-    /* Layout overrides for mobile events page */
-    /* HEADER */
+
     body {
       margin: 0;
       overflow: auto !important;
-    }    
+      padding-right: 3rem;
+    } 
+
+    .hidden { display: none !important; }
+    .schedule-section {
+      max-width: 350px;
+      margin: 0 auto;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .schedule-card,
+    .schedule-empty {
+      border: 1px solid var(--main-color);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-family: KBH Tekst, sans-serif;
+    }
+
+    .schedule-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-bottom: 0.6rem;
+      object-fit: cover;
+    }
+
+    .schedule-card h3 {
+      margin: 0;
+      font-family: KBH, sans-serif;
+      font-size: 1.1rem;
+    }
+
+    .schedule-meta p {
+      margin: 0;
+      font-size: 0.85rem;
+    }
+
+    .primary-btn-small {
+      text-align: center;
+      margin-top: 0.6rem;
+      background: var(--accent-color);
+      color: var(--background-color);
+      padding: 0.6rem 0;
+      font-family: KBH, sans-serif;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .section-title {
+    font-family: KBH, sans-serif;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    }
+
+    .how-to-card {
+    border: 1px solid var(--main-color);
+    padding: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-family: KBH Tekst, sans-serif;
+    border-radius: 15px;
+    }
+
   </style>
 </head>
-
 <body>
-  <header class="events-header">
-    <button class="back-btn"onclick="history.back()">&gt; back</button>
-    <div class="menu-icon">
-      <div></div><div></div><div></div>
+
+<header class="events-header">
+  <a class="back-btn" href="#">&gt; back</a>
+  <div class="menu-icon" id="burger">
+    <div></div><div></div><div></div>
+  </div>
+</header>
+
+<div class="page-title">Here are your scheduled <span>Events</span></div>
+
+<div class="schedule-section">
+
+  <h2 class="section-title">Starting Now</h2>
+  <div id="no-events" class="schedule-empty">
+    <p><strong>Oh snap!</strong> You don't have any events saved.</p>
+    <a class="primary-btn-small" href="/MOBILE-Events.html">Check Events</a>
+  </div>
+
+    <!-- Expanded Uniqlo event -->
+    <div id="event-uniqlo" class="schedule-card hidden">
+    <img src="uniqlo.jpg" alt="Uniqlo's soufflé house" />
+    <div>
+    <h3>Uniqlo's soufflé house</h3>
+    <p><strong>WHERE:</strong> Room B</p>
+    <p><strong>WHEN:</strong> 09:00 - 27 Jan</p>
+    <p>A cozy pop-up experience featuring warm soufflé pancakes and styled seasonal showcases.</p>
     </div>
-  </header>
+    </div>
 
-  <h1 class="page-title"><span>EVENTS</span> LIST</h1>
+<div class="how-to-card">
+<h2 class="active"><strong>HOW TO USE:</strong></h2> 
+<p>To help you gather your bearings and know exactly when and where to be, this schedule allows you to add or remove events that interest you.</p>
+</div>
 
-  <div class="events-container">
-    <section class="event-day">
-      <div class="event-date">27 <span>jan</span></div>
-    <a href="/Events [MOBILE]/events-uniqlo.html">
-      <div class="event-item">
-        <img src="uniqlo.jpg" alt="Uniqlo Event" />
-        <div class="event-info">
-          <h3>Uniqlo's soufflé house</h3>
-          <p><strong class="active">WHERE:</strong> Room B, Arena Hall</p>
-          <p><strong class="active">WHEN:</strong> 09:00 - 27 Jan</p>
-        </div>
-      </div>
-    </a>
 
-      <div class="event-item">
-        <img src="tarot.jpg" alt="Tarot Event" />
-        <div class="event-info">
-          <h3>Tarot cards and trends</h3>
-          <p><strong class="active">WHERE:</strong> Room C, Arena Hall</p>
-          <p><strong class="active">WHEN:</strong> 10:00 - 27 Jan</p>
-        </div>
-      </div>
+<h2 class="section-title">Upcoming Events</h2>
 
-      <!-- Hidden extra events -->
-      <div class="extra-events">
-        <div class="event-item">
-          <img src="fashion1.jpg" alt="Fashion Event" />
-          <div class="event-info">
-            <h3>Fashion sustainability talk</h3>
-            <p><strong class="active">WHERE:</strong> Hall A, Main Wing</p>
-            <p><strong class="active">WHEN:</strong> 11:00 - 27 Jan</p>
-          </div>
-        </div>
-
-        <div class="event-item">
-          <img src="artshow.jpg" alt="Art Show" />
-          <div class="event-info">
-            <h3>Art Show: Modern Lines</h3>
-            <p><strong class="active">WHERE:</strong> Gallery Hall</p>
-            <p><strong class="active">WHEN:</strong> 12:00 - 27 Jan</p>
-          </div>
-        </div>
-
-        <div class="event-item">
-          <img src="music.jpg" alt="Music Event" />
-          <div class="event-info">
-            <h3>Live Jazz Performance</h3>
-            <p><strong class="active">WHERE:</strong> Lounge Room</p>
-            <p><strong class="active">WHEN:</strong> 14:00 - 27 Jan</p>
-          </div>
-        </div>
-
-        <div class="event-item">
-          <img src="cocktail.jpg" alt="Cocktail Event" />
-          <div class="event-info">
-            <h3>Cocktail Networking</h3>
-            <p><strong class="active">WHERE:</strong> VIP Terrace</p>
-            <p><strong class="active">WHEN:</strong> 16:00 - 27 Jan</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="see-more" onclick="toggleEvents(this)">SEE MORE</div>
-    </section>
-
-    
+  <div id="event-uniqlo" class="schedule-card hidden">
+    <img src="uniqlo.jpg" alt="Uniqlo's soufflé house" />
+    <h3>Uniqlo's soufflé house</h3>
+    <div class="schedule-meta">
+      <p>WHERE: Room B, Arena Hall</p>
+      <p>WHEN: 09:00 - 27 Jan</p>
+    </div>
   </div>
 
-  <div class="footer">
-    <a href="#">INFO &gt; CONTACT</a>
-    <a href="#">PRIVACY POLICY</a>
-    <a href="#">COOKIE POLICY</a>
-    <div class="copyright">COPYRIGHT © COPENHAGEN FASHION WEEK 2025</div>
+  <div id="event-tarot" class="schedule-card hidden">
+    <img src="tarot.jpg" alt="Tarot cards and trends" />
+    <h3>Tarot cards and trends</h3>
+    <div class="schedule-meta">
+      <p>WHERE: Room C, Arena Hall</p>
+      <p>WHEN: 10:00 - 27 Jan</p>
+    </div>
   </div>
 
-  <div class="vertical-text">MOBILE &gt; <a class="active">EVENTS</a></div>
+  <div id="event-sip" class="schedule-card hidden">
+    <img src="sip.jpg" alt="Sip, shop and Swap" />
+    <h3>Sip, shop and Swap</h3>
+    <div class="schedule-meta">
+      <p>WHERE: Room B, Arena Hall</p>
+      <p>WHEN: 12:00 - 27 Jan</p>
+    </div>
+  </div>
 
-  <script>
-    function toggleEvents(button) {
-      const section = button.closest('.event-day');
-      const extra = section.querySelector('.extra-events');
-      const isVisible = extra.style.display === 'block';
+  <div id="event-preloved" class="schedule-card hidden">
+    <img src="preloved.jpg" alt="Preloved finds for fashion lovers" />
+    <h3>Preloved finds for fashion lovers</h3>
+    <div class="schedule-meta">
+      <p>WHERE: Room C, Arena Hall</p>
+      <p>WHEN: 14:00 - 27 Jan</p>
+    </div>
+  </div>
 
-      extra.style.display = isVisible ? 'none' : 'block';
-      button.textContent = isVisible ? 'SEE MORE' : 'SEE LESS';
-    }
-  </script>
+  <div id="event-design" class="schedule-card hidden">
+    <img src="design.jpg" alt="Design meets sustainability" />
+    <h3>Design meets sustainability</h3>
+    <div class="schedule-meta">
+      <p>WHERE: Room B, Arena Hall</p>
+      <p>WHEN: 16:00 - 27 Jan</p>
+    </div>
+  </div>
+
+  <div id="event-scent" class="schedule-card hidden">
+    <img src="scent.jpg" alt="Where Art Meets Scent" />
+    <h3>Where Art Meets Scent</h3>
+    <div class="schedule-meta">
+      <p>WHERE: Room C, Arena Hall</p>
+      <p>WHEN: 18:00 - 27 Jan</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <a href="#">INFO</a>
+  <a href="#">CONTACT</a>
+  <a href="#">PRIVACY POLICY</a>
+  <a href="#">COOKIE POLICY</a>
+  <div class="copyright">COPYRIGHT © COPENHAGEN FASHION WEEK 2025</div>
+</div>
+
+
+  <div class="vertical-text">MOBILE &gt; <a class="active">SCHEDULE</a></div>
+
+<!-- Menu panel -->
+<div class="menu-container" id="menuPanel">
+  <div class="menu-close" id="menuClose">×</div>
+  <div class="menu-hero"></div>
+  <div class="menu-buttons">
+    <a href="/MOBILE-Events.html" class="menu-btn">Events</a>
+    <a href="/MOBILE-Schedule.html" class="menu-btn active">My Picks</a>
+  </div>
+</div>
+
+<script>
+const burger = document.getElementById('burger');
+const menu = document.getElementById('menuPanel');
+const closeBtn = document.getElementById('menuClose');
+
+// Open menu
+burger.addEventListener('click', () => {
+  menu.classList.add('active');
+});
+
+// Close menu
+closeBtn.addEventListener('click', () => {
+  menu.classList.remove('active');
+});
+
+// Optional: close when clicking outside menu
+menu.addEventListener('click', (e) => {
+  if(e.target === menu) menu.classList.remove('active');
+});
+
+
+function revealEvent(id) {
+  const card = document.getElementById(id);
+  if (card) {
+    card.classList.remove('hidden');
+  }
+}
+
+function checkIfEmpty() {
+  const cards = document.querySelectorAll('.schedule-card');
+  const anyVisible = Array.from(cards).some(c => !c.classList.contains('hidden'));
+  document.getElementById('no-events').classList.toggle('hidden', anyVisible);
+}
+
+// Load events from localStorage
+window.addEventListener('DOMContentLoaded', () => {
+  const savedEvents = JSON.parse(localStorage.getItem('mySchedule') || '[]');
+  savedEvents.forEach(id => revealEvent(id));
+  checkIfEmpty();
+});
+</script>
+
 </body>
 </html>
