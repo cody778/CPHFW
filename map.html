@@ -10,13 +10,75 @@
      <a href="index.html"><img src="/logo images/sub logo info.png" alt="sub logo"></a>
 </header>
 <body>
-<main>
-<img class="big-map" src="map/map big.png">
-</main>
+<div class="map-container">
+    <div class="map-wrapper">
+        <img class="big-map" src="map/map big.png">
+    <!-- <img src="/map/pin.svg" alt="Pin" class="pin-1" width="50" height="50"> -->
+     <div class="pins"></div>
+
+    </div>
+    
+</div>
+
 
 <footer class="sticky-footer">
     <button class="back-btn-main" onclick="history.back()"><img src="/logo images/back.svg" class="back-icon" width="80" height="80" alt="back icon"></button>
     <h1><a href="index.html">HOME > </a></h1>  <h1><a class="active">MAP</a></h1>
 </footer>
+<script>
+    const pins = [
+  {
+    id: 1,
+    top: "40%",
+    left: "60%",
+    title: "Main Stage",
+    desc: "Opening Ceremony & Keynote"
+  },
+  {
+    id: 2,
+    top: "65%",
+    left: "30%",
+    title: "Design Zone",
+    desc: "Exhibitions and pop-up studios"
+  },
+  {
+    id: 3,
+    top: "55%",
+    left: "75%",
+    title: "Food Lounge",
+    desc: "Refreshments & networking area"
+  }
+];
+
+const pinsContainer = document.querySelector('.pins');
+
+pins.forEach(pin => {
+  const pinEl = document.createElement('div');
+  pinEl.classList.add('pin');
+  pinEl.style.top = pin.top;
+  pinEl.style.left = pin.left;
+  pinEl.innerHTML = `
+    <img src="/map/pin.svg" alt="Pin" width="40" height="40">
+    <div class="popup">
+      <h4>${pin.title}</h4>
+      <p>${pin.desc}</p>
+    </div>
+  `;
+  pinsContainer.appendChild(pinEl);
+
+  // 클릭으로 팝업 열고 닫기
+  const popup = pinEl.querySelector('.popup');
+  pinEl.addEventListener('click', e => {
+    e.stopPropagation(); // 다른 핀 클릭 시 닫힘 방지
+    popup.classList.toggle('active');
+  });
+});
+
+// 지도 밖 클릭 시 모든 팝업 닫기
+document.addEventListener('click', () => {
+  document.querySelectorAll('.popup.active').forEach(p => p.classList.remove('active'));
+});
+
+</script>
 </body>
 </html>
