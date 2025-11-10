@@ -23,6 +23,7 @@ function renderEvents(day) {
     <div class="event-row">
       ${group.map(e => `
         <div class="event"
+        class="event ${e.type === 'Empty' ? 'empty' : ''}"
           data-title="${e.title}"
           data-type="${e.type}"
           data-date="${e.date}"
@@ -32,7 +33,7 @@ function renderEvents(day) {
           data-description="${e.description}"
           data-note="${e.note || ''}"
           data-image="${e.image}">
-        <img src="${e.thumbnail}" alt="${e.title}" class="event-thumbnail"/>
+        <img src="${e.thumbnail}" alt="${e.title}" class="event-thumbnail empty"/>
         </div>
       `).join('')}
     </div>
@@ -91,6 +92,10 @@ eventsContainer.addEventListener('click', e => {
   const card = e.target.closest('.event');
   if (!card) return;
 
+  //to remove pointer..
+  if (card.dataset.type && card.dataset.type.toLowerCase() === "empty") return;
+  if (card.classList.contains('empty')) return;
+
 
   // Extract card data
   const title = card.dataset.title;
@@ -120,3 +125,4 @@ closeModal.addEventListener('click', () => modal.classList.remove('active'));
 window.addEventListener('click', e => {
   if (e.target === modal) modal.classList.remove('active');
 });
+
