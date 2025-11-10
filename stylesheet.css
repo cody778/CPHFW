@@ -233,7 +233,8 @@ aside{
 }
 
 .qr-section .qr-box p {
-  font-size: 16px;
+  font-size: 18px;
+  text-align: center;
 }
 
 .map-small{
@@ -243,10 +244,10 @@ aside{
 }
 
 .qr-section{
-  width: 350px;
+  width: 400px;
 }
 .test-QR{
-  max-width: 50%;
+  max-width: 40%;
   height: auto;
 }
 
@@ -259,6 +260,17 @@ aside{
 
 .qr-flexbox{
   display: flex;
+  gap: 10px;
+  padding:-20px;
+}
+
+
+.qr-check-list li{
+  display: flex; 
+  flex-direction: row;
+  justify-content: flex-start;      
+  gap: 10px;   
+  margin-bottom: 20px;
 }
 
 .qr-content ul {
@@ -268,8 +280,16 @@ aside{
 }
 
 .qr-content ul li {
-  font-size: 18px;
+  font-size: 20px;
+
 }
+
+.check {
+  color: #8323FF;
+  font-size: 20px;
+  margin-right: 3px;
+}
+
 
 .map-box img,
 .qr-box img {
@@ -284,9 +304,10 @@ aside{
 }
 
 .qr-box li::before {
-  content: "• ";
   color: var(--accent-color);
 }
+
+
 
 .schedule {
   margin-right: 50px;
@@ -319,6 +340,9 @@ aside{
 }
 
 .tabs button.active {
+   font-family: 'KBH-Demibold', sans-serif;
+   font-size: 26px;
+  background: none;
   color: var(--accent-color);
   background-color: #EBE2F7;
   padding: 20px;
@@ -385,19 +409,11 @@ aside{
 .event[data-type="Empty"] *::after {
   pointer-events: none ;
   cursor: default !important;
-
-}
-
-
-.event.empty,
-.event.empty *,
-.event.empty *::before,
-.event.empty *::after {
-  pointer-events: none ;
-  cursor: default !important;
-  user-select: none !important;
-   -webkit-user-select: none !important;
+    user-select: none !important;
+  -webkit-user-select: none !important;
   -ms-user-select: none !important;
+  -webkit-user-drag: none !important;
+ 
 }
 
 .event {
@@ -408,21 +424,11 @@ aside{
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
   position: relative;
-  max-width: 25%;
-  font-size: 0.9rem; */
+  max-width: 25%; */
+  font-size: 0.9rem;
   cursor: pointer;
   transition: 0.15s ease;
 }
-
-
-/* .event::before {
-  content: attr(data-type);
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  font-size: 0.75rem;
-  color: var(--accent-color);
-} */
 
 .event-row {
   display: flex;
@@ -436,21 +442,41 @@ aside{
   flex: 1;
 }
 
+/* .event[data-type="Show"],
+.event[data-type="Talk"],
+.event[data-type="Interview"],
+.event[data-type="Film"],
+.event[data-type="Work shop"],
+.event[data-type="After party"]{
+  background: var(--background-color);
+  margin-right: 30px;
+  margin-bottom: 10px;
+  padding: 0.5rem;
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(39, 2, 67, 0.2);
+  position: relative;
+  max-width: 25%;
+} */
 
-/* ======================= MODAL STYLING ===== */
 .event[data-type="Show"] .event-thumbnail,
 .event[data-type="Talk"] .event-thumbnail,
 .event[data-type="Interview"] .event-thumbnail,
 .event[data-type="Film"] .event-thumbnail,
 .event[data-type="Work shop"] .event-thumbnail,
 .event[data-type="After party"] .event-thumbnail{
-  box-shadow: 0 4px 8px rgba(5, 4, 6, 0.2);
+  margin-top:5px;
+  border: 8px solid #FBFBFB;
+  border-radius: 2px;
+  box-shadow: 0 4px 8px rgba(37, 27, 47, 0.2);
 }
 .event-thumbnail{
   width: 250px;
   height: auto;
  
 }
+
+/* ======================= MODAL STYLING ===== */
+
 .event h4 {
     display: none;
 }
@@ -522,7 +548,7 @@ aside{
 
 .modal-info .type {
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 14px;
   color: var(--main-color);
 }
 
@@ -535,21 +561,25 @@ aside{
 .modal-info .datetime,
 .modal-info .venue,
 .modal-info .hosted{
+  font-size: 14px;
   letter-spacing: 1px;
-  margin: 0.6rem 0;
+  margin: 0.4rem 0;
    color: var(--main-color);
 }
 
 .modal-info .description{
   letter-spacing: 1px;
    white-space: pre-line;
-  margin: 2rem 0;
+  margin-top: 1.8rem;
+
   font-size: 18px;
    color: var(--main-color);
 }
 
 .modal-info .note {
+  font-size: 16px;
    letter-spacing: 1px;
+   white-space: pre-line;
    font-family: 'KBH-LightItalic', sans-serif;
    margin-top: 2rem;
    color: var(--main-color);

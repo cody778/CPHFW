@@ -115,11 +115,13 @@ export const schedules = {
       date: "27 Jan 2026",
       host: "Conan",
       venue: "Nattergalevej 980 3.th",
-      description: "Featuring 3 leading voices in fashion innovation. Dive into the future of textiles from cutting-edge materials to sustainable design practices.",
+      description: `Featuring 3 leading voices in fashion innovation. 
+  
+  Dive into the future of textiles from cutting-edge materials to sustainable design practices.`,scription: "Featuring 3 leading voices in fashion innovation. Dive into the future of textiles from cutting-edge materials to sustainable design practices.",
       image: "/Events/others/talk.png",
       thumbnail:"/Events/others/talk thumbnail.png",
-      note: "This talk show has limited seats. We recommend to take a seat 20 mins in advance. "
-    },
+note: `This talk show has limited seats. 
+  We recommend to take a seat 20 mins in advance. `    },
    { 
       time: "12:00",
       type: "Empty",      
@@ -147,10 +149,14 @@ export const schedules = {
       date: "27 Jan 2026",
       host: "Copenhagen Fashion Film Institute",
       venue: "Vega 3F",
-      description: "Classic Fashion Film Screening. Step into the timeless world of fashion through iconic films and discover legendary designers, unforgettable style moments, and cinematic inspiration.",
+      description: `Classic Fashion Film Screening.
+      
+      Step into the timeless world of fashion through iconic films and discover legendary designers, unforgettable style moments, and cinematic inspiration.
+      `,
       image: "/Events/others/film.png",
       thumbnail:"/Events/others/movie thumbnail.png",
-      note: "Seats could be sold out soon. Please visit the Vega website to book your ticket."
+      note: `Seats could be sold out soon. 
+Please visit the Vega website to book your ticket.`
     },
         { 
       time: "17:00",  
@@ -179,9 +185,13 @@ export const schedules = {
       date: "27 Jan 2026",
       host: "[title]",
       venue: "Tivoli restaurant",
-      description: "Dance to live DJ sets, enjoy signature cocktails, and mingle with designers and industry insiders. Experience exclusive fashion after party, interactive installations, and surprises throughout the night.",
+      description: `Dance to live DJ sets, enjoy signature cocktails, and mingle with designers and industry insiders. 
+      
+      Experience exclusive fashion after party, interactive installations, and surprises throughout the night.`,
       image: "/Events/others/after party.png",
-      thumbnail:"/Events/others/party thumbnail.png",          
+      thumbnail:"/Events/others/party thumbnail.png",
+      note:`Limited walk-in spots may be available. 
+            Please bring a valid ID for entry.`          
     },
     // 3rd column
      { 
@@ -206,9 +216,13 @@ export const schedules = {
       date: "27 Jan 2026",
       host: "Kim from Kolding design school",
       venue: "Illum Studio 2F",
-      description: "Bring your ideas to life on paper. You will learn how to draw fashion sketches and see how your sketches come to life as actual garments.",
+      description: `Bring your ideas to life on paper. 
+      
+      You will learn how to draw fashion sketches and see how your sketches come to life as actual garments.`,
       image: "/Events/others/work shop.png",
-      thumbnail:"/Events/others/work shop thumbnail.png",           
+      thumbnail:"/Events/others/work shop thumbnail.png",   
+      note:`Limited seats — first come, first served. 
+            We recommend booking early for same-day visits.`        
     },
     { 
       time: "14:00",
@@ -227,10 +241,13 @@ export const schedules = {
     date: "27 Jan 2026",
     host: "Teofil",
     venue: "Social Media Hub",
-    description: "Join us for an exclusive interview event featuring leading designers, and creative minds of Fashion Week. Hear firsthand insights on trends, inspirations, and the art of fashion in motion.",
+    description: `Join us for an exclusive interview event featuring leading designers, and creative minds of Fashion Week. 
+    
+    Hear firsthand insights on trends, inspirations, and the art of fashion in motion.`,
     image: "/Events/others/interview.png",
     thumbnail:"/Events/others/interview thumbnail.png",
-    note: "Seats are available for all attendees. You can also join via live streaming."
+    note: `Seats are available for all attendees. 
+    + Join us live on our social media channels.`
 },  
 { 
       time: "17:00",
@@ -367,11 +384,13 @@ export const schedules = {
   date: "28 Jan 2026",
   host: "Conan",
   venue: "Nattergalevej 980 3.th",
-  description: "Featuring 3 leading voices in fashion innovation. Dive into the future of textiles from cutting-edge materials to sustainable design practices.",
+  description: `Featuring 3 leading voices in fashion innovation. 
+  
+  Dive into the future of textiles from cutting-edge materials to sustainable design practices.`,
   image: "/Events/others/talk.png",
   thumbnail:"/Events/others/talk thumbnail.png",
-  note: "This talk show has limited seats. We recommend to take a seat 20 mins in advance. "
-},
+note: `This talk show has limited seats. 
+  We recommend to take a seat 20 mins in advance. `},
 {
   time: "11:00",
   type: "Empty",
@@ -399,10 +418,13 @@ export const schedules = {
   date: "28 Jan 2026",
   host: "Teofil",
   venue: "Social Media Hub",
-  description: "Join us for an exclusive interview event featuring leading designers, and creative minds of Fashion Week. Hear firsthand insights on trends, inspirations, and the art of fashion in motion.",
-  image: "/Events/others/interview.png",
-  thumbnail:"/Events/others/interview thumbnail.png",
-  note: "Seats are available for all attendees. You can also join via live streaming."
+    description: `Join us for an exclusive interview event featuring leading designers, and creative minds of Fashion Week. 
+    
+    Hear firsthand insights on trends, inspirations, and the art of fashion in motion.`,
+    image: "/Events/others/interview.png",
+    thumbnail:"/Events/others/interview thumbnail.png",
+    note: `Seats are available for all attendees. 
+    + Join us live on our social media channels.`
 },
 {
   time: "16:00",
@@ -436,9 +458,13 @@ export const schedules = {
   date: "28 Jan 2026",
       host: "[title]",
       venue: "Tivoli restaurant",
-      description: "Dance to live DJ sets, enjoy signature cocktails, and mingle with designers and industry insiders. Experience exclusive fashion after party, interactive installations, and surprises throughout the night.",
-  image: "/Events/others/after party.png",
-  thumbnail:"/Events/others/party thumbnail.png",
+     description: `Dance to live DJ sets, enjoy signature cocktails, and mingle with designers and industry insiders. 
+      
+      Experience exclusive fashion after party, interactive installations, and surprises throughout the night.`,
+      image: "/Events/others/after party.png",
+      thumbnail:"/Events/others/party thumbnail.png",
+      note:`Limited walk-in spots may be available. 
+            Please bring a valid ID for entry.`  
 },
 // 3rd column
 {
@@ -463,9 +489,13 @@ export const schedules = {
   date: "28 Jan 2026",
       host: "Kim from Kolding design school",
       venue: "Illum Studio 2F",
-      description: "Bring your ideas to life on paper. You will learn how to draw fashion sketches and see how your sketches come to life as actual garments.",
-  image: "/Events/others/work shop.png",
-  thumbnail:"/Events/others/work shop thumbnail.png",
+      description: `Bring your ideas to life on paper. 
+      
+      You will learn how to draw fashion sketches and see how your sketches come to life as actual garments.`,
+      image: "/Events/others/work shop.png",
+      thumbnail:"/Events/others/work shop thumbnail.png",   
+      note:`Limited seats — first come, first served. 
+            We recommend booking early for same-day visits.`   
 },
 {
   time: "14:00",
@@ -494,9 +524,14 @@ export const schedules = {
   date: "28 Jan 2026",
       host: "Copenhagen Fashion Film Institute",
       venue: "Vega 3F",
-      description: "Classic Fashion Film Screening. Step into the timeless world of fashion through iconic films and discover legendary designers, unforgettable style moments, and cinematic inspiration.",
-  image: "/Events/others/film.png",
-  thumbnail:"/Events/others/movie thumbnail.png",
+      description: `Classic Fashion Film Screening.
+      
+      Step into the timeless world of fashion through iconic films and discover legendary designers, unforgettable style moments, and cinematic inspiration.
+      `,
+      image: "/Events/others/film.png",
+      thumbnail:"/Events/others/movie thumbnail.png",
+      note: `Seats could be sold out soon. 
+Please visit the Vega website to book your ticket.`
 },
 {
   time: "19:00",
@@ -630,9 +665,14 @@ export const schedules = {
   date: "29 Jan 2026",
       host: "Copenhagen Fashion Film Institute",
       venue: "Vega 3F",
-      description: "Classic Fashion Film Screening. Step into the timeless world of fashion through iconic films and discover legendary designers, unforgettable style moments, and cinematic inspiration.",
-  image: "/Events/others/film.png",
-  thumbnail:"/Events/others/movie thumbnail.png",
+      description: `Classic Fashion Film Screening.
+      
+      Step into the timeless world of fashion through iconic films and discover legendary designers, unforgettable style moments, and cinematic inspiration.
+      `,
+      image: "/Events/others/film.png",
+      thumbnail:"/Events/others/movie thumbnail.png",
+      note: `Seats could be sold out soon. 
+Please visit the Vega website to book your ticket.`
 },
 {
   time: "13:00",
@@ -646,10 +686,13 @@ export const schedules = {
   date: "29 Jan 2026",
   host: "Teofil",
   venue: "Social Media Hub",
-  description: "Join us for an exclusive interview event featuring leading designers, and creative minds of Fashion Week. Hear firsthand insights on trends, inspirations, and the art of fashion in motion.",
-  image: "/Events/others/interview.png",
-  thumbnail:"/Events/others/interview thumbnail.png",
-  note: "Seats are available for all attendees. You can also join via live streaming."
+    description: `Join us for an exclusive interview event featuring leading designers, and creative minds of Fashion Week. 
+    
+    Hear firsthand insights on trends, inspirations, and the art of fashion in motion.`,
+    image: "/Events/others/interview.png",
+    thumbnail:"/Events/others/interview thumbnail.png",
+    note: `Seats are available for all attendees. 
+    + Join us live on our social media channels.`
 },
 {
   time: "15:00",
@@ -688,9 +731,13 @@ export const schedules = {
   date: "29 Jan 2026",
       host: "[title]",
       venue: "Tivoli restaurant",
-      description: "Dance to live DJ sets, enjoy signature cocktails, and mingle with designers and industry insiders. Experience exclusive fashion after party, interactive installations, and surprises throughout the night.",
-  image: "/Events/others/after party.png",
-  thumbnail:"/Events/others/party thumbnail.png",
+     description: `Dance to live DJ sets, enjoy signature cocktails, and mingle with designers and industry insiders. 
+      
+      Experience exclusive fashion after party, interactive installations, and surprises throughout the night.`,
+      image: "/Events/others/after party.png",
+      thumbnail:"/Events/others/party thumbnail.png",
+      note:`Limited walk-in spots may be available. 
+            Please bring a valid ID for entry.`  
 },
 //3rd column
 {
@@ -700,9 +747,13 @@ export const schedules = {
   date: "29 Jan 2026",
       host: "Kim from Kolding design school",
       venue: "Illum Studio 2F",
-      description: "Bring your ideas to life on paper. You will learn how to draw fashion sketches and see how your sketches come to life as actual garments.",
-  image: "/Events/others/work shop.png",
-  thumbnail:"/Events/others/work shop thumbnail.png",
+     description: `Bring your ideas to life on paper. 
+      
+      You will learn how to draw fashion sketches and see how your sketches come to life as actual garments.`,
+      image: "/Events/others/work shop.png",
+      thumbnail:"/Events/others/work shop thumbnail.png",   
+      note:`Limited seats — first come, first served. 
+            We recommend booking early for same-day visits.`   
 },
 {
   time: "11:00",
@@ -741,10 +792,12 @@ export const schedules = {
   date: "29 Jan 2026",
   host: "Conan",
   venue: "Nattergalevej 980 3.th",
-  description: "Featuring 3 leading voices in fashion innovation. Dive into the future of textiles from cutting-edge materials to sustainable design practices.",
-  image: "/Events/others/talk.png",
+  description: `Featuring 3 leading voices in fashion innovation. 
+  
+  Dive into the future of textiles from cutting-edge materials to sustainable design practices.`,  image: "/Events/others/talk.png",
   thumbnail:"/Events/others/talk thumbnail.png",
-  note: "This talk show has limited seats. We recommend to take a seat 20 mins in advance. "
+  note: `This talk show has limited seats. 
+  We recommend to take a seat 20 mins in advance. `
 },
 {
   time: "18:00",
@@ -873,11 +926,13 @@ export const schedules = {
   date: " Jan 2026",
   host: "Conan",
   venue: "Nattergalevej 980 3.th",
-  description: "Featuring 3 leading voices in fashion innovation. Dive into the future of textiles from cutting-edge materials to sustainable design practices.",
+  description: `Featuring 3 leading voices in fashion innovation. 
+  
+  Dive into the future of textiles from cutting-edge materials to sustainable design practices.`,
   image: "/Events/others/talk.png",
   thumbnail:"/Events/others/talk thumbnail.png",
-  note: "This talk show has limited seats. We recommend to take a seat 20 mins in advance. "
-},
+note: `This talk show has limited seats. 
+  We recommend to take a seat 20 mins in advance. `},
 
 {
   time: "11:00",
@@ -896,9 +951,13 @@ export const schedules = {
   date: "30 Jan 2026",
       host: "Kim from Kolding design school",
       venue: "Illum Studio 2F",
-      description: "Bring your ideas to life on paper. You will learn how to draw fashion sketches and see how your sketches come to life as actual garments.",
-  image: "/Events/others/work shop.png",
-  thumbnail:"/Events/others/work shop thumbnail.png",
+     description: `Bring your ideas to life on paper. 
+      
+      You will learn how to draw fashion sketches and see how your sketches come to life as actual garments.`,
+      image: "/Events/others/work shop.png",
+      thumbnail:"/Events/others/work shop thumbnail.png",   
+      note:`Limited seats — first come, first served. 
+            We recommend booking early for same-day visits.`   
 },
 {
   time: "14:00",
@@ -942,9 +1001,13 @@ export const schedules = {
   date: "30 Jan 2026",
       host: "[title]",
       venue: "Tivoli restaurant",
-      description: "Dance to live DJ sets, enjoy signature cocktails, and mingle with designers and industry insiders. Experience exclusive fashion after party, interactive installations, and surprises throughout the night.",
-  image: "/Events/others/after party.png",
-  thumbnail:"/Events/others/party thumbnail.png",
+     description: `Dance to live DJ sets, enjoy signature cocktails, and mingle with designers and industry insiders. 
+      
+      Experience exclusive fashion after party, interactive installations, and surprises throughout the night.`,
+      image: "/Events/others/after party.png",
+      thumbnail:"/Events/others/party thumbnail.png",
+      note:`Limited walk-in spots may be available. 
+            Please bring a valid ID for entry.`  
 },
 // 3rd column
 {
@@ -979,10 +1042,13 @@ export const schedules = {
   date: "30 Jan 2026",
   host: "Teofil",
   venue: "Social Media Hub",
-  description: "Join us for an exclusive interview event featuring leading designers, and creative minds of Fashion Week. Hear firsthand insights on trends, inspirations, and the art of fashion in motion.",
-  image: "/Events/others/interview.png",
-  thumbnail:"/Events/others/interview thumbnail.png",
-  note: "Seats are available for all attendees. You can also join via live streaming."
+    description: `Join us for an exclusive interview event featuring leading designers, and creative minds of Fashion Week. 
+    
+    Hear firsthand insights on trends, inspirations, and the art of fashion in motion.`,
+    image: "/Events/others/interview.png",
+    thumbnail:"/Events/others/interview thumbnail.png",
+    note: `Seats are available for all attendees. 
+    + Join us live on our social media channels.`
 },
 {
   time: "16:00",
@@ -1006,9 +1072,14 @@ export const schedules = {
   date: "30 Jan 2026",
       host: "Copenhagen Fashion Film Institute",
       venue: "Vega 3F",
-      description: "Classic Fashion Film Screening. Step into the timeless world of fashion through iconic films and discover legendary designers, unforgettable style moments, and cinematic inspiration.",
-  image: "/Events/others/film.png",
-  thumbnail:"/Events/others/movie thumbnail.png",
+      description: `Classic Fashion Film Screening.
+      
+      Step into the timeless world of fashion through iconic films and discover legendary designers, unforgettable style moments, and cinematic inspiration.
+      `,
+      image: "/Events/others/film.png",
+      thumbnail:"/Events/others/movie thumbnail.png",
+      note: `Seats could be sold out soon. 
+Please visit the Vega website to book your ticket.`
 },
 {
   time: "20:00",
