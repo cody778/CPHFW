@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Events</title>
+  <link rel="stylesheet" href="stylesheet.css" />
+
+  <style>
+    /* Layout overrides for mobile events page */
+    /* HEADER */
+    body {
+      margin: 0;
+      overflow: auto !important;
+    }    
+  </style>
+</head>
+
+<body>
+  <header class="events-header">
+    <button class="back-btn"onclick="history.back()">&gt; back</button>
+    <div class="menu-icon" id="burger">
+      <div></div><div></div><div></div>
+    </div>
+  </header>
+
+  <h1 class="page-title"><span>EVENTS</span> LIST</h1>
+
+  <div class="events-container">
+    <section class="event-day">
+      <div class="event-date">27 <span>jan</span></div>
+    <a href="/Events [MOBILE]/events-uniqlo.html">
+      <div class="event-item">
+        <img src="uniqlo.jpg" alt="Uniqlo Event" />
+        <div class="event-info">
+          <h3>Uniqlo's soufflé house</h3>
+          <p><strong class="active">WHERE:</strong> Room B, Arena Hall</p>
+          <p><strong class="active">WHEN:</strong> 09:00 - 27 Jan</p>
+        </div>
+      </div>
+    </a>
+
+      <div class="event-item">
+        <img src="tarot.jpg" alt="Tarot Event" />
+        <div class="event-info">
+          <h3>Tarot cards and trends</h3>
+          <p><strong class="active">WHERE:</strong> Room C, Arena Hall</p>
+          <p><strong class="active">WHEN:</strong> 10:00 - 27 Jan</p>
+        </div>
+      </div>
+
+      <!-- Hidden extra events -->
+      <div class="extra-events">
+        <div class="event-item">
+          <img src="fashion1.jpg" alt="Fashion Event" />
+          <div class="event-info">
+            <h3>Fashion sustainability talk</h3>
+            <p><strong class="active">WHERE:</strong> Hall A, Main Wing</p>
+            <p><strong class="active">WHEN:</strong> 11:00 - 27 Jan</p>
+          </div>
+        </div>
+
+        <div class="event-item">
+          <img src="artshow.jpg" alt="Art Show" />
+          <div class="event-info">
+            <h3>Art Show: Modern Lines</h3>
+            <p><strong class="active">WHERE:</strong> Gallery Hall</p>
+            <p><strong class="active">WHEN:</strong> 12:00 - 27 Jan</p>
+          </div>
+        </div>
+
+        <div class="event-item">
+          <img src="music.jpg" alt="Music Event" />
+          <div class="event-info">
+            <h3>Live Jazz Performance</h3>
+            <p><strong class="active">WHERE:</strong> Lounge Room</p>
+            <p><strong class="active">WHEN:</strong> 14:00 - 27 Jan</p>
+          </div>
+        </div>
+
+        <div class="event-item">
+          <img src="cocktail.jpg" alt="Cocktail Event" />
+          <div class="event-info">
+            <h3>Cocktail Networking</h3>
+            <p><strong class="active">WHERE:</strong> VIP Terrace</p>
+            <p><strong class="active">WHEN:</strong> 16:00 - 27 Jan</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="see-more" onclick="toggleEvents(this)">SEE MORE</div>
+    </section>
+
+    
+  </div>
+
+  <div class="footer">
+    <a href="#">INFO &gt; CONTACT</a>
+    <a href="#">PRIVACY POLICY</a>
+    <a href="#">COOKIE POLICY</a>
+    <div class="copyright">COPYRIGHT © COPENHAGEN FASHION WEEK 2025</div>
+  </div>
+
+  <div class="vertical-text">MOBILE &gt; <a class="active">EVENTS</a></div>
+
+<!-- Menu panel -->
+<div class="menu-container" id="menuPanel">
+  <div class="menu-close" id="menuClose">×</div>
+  <div class="menu-hero"></div>
+  <div class="menu-buttons">
+    <a href="/MOBILE-Events.html" class="menu-btn active">Events</a>
+    <a href="/MOBILE-Schedule.html" class="menu-btn">My Picks</a>
+  </div>
+</div>
+
+<script>
+const burger = document.getElementById('burger');
+const menu = document.getElementById('menuPanel');
+const closeBtn = document.getElementById('menuClose');
+
+// Open menu
+burger.addEventListener('click', () => {
+  menu.classList.add('active');
+});
+
+// Close menu
+closeBtn.addEventListener('click', () => {
+  menu.classList.remove('active');
+});
+
+// Optional: close when clicking outside menu
+menu.addEventListener('click', (e) => {
+  if(e.target === menu) menu.classList.remove('active');
+});
+
+    function toggleEvents(button) {
+      const section = button.closest('.event-day');
+      const extra = section.querySelector('.extra-events');
+      const isVisible = extra.style.display === 'block';
+
+      extra.style.display = isVisible ? 'none' : 'block';
+      button.textContent = isVisible ? 'SEE MORE' : 'SEE LESS';
+    }
+  </script>
+</body>
+</html>
