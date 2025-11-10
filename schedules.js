@@ -75,7 +75,7 @@ export const schedules = {
     { 
       time: "18:00",
       title: "Nordic Trauma",         
-      type: "show",      
+      type: "Show",      
       date: "27 Jan 2026",
       host: "[title] designer",
       venue: "Copenhagen Contemporary",
@@ -263,13 +263,13 @@ export const schedules = {
   "28 January": [
     {
   time: "10:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "11:00",
   title: "Baum und Pferdgarte",
-  type: "show",
+  type: "Show",
   date: "28 Jan 2026",
   host: "[title] designer",
   venue: "Copenhagen Contemporary",
@@ -282,7 +282,7 @@ export const schedules = {
 },
 {
   time: "12:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
@@ -301,17 +301,17 @@ export const schedules = {
 },
 {
   time: "14:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "15:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "16:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
@@ -330,7 +330,7 @@ export const schedules = {
 },
 {
   time: "18:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 
@@ -350,12 +350,12 @@ export const schedules = {
 },
 {
   time: "20:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "21:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 // 2nd column
@@ -374,22 +374,22 @@ export const schedules = {
 },
 {
   time: "11:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "12:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "13:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "14:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
@@ -406,27 +406,27 @@ export const schedules = {
 },
 {
   time: "16:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "17:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "18:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "19:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "20:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
@@ -443,17 +443,17 @@ export const schedules = {
 // 3rd column
 {
   time: "10:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "11:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "12:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
@@ -469,22 +469,22 @@ export const schedules = {
 },
 {
   time: "14:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "15:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "16:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "17:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
@@ -500,24 +500,24 @@ export const schedules = {
 },
 {
   time: "19:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "20:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "21:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
   ],
   "29 January": [
     {
   time: "10:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
@@ -536,7 +536,7 @@ export const schedules = {
 },
 {
   time: "12:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
@@ -555,17 +555,17 @@ export const schedules = {
 },
 {
   time: "14:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "15:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "16:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
@@ -584,7 +584,7 @@ export const schedules = {
 },
 {
   time: "18:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
@@ -603,24 +603,24 @@ export const schedules = {
 },
 {
   time: "20:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "21:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 }
 ,
 // 2nd column
 {
   time: "10:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "11:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
@@ -636,7 +636,7 @@ export const schedules = {
 },
 {
   time: "13:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
@@ -653,32 +653,32 @@ export const schedules = {
 },
 {
   time: "15:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "16:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "17:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "18:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "19:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "20:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
@@ -706,32 +706,32 @@ export const schedules = {
 },
 {
   time: "11:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "12:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "13:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "14:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "15:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "16:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
@@ -748,22 +748,22 @@ export const schedules = {
 },
 {
   time: "18:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "19:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "20:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "21:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 
@@ -771,13 +771,13 @@ export const schedules = {
   "30 January":[
     {
   time: "10:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "11:00",
   title: "Iamisigo",
-  type: "show",
+  type: "Show",
   date: "30 Jan 2026",
   host: "[title] designer",
   venue: "Copenhagen Contemporary",
@@ -790,13 +790,13 @@ export const schedules = {
 },
 {
   time: "12:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "13:00",
   title: "Opera Sport",
-  type: "show",
+  type: "Show",
   date: "30 Jan 2026",
   host: "[title] designer",
   venue: "Copenhagen Contemporary",
@@ -809,18 +809,18 @@ export const schedules = {
 },
 {
   time: "14:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "15:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "16:00",
   title: "Aiayu",
-  type: "show",
+  type: "Show",
   date: "30 Jan 2026",
   host: "[title] designer",
   venue: "Copenhagen Contemporary",
@@ -833,13 +833,13 @@ export const schedules = {
 },
 {
   time: "17:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "18:00",
   title: "Nicklas Skovgaard",
-  type: "show",
+  type: "Show",
   date: "30 Jan 2026",
   host: "[title] designer",
   venue: "Copenhagen Contemporary",
@@ -852,17 +852,17 @@ export const schedules = {
 },
 {
   time: "19:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "20:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "21:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 // 2nd column/
@@ -881,12 +881,12 @@ export const schedules = {
 
 {
   time: "11:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "12:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
@@ -902,37 +902,37 @@ export const schedules = {
 },
 {
   time: "14:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "15:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "16:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "17:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "18:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "19:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "20:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
@@ -949,27 +949,27 @@ export const schedules = {
 // 3rd column
 {
   time: "10:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "11:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "12:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "13:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "14:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
@@ -986,17 +986,17 @@ export const schedules = {
 },
 {
   time: "16:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "17:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "18:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
@@ -1012,12 +1012,12 @@ export const schedules = {
 },
 {
   time: "20:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
 {
   time: "21:00",
-  type: "empty",
+  type: "Empty",
   thumbnail:"/Events/others/default-placeholder.png",
 },
   ]

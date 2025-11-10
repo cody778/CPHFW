@@ -182,6 +182,7 @@ header .powered span {
 .logo-box{
   display:flex;
   align-content: flex-start;
+  gap: 200px;
 }
 
 .info-zalando{
@@ -367,11 +368,36 @@ aside{
 
 .time-label {
   text-align: right;
-  font-weight: 600;
-  font-family: KBH, sans-serif;
+  font-family: 'KBH-Medium', sans-serif;
+  font-size: 20px;
   color: #65478C;
   padding-top: 3rem;
-  padding-right: 15px;
+  padding-right: 20px;
+  margin-left:10px;
+
+}
+
+/* to make empty type card not clickable */
+
+.event[data-type="Empty"],
+.event[data-type="Empty"] *,
+.event[data-type="Empty"] *::before,
+.event[data-type="Empty"] *::after {
+  pointer-events: none ;
+  cursor: default !important;
+
+}
+
+
+.event.empty,
+.event.empty *,
+.event.empty *::before,
+.event.empty *::after {
+  pointer-events: none ;
+  cursor: default !important;
+  user-select: none !important;
+   -webkit-user-select: none !important;
+  -ms-user-select: none !important;
 }
 
 .event {
@@ -410,11 +436,20 @@ aside{
   flex: 1;
 }
 
-/* ======================= MODAL STYLING ===== */
 
+/* ======================= MODAL STYLING ===== */
+.event[data-type="Show"] .event-thumbnail,
+.event[data-type="Talk"] .event-thumbnail,
+.event[data-type="Interview"] .event-thumbnail,
+.event[data-type="Film"] .event-thumbnail,
+.event[data-type="Work shop"] .event-thumbnail,
+.event[data-type="After party"] .event-thumbnail{
+  box-shadow: 0 4px 8px rgba(5, 4, 6, 0.2);
+}
 .event-thumbnail{
   width: 250px;
   height: auto;
+ 
 }
 .event h4 {
     display: none;
@@ -444,25 +479,6 @@ aside{
   position: relative;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   animation: popIn 0.25s ease-out;
-}
-/* to make empty type card not clickable */
-
-.event[data-type="Empty"],
-.event[data-type="Empty"] *,
-.event[data-type="Empty"] *::before,
-.event[data-type="Empty"] *::after {
-  pointer-events: none ;
-  cursor: default !important;
-
-}
-
-
-.event.empty,
-.event.empty *,
-.event.empty *::before,
-.event.empty *::after {
-  pointer-events: none ;
-  cursor: default !important;
 }
 
 
