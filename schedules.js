@@ -211,8 +211,8 @@ Please visit the Vega website to book your ticket.`
     },
      { 
       time: "13:00",
-      title: "Work Shop Title",         
-      type: "Work shop",      
+      title: "Workshop Title",         
+      type: "Workshop",      
       date: "27 Jan 2026",
       host: "Kim from Kolding design school",
       venue: "Illum Studio 2F",
@@ -484,8 +484,8 @@ note: `This talk show has limited seats.
 },
 {
   time: "13:00",
-  title: "Work Shop Title",
-  type: "Work shop",
+  title: "Workshop Title",
+  type: "Workshop",
   date: "28 Jan 2026",
       host: "Kim from Kolding design school",
       venue: "Illum Studio 2F",
@@ -742,8 +742,8 @@ Please visit the Vega website to book your ticket.`
 //3rd column
 {
   time: "10:00",
-  title: "Work shop Title",
-  type: "Work shop",
+  title: "Workshop Title",
+  type: "Workshop",
   date: "29 Jan 2026",
       host: "Kim from Kolding design school",
       venue: "Illum Studio 2F",
@@ -946,8 +946,8 @@ note: `This talk show has limited seats.
 },
 {
   time: "13:00",
-  title: "Work Shop Title",
-  type: "Work shop",
+  title: "Workshop Title",
+  type: "Workshop",
   date: "30 Jan 2026",
       host: "Kim from Kolding design school",
       venue: "Illum Studio 2F",

@@ -218,10 +218,6 @@ header .powered span {
   margin-bottom: -50px;
 }
 
-.map .event-head{
-  margin-top: 120px;
-}
-
 .event-head{
   font-family: 'KBH-Medium', sans-serif;
   font-size: 21px;
@@ -239,8 +235,8 @@ aside{
 
 .map-small{
   border:1px solid var(--accent-color);
-  width: 350px;
-  height: auto;
+  width: 400px;
+  height: 320px;
 }
 
 .qr-section{
@@ -462,7 +458,7 @@ aside{
 .event[data-type="Talk"] .event-thumbnail,
 .event[data-type="Interview"] .event-thumbnail,
 .event[data-type="Film"] .event-thumbnail,
-.event[data-type="Work shop"] .event-thumbnail,
+.event[data-type="Workshop"] .event-thumbnail,
 .event[data-type="After party"] .event-thumbnail{
   margin-top:5px;
   border: 8px solid #FBFBFB;
@@ -612,6 +608,15 @@ aside{
   cursor: pointer;
 } */
 
+.map .event-head{
+  margin-top: 120px;
+}
+
+.map-popup-img{
+ width: 80px;
+ height: 80px;
+}
+
 .map-container {
   display: flex;
    justify-content: center;  /* 가로 중앙 정렬 */
@@ -659,19 +664,31 @@ aside{
   transform: scale(1.1);
 }
 
+.pin-title {
+  margin-top: 6px;
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--main-color);
+  -webkit-text-stroke: 1px rgba(0,0,0,0.2);
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  white-space: nowrap;
+}
+
+
 .popup {
   position: absolute;
   top: -10px;
   left: 50%;
   transform: translate(-50%, -120%);
   background: white;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   padding: 8px 12px;
-  width: 160px;
-  font-size: 14px;
-  text-align: center;
-  display: none;
+  width: 200px;
+  font-size: 16px;
+  color:#1C1C1C;
+  display: flex;
+  gap: 10px;
 }
 
 .popup.active {

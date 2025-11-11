@@ -26,27 +26,47 @@
     <h1><a href="index.html">HOME > </a></h1>  <h1><a class="active">MAP</a></h1>
 </footer>
 <script>
+
     const pins = [
   {
     id: 1,
-    top: "40%",
+    top: "35%",
     left: "60%",
-    title: "Main Stage",
-    desc: "Opening Ceremony & Keynote"
+    title: "Main Runway Hall",
+    desc: "Nørregade 14, 1165 København K",
+    img: "/map/runway.png"
   },
   {
     id: 2,
     top: "65%",
     left: "30%",
-    title: "Design Zone",
-    desc: "Exhibitions and pop-up studios"
+    title: "TikTok Creator Hub",
+    desc: "Vesterbrogade 72, 1620 København",
+    img: "/map/tiktok.png"
   },
   {
     id: 3,
     top: "55%",
+    left: "80%",
+    title: "Exhibition",
+    desc: "Gothersgade 105, 1123 København K",
+    img: "/map/exhibition.png"
+  },
+   {
+    id: 4,
+    top: "25%",
     left: "75%",
     title: "Food Lounge",
-    desc: "Refreshments & networking area"
+    desc: "Læderstræde 18, 1201 København K,",
+    img: "/map/food.png"
+  },
+  {
+    id: 5,
+    top: "35%",
+    left: "20%",
+    title: "CIFF",
+    desc: "Studiestræde 45, 1554 København",
+    img: "/map/ciff.png"
   }
 ];
 
@@ -59,22 +79,21 @@ pins.forEach(pin => {
   pinEl.style.left = pin.left;
   pinEl.innerHTML = `
     <img src="/map/pin.svg" alt="Pin" width="40" height="40">
+    <div class="pin-title">${pin.title}</div>
     <div class="popup">
-      <h4>${pin.title}</h4>
+        <img class="map-popup-img"src="${pin.img}">
       <p>${pin.desc}</p>
     </div>
   `;
   pinsContainer.appendChild(pinEl);
 
-  // 클릭으로 팝업 열고 닫기
   const popup = pinEl.querySelector('.popup');
   pinEl.addEventListener('click', e => {
-    e.stopPropagation(); // 다른 핀 클릭 시 닫힘 방지
+    e.stopPropagation(); 
     popup.classList.toggle('active');
   });
 });
 
-// 지도 밖 클릭 시 모든 팝업 닫기
 document.addEventListener('click', () => {
   document.querySelectorAll('.popup.active').forEach(p => p.classList.remove('active'));
 });
