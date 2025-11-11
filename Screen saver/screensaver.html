@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Screensaver</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: black;
+    }
+  </style>
+</head>
+
+<body>
+ 
+  <script>
+    let idleTimer = 0;
+    let idleDelay = 60; // unactive
+    let isScreensaverOn = false;
+    let introPlayed = false;
+
+    const video = document.createElement('video');
+    video.src = "screensaver (1).mp4"; 
+    video.style.cssText = `
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1.2s ease;
+      pointer-events: none;
+      z-index: 9999;
+    `;
+    video.muted = true;
+    video.autoplay = false;
+    document.body.appendChild(video);
+
+    window.addEventListener('load', () => {
+      playScreensaver(true);
+    });
+
+    // Brojač neaktivnosti
+    setInterval(() => {
+      idleTimer++;
+      if (idleTimer >= idleDelay && !isScreensaverOn && introPlayed) {
+        playScreensaver(false);
+      }
+    }, 1000);
+
+    // Funkcija za pokretanje videa
+    function playScreensaver(isIntro) {
+      isScreensaverOn = true;
+      video.currentTime = 0;
+      video.style.display = 'block';
+      setTimeout(() => video.style.opacity = 1, 50);
+      video.play();
+
+      video.onended = () => {
+        if (isIntro) {
+          introPlayed = true;
+          hideScreensaver();
+        } else {
+          setTimeout(() => {
+            if (isScreensaverOn) {
+              video.currentTime = 0;
+              video.play();
+            }
+          }, 9000); // pauza 9 sekunde 
+        }
+      };
+    }
+
+    // Reset timera
+    ['mousemove', 'mousedown', 'keypress', 'touchstart'].forEach(event => {
+      document.addEventListener(event, () => {
+        idleTimer = 0;
+        if (isScreensaverOn) hideScreensaver();
+      });
+    });
+
+    // Funkcija za skrivanje screensavera
+    function hideScreensaver() {
+      isScreensaverOn = false;
+      video.style.opacity = 0;
+      setTimeout(() => {
+        video.pause();
+        video.style.display = 'none';
+      }, 1200);
+    }
+  </script>
+</body>
+</html>

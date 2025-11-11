@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preloved finds for fashion lovers</title>
+  <link rel="stylesheet" href="/stylesheet.css" />
+
+  <style>
+    /* Title box under header */
+    body {
+      margin: 0;
+      overflow: auto !important;
+      padding-right: 3rem;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="events-header">
+    <button class="back-btn"onclick="history.back()">&gt; back</button>
+    <div class="menu-icon" id="burger">
+      <div></div><div></div><div></div>
+    </div>
+  </header>
+
+  <!-- TITLE BOX -->
+  <div class="event-title-box">
+    <h1>Preloved finds for fashion lovers</h1>
+  </div>
+
+  <!-- SCHEDULE BUTTON -->
+  <a href="/MOBILE-Schedule.html" class="primary-btn">VIEW YOUR PICKS</a>
+
+  <!-- MAIN EVENT CONTENT -->
+  <section class="event-detail-card">
+    <h2>Preloved finds for fashion lovers</h2>
+
+    <img src="/MOBILE Images/MOBILE-Preloved Event.png" alt="Preloved clothes" />
+
+    <p>Hunting for designer treasures with a conscience?Chanel, Dior, Prada, Saint Laurent—expect big names and even bigger bargains.</p>
+
+    <div class="event-meta">
+      <p><strong class="active">BRAND:</strong>Loop Generation</p>
+      <p><strong class="active">BRAND:</strong> ILLUM</p>
+      <p><strong class="active">WHERE:</strong> ROOM G, ARENA HALL</p>
+      <p><strong class="active">WHEN:</strong> 13:00 - 27 jan</p>
+    </div>
+
+    <a href="/MOBILE-Schedule.html" class="primary-btn" onclick="addToSchedule('event-preloved')">ADD TO YOUR PICKS</a>
+  </section>
+
+    <!-- MORE LINKS -->
+    <div class="more-links">
+    <a href="#" class="more-toggle" data-target="event-text">&gt; MORE ON <span>EVENT</span></a>
+    <div id="event-text" class="more-content" style="display:none;">
+        The second floor of Illum is transformed into a curated market of high-end preloved fashion. Sustainable shopping just got seriously chic.
+    </div>
+
+    <a href="#" class="more-toggle" data-target="uniqlo-text">&gt; MORE ON <span>ILLUM</span></a>
+    <div id="uniqlo-text" class="more-content" style="display:none;">
+         Denmark’s leading luxury department store since 1891. It curates high-end fashion, beauty, home, and lifestyle brands under one roof, blending timeless Scandinavian elegance with global luxury. Beyond shopping, it positions itself as an experience hub, offering personal styling that cater to modern urban sophistication.
+    </div>
+    </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <a href="#">INFO &gt; CONTACT</a>
+    <a href="#">PRIVACY POLICY</a>
+    <a href="#">COOKIE POLICY</a>
+    <div class="copyright">COPYRIGHT © COPENHAGEN FASHION WEEK 2025</div>
+  </div>
+
+  <div class="vertical-text">MOBILE &gt; EVENTS &gt; <a class="active">PRELOVED FINDS</a></div>
+
+<!-- Menu panel -->
+<div class="menu-container" id="menuPanel">
+  <div class="menu-close" id="menuClose">x</div>
+  <div class="menu-hero"></div>
+  <div class="menu-buttons">
+    <a href="/MOBILE-Events.html" class="menu-btn active">Events</a>
+    <a href="/MOBILE-Schedule.html" class="menu-btn">My Picks</a>
+  </div>
+</div>
+
+<script>
+const burger = document.getElementById('burger');
+const menu = document.getElementById('menuPanel');
+const closeBtn = document.getElementById('menuClose');
+
+// Open menu
+burger.addEventListener('click', () => {
+  menu.classList.add('active');
+});
+
+// Close menu
+closeBtn.addEventListener('click', () => {
+  menu.classList.remove('active');
+});
+
+// Optional: close when clicking outside menu
+menu.addEventListener('click', (e) => {
+  if(e.target === menu) menu.classList.remove('active');
+});
+
+  const toggles = document.querySelectorAll('.more-toggle');
+
+  toggles.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = btn.dataset.target;
+      const target = document.getElementById(targetId);
+      if (target.style.display === 'none') {
+        target.style.display = 'block';
+      } else {
+        target.style.display = 'none';
+      }
+    });
+  });
+
+function addToSchedule(id) {
+  // save the event ID to localStorage
+  let savedEvents = JSON.parse(localStorage.getItem('mySchedule') || '[]');
+  if (!savedEvents.includes(id)) {
+    savedEvents.push(id);
+    localStorage.setItem('mySchedule', JSON.stringify(savedEvents));
+  }
+}
+</script>
+</body>
+</html>

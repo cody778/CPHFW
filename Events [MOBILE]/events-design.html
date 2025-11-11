@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design meets sustainability</title>
+  <link rel="stylesheet" href="/stylesheet.css" />
+
+  <style>
+    /* Title box under header */
+    body {
+      margin: 0;
+      overflow: auto !important;
+      padding-right: 3rem;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="events-header">
+    <button class="back-btn"onclick="history.back()">&gt; back</button>
+    <div class="menu-icon" id="burger">
+      <div></div><div></div><div></div>
+    </div>
+  </header>
+
+  <!-- TITLE BOX -->
+  <div class="event-title-box">
+    <h1>Design meets sustainability</h1>
+  </div>
+
+  <!-- SCHEDULE BUTTON -->
+  <a href="/MOBILE-Schedule.html" class="primary-btn">VIEW YOUR PICKS</a>
+
+  <!-- MAIN EVENT CONTENT -->
+  <section class="event-detail-card">
+    <h2>Design meets sustainability</h2>
+
+    <img src="/MOBILE Images/MOBILE-Design Event.png" alt="Preloved clothes" />
+
+    <p>At the , Icelandic brand orth is bringing their signature “A Craft of Longevity” concept to life.</p>
+
+    <div class="event-meta">
+      <p><strong class="active">DESIGNER:</strong>Siciliansk IS</p>
+      <p><strong class="active">BRAND:</strong> 66°NORTH</p>
+      <p><strong class="active">WHERE:</strong> RNILS STÆRK GALLERY</p>
+      <p><strong class="active">WHEN:</strong> 13:00 - 27 jan</p>
+    </div>
+
+    <a href="/MOBILE-Schedule.html" class="primary-btn" onclick="addToSchedule('event-design')">ADD TO YOUR PICKS</a>
+  </section>
+
+    <!-- MORE LINKS -->
+    <div class="more-links">
+    <a href="#" class="more-toggle" data-target="event-text">&gt; MORE ON <span>EVENT</span></a>
+    <div id="event-text" class="more-content" style="display:none;">
+        Drop in to see how real outerwear is made: live repairs, behind-the-scenes demos, weather testing, and a chance to chat with industry experts about why clothes should last a lifetime. If that's not enough, there's 66°North x Siciliansk IS ice cream on offer, and an inspiring panel talk about fashion's future.
+    </div>
+
+    <a href="#" class="more-toggle" data-target="uniqlo-text">&gt; MORE ON <span>66°NORTH</span></a>
+    <div id="uniqlo-text" class="more-content" style="display:none;">
+         An Icelandic outerwear brand founded in 1926 with roots in making life-saving gear for fishermen and search-and-rescue teams. 
+Its offerings blend rugged functionality and everyday urban wear, built on a circular sustainability ethos and a claim to durability lots of brands only talk about.
+    </div>
+    </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <a href="#">INFO &gt; CONTACT</a>
+    <a href="#">PRIVACY POLICY</a>
+    <a href="#">COOKIE POLICY</a>
+    <div class="copyright">COPYRIGHT © COPENHAGEN FASHION WEEK 2025</div>
+  </div>
+
+  <div class="vertical-text">MOBILE &gt; EVENTS &gt; <a class="active">DESIGN MEETS SUSTAINABILITY</a></div>
+
+<!-- Menu panel -->
+<div class="menu-container" id="menuPanel">
+  <div class="menu-close" id="menuClose">x</div>
+  <div class="menu-hero"></div>
+  <div class="menu-buttons">
+    <a href="/MOBILE-Events.html" class="menu-btn active">Events</a>
+    <a href="/MOBILE-Schedule.html" class="menu-btn">My Picks</a>
+  </div>
+</div>
+
+<script>
+const burger = document.getElementById('burger');
+const menu = document.getElementById('menuPanel');
+const closeBtn = document.getElementById('menuClose');
+
+// Open menu
+burger.addEventListener('click', () => {
+  menu.classList.add('active');
+});
+
+// Close menu
+closeBtn.addEventListener('click', () => {
+  menu.classList.remove('active');
+});
+
+// Optional: close when clicking outside menu
+menu.addEventListener('click', (e) => {
+  if(e.target === menu) menu.classList.remove('active');
+});
+
+  const toggles = document.querySelectorAll('.more-toggle');
+
+  toggles.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = btn.dataset.target;
+      const target = document.getElementById(targetId);
+      if (target.style.display === 'none') {
+        target.style.display = 'block';
+      } else {
+        target.style.display = 'none';
+      }
+    });
+  });
+
+function addToSchedule(id) {
+  // save the event ID to localStorage
+  let savedEvents = JSON.parse(localStorage.getItem('mySchedule') || '[]');
+  if (!savedEvents.includes(id)) {
+    savedEvents.push(id);
+    localStorage.setItem('mySchedule', JSON.stringify(savedEvents));
+  }
+}
+</script>
+</body>
+</html>

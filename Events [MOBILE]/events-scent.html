@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Where Art Meets Scent</title>
+  <link rel="stylesheet" href="/stylesheet.css" />
+
+  <style>
+    /* Title box under header */
+    body {
+      margin: 0;
+      overflow: auto !important;
+      padding-right: 3rem;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="events-header">
+    <button class="back-btn"onclick="history.back()">&gt; back</button>
+    <div class="menu-icon" id="burger">
+      <div></div><div></div><div></div>
+    </div>
+  </header>
+
+  <!-- TITLE BOX -->
+  <div class="event-title-box">
+    <h1>Where Art Meets Scent</h1>
+  </div>
+
+  <!-- SCHEDULE BUTTON -->
+  <a href="/MOBILE-Schedule.html" class="primary-btn">VIEW YOUR PICKS</a>
+
+  <!-- MAIN EVENT CONTENT -->
+  <section class="event-detail-card">
+    <h2>Where Art Meets Scent</h2>
+
+    <img src="/MOBILE Images/MOBILE-Scent Event.png" alt="Manuel perfumes" />
+
+    <p>Haitian artist Manuel Mathieu is launching his first collection of perfumes here.</p>
+
+    <div class="event-meta">
+      <p><strong class="active">DESIGNER:</strong>Juliette Karagueuzoglou</p>
+      <p><strong class="active">BRAND:</strong> Manuel Mathieu</p>
+      <p><strong class="active">WHERE:</strong> Henrik Vibskov Boutique</p>
+      <p><strong class="active">WHEN:</strong> 16:00 - 27 jan</p>
+    </div>
+
+    <a href="/MOBILE-Schedule.html" class="primary-btn" onclick="addToSchedule('event-scent')">ADD TO YOUR PICKS</a>
+  </section>
+
+    <!-- MORE LINKS -->
+    <div class="more-links">
+    <a href="#" class="more-toggle" data-target="event-text">&gt; MORE ON <span>EVENT</span></a>
+    <div id="event-text" class="more-content" style="display:none;">
+         each bottle a piece of art in itself, crafted with master perfumer Juliette Karagueuzoglou. Expect immersive scents, hand-moulded clay bottles, and a gallery feel—plus a chance to chat with Mathieu about blending art and fragrance. The exhibition runs all week and is as open as the Danish sky.
+    </div>
+
+    <a href="#" class="more-toggle" data-target="uniqlo-text">&gt; MORE ON <span>MANUEL</span></a>
+    <div id="uniqlo-text" class="more-content" style="display:none;">
+        Manuel Mathieu is a Haitian-born (1986) multidisciplinary artist based in Montréal whose paintings, installations and ceramics interrogate themes of historical violence, spiritual legacy and personal trauma. His work uses an abstract/figurative visual language to explore Haiti's past and his own survival.
+    </div>
+    </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <a href="#">INFO &gt; CONTACT</a>
+    <a href="#">PRIVACY POLICY</a>
+    <a href="#">COOKIE POLICY</a>
+    <div class="copyright">COPYRIGHT © COPENHAGEN FASHION WEEK 2025</div>
+  </div>
+
+  <div class="vertical-text">MOBILE &gt; EVENTS &gt; <a class="active">WHERE ART MEETS SCENT</a></div>
+
+<!-- Menu panel -->
+<div class="menu-container" id="menuPanel">
+  <div class="menu-close" id="menuClose">x</div>
+  <div class="menu-hero"></div>
+  <div class="menu-buttons">
+    <a href="/MOBILE-Events.html" class="menu-btn active">Events</a>
+    <a href="/MOBILE-Schedule.html" class="menu-btn">My Picks</a>
+  </div>
+</div>
+
+<script>
+const burger = document.getElementById('burger');
+const menu = document.getElementById('menuPanel');
+const closeBtn = document.getElementById('menuClose');
+
+// Open menu
+burger.addEventListener('click', () => {
+  menu.classList.add('active');
+});
+
+// Close menu
+closeBtn.addEventListener('click', () => {
+  menu.classList.remove('active');
+});
+
+// Optional: close when clicking outside menu
+menu.addEventListener('click', (e) => {
+  if(e.target === menu) menu.classList.remove('active');
+});
+
+  const toggles = document.querySelectorAll('.more-toggle');
+
+  toggles.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = btn.dataset.target;
+      const target = document.getElementById(targetId);
+      if (target.style.display === 'none') {
+        target.style.display = 'block';
+      } else {
+        target.style.display = 'none';
+      }
+    });
+  });
+
+function addToSchedule(id) {
+  // save the event ID to localStorage
+  let savedEvents = JSON.parse(localStorage.getItem('mySchedule') || '[]');
+  if (!savedEvents.includes(id)) {
+    savedEvents.push(id);
+    localStorage.setItem('mySchedule', JSON.stringify(savedEvents));
+  }
+}
+</script>
+</body>
+</html>
