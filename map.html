@@ -10,94 +10,19 @@
      <a href="index.html"><img src="/logo images/sub logo info.png" alt="sub logo"></a>
 </header>
 <body>
-<div class="map-container">
+  <div class="map-area">
     <div class="map-wrapper">
-        <img class="big-map" src="map/map big.png">
-    <!-- <img src="/map/pin.svg" alt="Pin" class="pin-1" width="50" height="50"> -->
-     <div class="pins"></div>
-
+      <img src="/map/map big.png" alt="Main map" class="map-image">
+      <div class="map-pins"></div>
     </div>
-    
-</div>
+  </div>
 
 
 <footer class="sticky-footer">
     <button class="back-btn-main" onclick="history.back()"><img src="/logo images/back.svg" class="back-icon" width="80" height="80" alt="back icon"></button>
     <h1><a href="index.html">HOME > </a></h1>  <h1><a class="active">MAP</a></h1>
 </footer>
-<script>
 
-    const pins = [
-  {
-    id: 1,
-    top: "35%",
-    left: "60%",
-    title: "Main Runway Hall",
-    desc: "Nørregade 14, 1165 København K",
-    img: "/map/runway.png"
-  },
-  {
-    id: 2,
-    top: "65%",
-    left: "30%",
-    title: "TikTok Creator Hub",
-    desc: "Vesterbrogade 72, 1620 København",
-    img: "/map/tiktok.png"
-  },
-  {
-    id: 3,
-    top: "55%",
-    left: "80%",
-    title: "Exhibition",
-    desc: "Gothersgade 105, 1123 København K",
-    img: "/map/exhibition.png"
-  },
-   {
-    id: 4,
-    top: "25%",
-    left: "75%",
-    title: "Food Lounge",
-    desc: "Læderstræde 18, 1201 København K,",
-    img: "/map/food.png"
-  },
-  {
-    id: 5,
-    top: "35%",
-    left: "20%",
-    title: "CIFF",
-    desc: "Studiestræde 45, 1554 København",
-    img: "/map/ciff.png"
-  }
-];
-
-const pinsContainer = document.querySelector('.pins');
-
-pins.forEach(pin => {
-  const pinEl = document.createElement('div');
-  pinEl.classList.add('pin');
-  pinEl.style.top = pin.top;
-  pinEl.style.left = pin.left;
-  pinEl.innerHTML = `
-    <img src="/map/pin.svg" alt="Pin" width="40" height="40">
-    <div class="pin-title">${pin.title}</div>
-    <div class="popup">
-        <img class="map-popup-img"src="${pin.img}">
-      <p>${pin.desc}</p>
-    </div>
-  `;
-  pinsContainer.appendChild(pinEl);
-
-  const popup = pinEl.querySelector('.popup');
-  pinEl.addEventListener('click', e => {
-    e.stopPropagation(); 
-    popup.classList.toggle('active');
-  });
-});
-
-document.addEventListener('click', () => {
-  document.querySelectorAll('.popup.active').forEach(p => p.classList.remove('active'));
-});
-
-</script>
+<script src="map-script.js"></script>
 </body>
 </html>
