@@ -624,6 +624,7 @@ a .test-QR{
 }
 
 /* ----- POPUP ----- */
+
 .map-popup {
   display: none;
   position: absolute;
@@ -645,6 +646,7 @@ a .test-QR{
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  
 }
 
 .map-popup-img {
