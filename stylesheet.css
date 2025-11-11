@@ -182,6 +182,7 @@ header .powered span {
 .logo-box{
   display:flex;
   align-content: flex-start;
+  gap: 200px;
 }
 
 .info-zalando{
@@ -232,7 +233,8 @@ aside{
 }
 
 .qr-section .qr-box p {
-  font-size: 16px;
+  font-size: 18px;
+  text-align: center;
 }
 
 .map-small{
@@ -242,10 +244,10 @@ aside{
 }
 
 .qr-section{
-  width: 350px;
+  width: 400px;
 }
 .test-QR{
-  max-width: 50%;
+  max-width: 40%;
   height: auto;
 }
 
@@ -258,6 +260,17 @@ aside{
 
 .qr-flexbox{
   display: flex;
+  gap: 10px;
+  padding:-20px;
+}
+
+
+.qr-check-list li{
+  display: flex; 
+  flex-direction: row;
+  justify-content: flex-start;      
+  gap: 10px;   
+  margin-bottom: 20px;
 }
 
 .qr-content ul {
@@ -267,8 +280,16 @@ aside{
 }
 
 .qr-content ul li {
-  font-size: 18px;
+  font-size: 20px;
+
 }
+
+.check {
+  color: #8323FF;
+  font-size: 20px;
+  margin-right: 3px;
+}
+
 
 .map-box img,
 .qr-box img {
@@ -283,9 +304,10 @@ aside{
 }
 
 .qr-box li::before {
-  content: "• ";
   color: var(--accent-color);
 }
+
+
 
 .schedule {
   margin-right: 50px;
@@ -318,6 +340,9 @@ aside{
 }
 
 .tabs button.active {
+   font-family: 'KBH-Demibold', sans-serif;
+   font-size: 26px;
+  background: none;
   color: var(--accent-color);
   background-color: #EBE2F7;
   padding: 20px;
@@ -367,11 +392,28 @@ aside{
 
 .time-label {
   text-align: right;
-  font-weight: 600;
-  font-family: KBH, sans-serif;
+  font-family: 'KBH-Medium', sans-serif;
+  font-size: 20px;
   color: #65478C;
   padding-top: 3rem;
-  padding-right: 15px;
+  padding-right: 20px;
+  margin-left:10px;
+
+}
+
+/* to make empty type card not clickable */
+
+.event[data-type="Empty"],
+.event[data-type="Empty"] *,
+.event[data-type="Empty"] *::before,
+.event[data-type="Empty"] *::after {
+  pointer-events: none ;
+  cursor: default !important;
+    user-select: none !important;
+  -webkit-user-select: none !important;
+  -ms-user-select: none !important;
+  -webkit-user-drag: none !important;
+ 
 }
 
 .event {
@@ -382,21 +424,11 @@ aside{
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
   position: relative;
-  max-width: 25%;
-  font-size: 0.9rem; */
+  max-width: 25%; */
+  font-size: 0.9rem;
   cursor: pointer;
   transition: 0.15s ease;
 }
-
-
-/* .event::before {
-  content: attr(data-type);
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  font-size: 0.75rem;
-  color: var(--accent-color);
-} */
 
 .event-row {
   display: flex;
@@ -410,12 +442,41 @@ aside{
   flex: 1;
 }
 
-/* ======================= MODAL STYLING ===== */
+/* .event[data-type="Show"],
+.event[data-type="Talk"],
+.event[data-type="Interview"],
+.event[data-type="Film"],
+.event[data-type="Work shop"],
+.event[data-type="After party"]{
+  background: var(--background-color);
+  margin-right: 30px;
+  margin-bottom: 10px;
+  padding: 0.5rem;
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(39, 2, 67, 0.2);
+  position: relative;
+  max-width: 25%;
+} */
 
+.event[data-type="Show"] .event-thumbnail,
+.event[data-type="Talk"] .event-thumbnail,
+.event[data-type="Interview"] .event-thumbnail,
+.event[data-type="Film"] .event-thumbnail,
+.event[data-type="Work shop"] .event-thumbnail,
+.event[data-type="After party"] .event-thumbnail{
+  margin-top:5px;
+  border: 8px solid #FBFBFB;
+  border-radius: 2px;
+  box-shadow: 0 4px 8px rgba(37, 27, 47, 0.2);
+}
 .event-thumbnail{
   width: 250px;
   height: auto;
+ 
 }
+
+/* ======================= MODAL STYLING ===== */
+
 .event h4 {
     display: none;
 }
@@ -444,25 +505,6 @@ aside{
   position: relative;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   animation: popIn 0.25s ease-out;
-}
-/* to make empty type card not clickable */
-
-.event[data-type="Empty"],
-.event[data-type="Empty"] *,
-.event[data-type="Empty"] *::before,
-.event[data-type="Empty"] *::after {
-  pointer-events: none ;
-  cursor: default !important;
-
-}
-
-
-.event.empty,
-.event.empty *,
-.event.empty *::before,
-.event.empty *::after {
-  pointer-events: none ;
-  cursor: default !important;
 }
 
 
@@ -506,7 +548,7 @@ aside{
 
 .modal-info .type {
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 14px;
   color: var(--main-color);
 }
 
@@ -519,21 +561,25 @@ aside{
 .modal-info .datetime,
 .modal-info .venue,
 .modal-info .hosted{
+  font-size: 14px;
   letter-spacing: 1px;
-  margin: 0.6rem 0;
+  margin: 0.4rem 0;
    color: var(--main-color);
 }
 
 .modal-info .description{
   letter-spacing: 1px;
    white-space: pre-line;
-  margin: 2rem 0;
+  margin-top: 1.8rem;
+
   font-size: 18px;
    color: var(--main-color);
 }
 
 .modal-info .note {
+  font-size: 16px;
    letter-spacing: 1px;
+   white-space: pre-line;
    font-family: 'KBH-LightItalic', sans-serif;
    margin-top: 2rem;
    color: var(--main-color);
@@ -545,11 +591,93 @@ aside{
   font-size: 16px;
 }
 /*=============================  Map page Content setup  ==========================================*/
-.big-map{
-  margin: 20px 50px 20px 100x;
-  width: 100vw;
-  height: auto;
+/* .map-container{
+  position: relative;
+  display: flex;                
+  justify-content: center;      
+  height: 75vh;               
+  background-color: #f8f8f8;   
 }
+
+.big-map{
+  display: block;
+  max-width: 90%;              
+  height: auto;
+
+}
+
+.pin-1{
+   position: absolute;   
+  transform: translate(-50%, -50%); 
+  cursor: pointer;
+} */
+
+.map-container {
+  display: flex;
+   justify-content: center;  /* 가로 중앙 정렬 */
+  align-items: center;      /* 세로 중앙 정렬 */
+  width: 100%;
+  height: 75vh;
+  background-color: #f8f8f8;
+}
+
+.map-wrapper {
+  position: relative; /* ✅ 이제 이게 기준이 됨 */
+  display: inline-block;
+  text-align: center;
+}
+
+.big-map {
+  display: block;
+  max-width: 100%;
+  height: 70vh;
+}
+
+/* .pin-1 {
+  position: absolute;
+  top: 50%;     /* 지도 안에서 위치 지정 */
+  /* left: 50%;
+  transform: translate(-50%, -100%);
+  cursor: pointer;
+} */ */
+
+.pins {
+  position: relative;
+}
+
+.pin {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  cursor: pointer;
+}
+
+.pin img {
+  transition: transform 0.2s;
+}
+
+.pin:hover img {
+  transform: scale(1.1);
+}
+
+.popup {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translate(-50%, -120%);
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  padding: 8px 12px;
+  width: 160px;
+  font-size: 14px;
+  text-align: center;
+  display: none;
+}
+
+.popup.active {
+  display: block;
+}
+
 
 /*=============================  Mobile pages Content setup  ==========================================*/
 
