@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarot Cards and Trends</title>
+  <link rel="stylesheet" href="/stylesheet.css" />
+
+  <style>
+    /* Title box under header */
+    body {
+      margin: 0;
+      overflow: auto !important;
+      padding-right: 3rem;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="events-header">
+    <button class="back-btn"onclick="history.back()">&gt; back</button>
+    <div class="menu-icon" id="burger">
+      <div></div><div></div><div></div>
+    </div>
+  </header>
+
+  <!-- TITLE BOX -->
+  <div class="event-title-box">
+    <h1>Tarot Cards and Trends</h1>
+  </div>
+
+  <!-- SCHEDULE BUTTON -->
+  <a href="/MOBILE-Schedule.html" class="primary-btn">VIEW YOUR PICKS</a>
+
+  <!-- MAIN EVENT CONTENT -->
+  <section class="event-detail-card">
+    <h2>Tarot Cards and Trends at Day Et</h2>
+
+    <img src="/MOBILE Images/MOBILE-Tarot Event.png" alt="Tarot cards" />
+
+    <p>“More Than Meets The Eye” pop-up has already drawn crowds with its dreamy atmosphere and complimentary tarot readings.</p>
+
+    <div class="event-meta">
+      <p><strong class="active">DESIGNER:</strong>Christina Andreassen</p>
+      <p><strong class="active">BRAND:</strong> Day Et</p>
+      <p><strong class="active">WHERE:</strong> ROOM C, ARENA HALL</p>
+      <p><strong class="active">WHEN:</strong> 10:00 - 27 jan</p>
+    </div>
+
+    <a href="/MOBILE-Schedule.html" class="primary-btn" onclick="addToSchedule('event-tarot')">ADD TO YOUR PICKS</a>
+  </section>
+
+    <!-- MORE LINKS -->
+    <div class="more-links">
+    <a href="#" class="more-toggle" data-target="event-text">&gt; MORE ON <span>EVENT</span></a>
+    <div id="event-text" class="more-content" style="display:none;">
+        Ever wondered what the future holds for your summer wardrobe? You'll get a preview of Day Et's new collection, think otherworldly hues inspired by aura photography and gothic church vaults, while a tarot reader gives you a glimpse of your personal destiny. It's a surprisingly addictive combo.
+    </div>
+
+    <a href="#" class="more-toggle" data-target="uniqlo-text">&gt; MORE ON <span>DAY ET</span></a>
+    <div id="uniqlo-text" class="more-content" style="display:none;">
+        DAY ET is a Copenhagen-based design brand (founded 2018) that fuses minimalist Scandinavian aesthetics with functional travel and everyday accessories. 
+Their collections lean on recycled materials and are crafted to be timeless, versatile pieces built for a mobile lifestyle.
+    </div>
+    </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <a href="#">INFO &gt; CONTACT</a>
+    <a href="#">PRIVACY POLICY</a>
+    <a href="#">COOKIE POLICY</a>
+    <div class="copyright">COPYRIGHT © COPENHAGEN FASHION WEEK 2025</div>
+  </div>
+
+  <div class="vertical-text">MOBILE &gt; EVENTS &gt; <a class="active">TAROT CARDS AND TRENDS</a></div>
+
+<!-- Menu panel -->
+<div class="menu-container" id="menuPanel">
+  <div class="menu-close" id="menuClose">x</div>
+  <div class="menu-hero"></div>
+  <div class="menu-buttons">
+    <a href="/MOBILE-Events.html" class="menu-btn active">Events</a>
+    <a href="/MOBILE-Schedule.html" class="menu-btn">My Picks</a>
+  </div>
+</div>
+
+<script>
+const burger = document.getElementById('burger');
+const menu = document.getElementById('menuPanel');
+const closeBtn = document.getElementById('menuClose');
+
+// Open menu
+burger.addEventListener('click', () => {
+  menu.classList.add('active');
+});
+
+// Close menu
+closeBtn.addEventListener('click', () => {
+  menu.classList.remove('active');
+});
+
+// Optional: close when clicking outside menu
+menu.addEventListener('click', (e) => {
+  if(e.target === menu) menu.classList.remove('active');
+});
+
+  const toggles = document.querySelectorAll('.more-toggle');
+
+  toggles.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = btn.dataset.target;
+      const target = document.getElementById(targetId);
+      if (target.style.display === 'none') {
+        target.style.display = 'block';
+      } else {
+        target.style.display = 'none';
+      }
+    });
+  });
+
+function addToSchedule(id) {
+  // save the event ID to localStorage
+  let savedEvents = JSON.parse(localStorage.getItem('mySchedule') || '[]');
+  if (!savedEvents.includes(id)) {
+    savedEvents.push(id);
+    localStorage.setItem('mySchedule', JSON.stringify(savedEvents));
+  }
+}
+</script>
+</body>
+</html>

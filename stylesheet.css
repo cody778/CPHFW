@@ -592,9 +592,9 @@ aside{
     /* PAGE TITLE */
     .page-title {
       font-family: KBH, sans-serif;
-      font-size: 1.8rem;
-      text-align: center;
-      margin: 1rem 0 2rem;
+      font-size: 2.3rem;
+      text-align: left;
+      margin: 1rem 2rem 2rem;
     }
 
     .page-title span {
@@ -814,8 +814,7 @@ aside{
     .more-links .more-content {
       text-align: left;
       margin: 1rem auto;
-      padding: 0.8rem 1rem;
-      border: 1px solid var(--main-color);
+      padding: 0.8rem 2rem;
       border-radius: 4px;
       max-width: 100%;
       box-sizing: border-box;
@@ -827,7 +826,7 @@ aside{
   .menu-container {
     position: fixed;
     top: 0;
-    left: -100%; /* hidden offscreen */
+    left: -100%; 
     width: 100%;
     height: 100%;
     background-color: var(--accent-color);
@@ -874,7 +873,6 @@ aside{
   text-decoration: underline;
 }
 
-  /* Close button (optional X at top-left) */
   .menu-close {
     position: absolute;
     top: 1rem;
@@ -1065,30 +1063,45 @@ aside{
 }
 /* ============================  404 Page End  ==========================================*/
 
+
 /*=============================  Discover page Content setup  ==========================================*/
+
 .discover-container {
   position: relative;
   width: 100%;
   height: calc(100vh - 140px);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center top;
 }
 
-
-.brand-swipe-card img {
-  width: 350px;        
-  height: 600px;       
-  object-fit: cover;
-  border: 1px solid var(--main-color);
-  border-radius: 6px;
+/* container for brand swipe card — border with inner padding */
+.brand-swipe-card {
+  width: 600px;
+  height: 850px;
+  padding: 20px;                    /* space between image and border */
+  box-sizing: border-box;
+  background: var(--background-color);
+  border: 2px solid var(--main-color); /* border moved to container */
+  border-radius: 8px;
+  overflow: hidden;
   display: block;
+}
+
+/* image fills the padded container */
+.brand-swipe-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px; /* slightly smaller radius so it sits inside the container */
+  display: block;
+  border: none;       /* remove border from image itself */
 }
 
 /* Position buttons bottom left + bottom right */
 .swipe-controls {
   position: absolute;
-  bottom: 2rem;
+  bottom: 6.2rem; /* moved container up a bit */
   width: 80%;
   max-width: 800px;
   display: flex;
@@ -1096,19 +1109,68 @@ aside{
 }
 
 .swipe-controls button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 180px;
+  padding: 0 1rem;           /* allow horizontal padding for larger text */
   font-family: KBH, sans-serif;
-  font-size: 1.8rem;
-  padding: 0.6rem 2.5rem;
-  background: none;
-  border: 2px solid var(--main-color);
+  font-size: 2.2rem;         /* increased text size */
+  font-weight: 600;          /* bolder text */
+  line-height: 1;            /* keep text vertically centered */
+  background: rgba(0, 0, 0, 0.473);
+  color: #fff;
+  border: 3px solid rgba(0, 0, 0, 0.969);
+  border-radius: 12px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: transform 0.18s ease, background 0.18s ease;
+  transform: translateY(-6px);
+  text-align: center;
+  white-space: normal;       /* allow wrapping if needed */
+  word-break: break-word;
+}
+
+/* keep it responsive on small screens */
+@media (max-width: 480px) {
+  .swipe-controls button {
+    width: 140px;
+    height: 120px;
+    font-size: 1.4rem;
+    padding: 0 .6rem;
+  }
 }
 
 .swipe-controls button:hover {
-  transform: scale(1.07);
+  transform: translateY(-6px) scale(1.05);
+  background: var(--accent-color--); /* slightly stronger on hover */
 }
 
+/* NO button (left) */
+.swipe-controls button:first-child {
+  background: rgba(0,0,0,0.47);
+  border-color: rgba(0,0,0,0.9);
+  color: #fff;
+}
+
+.swipe-controls button:first-child:hover {
+  background: rgba(0,0,0,0.75); /* darker on hover */
+}
+
+/* YES button (right) — semi‑transparent accent */
+.swipe-controls button:last-child {
+  background: rgba(103,71,140,0.55); /* semi-transparent accent (#67478C) */
+  border-color: rgba(103,71,140,0.85);
+  color: #fff;
+}
+
+.swipe-controls button:last-child:hover {
+  background: rgba(103,71,140,0.85); /* darker on hover */
+}
+
+/* ensure SVG icons remain white */
+.swipe-controls button svg { fill: #fff; }
 
 .popup {
   position: fixed;
@@ -1129,6 +1191,23 @@ aside{
   padding: 2rem 3rem;
   text-align: center;
   border-radius: 8px;
+}
+
+/* swipe-left animation: image slides left and fades out */
+@keyframes slideFadeLeft {
+  from { transform: translateX(0) scale(1); opacity: 1; }
+  to   { transform: translateX(-100%) scale(0.98); opacity: 0; }
+}
+
+/* trigger animation when container gets .swipe-left */
+.brand-swipe-card.swipe-left img {
+  animation: slideFadeLeft 420ms ease-in forwards; /* prevent pointer interaction during animation */
+  pointer-events: none;
+}
+
+/* Optional: slight scale for smoother feeling while leaving */
+.brand-swipe-card.swipe-left {
+  will-change: transform, opacity;
 }
 /* ============================  Map Page content setup  ==========================================*/
 
