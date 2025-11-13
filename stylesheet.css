@@ -59,7 +59,7 @@ html, body {
 
     --fs-h1: clamp(1.6rem, 4vw, 3.2rem);
     --fs-h2: clamp(1rem, 3vw, 2rem);
-    --fs-h3: clamp(1rem, 2.6vw, 1.4rem);
+    --fs-h3: clamp(0.7rem, 2.6vw, 1.4rem);
     --fs-body: clamp(0.9rem, 1.8vw, 1.2rem);
 }
 
@@ -84,7 +84,6 @@ main {
 }
 
 /*=============================  Main Text setup  ==========================================*/
-
 
 .h1 {
     font-family: KBH, sans-serif;
@@ -193,7 +192,7 @@ header .powered span {
 
 
 .label-right {
-  position: absolute;
+  position: fixed !important;
   left: 70%;
   transform: translateX(-50%) rotate(-30deg);
   background: transparent;
@@ -208,7 +207,7 @@ header .powered span {
 }
 
 .label-left {
-  position: absolute;
+  position: fixed !important;
   left: 17%;
   transform: translateX(-50%) rotate(60deg);
   background: transparent;
@@ -220,6 +219,12 @@ header .powered span {
   white-space: nowrap;
   bottom: 2rem;
   z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .label-right .label-left {
+    left: 120%; /* fully outside viewport */
+  }
 }
 
 /*=============================  Events page Content setup  ==========================================*/
@@ -875,7 +880,13 @@ a .test-QR{
     }
 
 /*=============================  Mobile Individual Event Content setup ==========================================*/
-
+  .mobile-event-content {
+    width: 100%;
+    max-width: 400px; /* matches the mobile event look */
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
 
     .event-title-box {
       position: relative;
@@ -1201,9 +1212,14 @@ a .test-QR{
 
 /*=========== Individual Brand Page setup =============*/
 .brand-page{
-  margin-top: 50px;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  gap: 2rem; /* space between gallery and info */
+  justify-content: center; /* center content horizontally */
+  padding: 2rem; /* space from viewport edges */
+  box-sizing: border-box;
+  max-width: 1200px; /* limit content width */
+  margin: 0 auto;
 }
 
 
@@ -1226,8 +1242,6 @@ a .test-QR{
 .brand-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 35%;
   gap: 1.5rem;
   flex: 1; /* take remaining space */
   max-width: 600px; /* optional constraint */
@@ -1307,6 +1321,76 @@ a .test-QR{
   white-space: nowrap;
   bottom: 2rem;
   z-index: -1;
+}
+
+/*===================Mobile Brand Page setup ===================*/
+
+
+@media (max-width: 900px) {
+
+  .brand-page {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .brand-gallery {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .brand-gallery img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+  }
+
+  .brand-info {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .brand-description {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5;
+    word-break: break-word; /* prevents text from pushing layout */
+  }
+
+  .brand-logo {
+    width: clamp(120px, 45vw, 230px);
+    height: auto;
+  }
+
+  .brand-ciff-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+
+  .brand-ciff-box img {
+    width: 70px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .brand-gallery {
+    grid-template-columns: 1fr; /* stack images fully */
+  }
+
+  .brand-ciff-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 /*=============================  404 Page  ==========================================*/
