@@ -672,11 +672,14 @@ a .test-QR{
   padding: 10px 14px;
   width: 220px;
   color: #1C1C1C;
-  font-size: 16px;
   gap: 10px;
   z-index: 10;
 }
 
+.map-popup p{
+  font-size: 16px;
+  text-align: left;
+}
 .map-popup.active {
   display: flex;
   flex-direction: row;

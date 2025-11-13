@@ -4,7 +4,7 @@ const mapPinsData = [
   { id: 2, top: "65%", left: "30%", title: "TikTok Creator Hub", desc: "Vesterbrogade 72, 1620 København", img: "/map/tiktok.png" },
   { id: 3, top: "85%", left: "80%", title: "Exhibition", desc: "Gothersgade 105, 1123 København K", img: "/map/exhibition.png" },
   { id: 4, top: "45%", left: "85%", title: "Food Lounge", desc: "Læderstræde 18, 1201 København K", img: "/map/food.png" },
-  { id: 5, top: "27%", left: "20%", title: "CIFF", desc: "Studiestræde 45, 1554 København", img: "/map/ciff.png" }
+  { id: 5, top: "37%", left: "35%", title: "CIFF", desc: "Studiestræde 45, 1554 København", img: "/map/ciff.png" }
 ];
 
 // confirm URL params
