@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Screensaver</title>
+      <link rel="stylesheet" href="stylesheet.css">
+
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: black;
+    }
+  </style>
+</head>
+
+<body>
+   <video autoplay muted loop playsinline webkit-playsinline preload="auto" style="width: 100vw; height: 100vh; object-fit: cover;"></video>
+  <script>
+    let idleTimer = 0;
+    let idleDelay = 60; // set lower (e.g. 5) while testing
+    let isScreensaverOn = false;
+    let introPlayed = false;
+
+    const video = document.createElement('video');
+    // Put a copy of your video in the same folder and/or rename it to avoid spaces,
+    // or URL-encode the path. Example uses ./screensaver.mp4
+    video.src = "video/screensaver.mp4";
+    video.preload = "auto";
+    video.muted = true;
+    video.autoplay = false;
+    video.playsInline = true;
+    video.setAttribute('playsinline', '');
+    video.style.display = 'none'; // hide until ready
+    video.style.cssText = `
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1.2s ease;
+      pointer-events: none;
+      z-index: 9999;
+    `;
+    document.body.appendChild(video);
+
+    video.addEventListener('error', e => console.error('Video error', e));
+    video.addEventListener('loadeddata', () => console.log('Video loaded'));
+
+    window.addEventListener('load', () => {
+      if (video.readyState >= 2) {
+        safePlay(true);
+      } else {
+        video.addEventListener('loadeddata', () => safePlay(true), { once: true });
+        video.load();
+      }
+    });
+
+    // inactivity counter
+    setInterval(() => {
+      idleTimer++;
+      if (idleTimer >= idleDelay && !isScreensaverOn && introPlayed) {
+        safePlay(false);
+      }
+    }, 1000);
+
+    function safePlay(isIntro) {
+      isScreensaverOn = true;
+      video.currentTime = 0;
+      video.style.display = 'block';
+      setTimeout(() => (video.style.opacity = 1), 50);
+
+      const p = video.play();
+      if (p && p.then) {
+        p.then(() => console.log('Playback started')).catch(err => console.warn('play() rejected:', err));
+      }
+
+      video.onended = () => {
+        if (isIntro) {
+          introPlayed = true;
+          hideScreensaver();
+        } else {
+          setTimeout(() => {
+            if (isScreensaverOn) {
+              video.currentTime = 0;
+              const q = video.play();
+              if (q && q.then) q.catch(err => console.warn('loop play rejected:', err));
+            }
+          }, 9000);
+        }
+      };
+    }
+
+    // reset timer on user interaction
+    ['mousedown', 'keypress', 'touchstart'].forEach(event => {
+      document.addEventListener(event, () => {
+        idleTimer = 0;
+        if (isScreensaverOn) hideScreensaver();
+                window.location.href = 'index.html'; 
+
+      });
+    });
+
+     function hideScreensaver() {
+      isScreensaverOn = false;
+      video.style.opacity = 0;
+      setTimeout(() => {
+        video.pause();
+        video.style.display = 'none';
+      }, 1200);
+    }
+  </script>
+</body>
+</html>
