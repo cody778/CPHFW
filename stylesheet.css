@@ -320,10 +320,12 @@ a .test-QR{
   margin: 0;
 }
 
-.qr-content ul li {
-  font-size: 20px;
+.qr-check-list li span{
+  font-size: 14px;
+  margin-bottom: 12px;
 
 }
+
 
 .check {
   color: #8323FF;
@@ -584,12 +586,21 @@ a .test-QR{
    color: var(--main-color);
 }
 
+.datetime{
+  font-family: 'KBH-Medium', sans-serif;
+}
+
+.type, .title{
+  font-family: 'KBH-Demibold', sans-serif;
+}
+
+
 .modal-info .description{
   letter-spacing: 1px;
    white-space: pre-line;
   margin-top: 1.8rem;
 
-  font-size: 18px;
+  font-size: 16px;
    color: var(--main-color);
 }
 
