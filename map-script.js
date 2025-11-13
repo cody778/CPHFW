@@ -59,4 +59,3 @@ mapPinsData.forEach((pin) => {
 document.addEventListener("click", () => {
   document.querySelectorAll(".map-popup.active").forEach(p => p.classList.remove("active"));
 });
-1
