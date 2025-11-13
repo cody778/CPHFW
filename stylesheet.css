@@ -1164,8 +1164,49 @@ a .test-QR{
   width: 100%;
 }
 
+/* discover title effect */
+
+.discover-title a {
+  font-family: 'KBH-Medium', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block; 
+
+  background: linear-gradient(270deg, #67478C, #1C1C1C, #67478C);
+  background-size: 600% 600%;
+
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+ 
+  animation: gradientText 8s ease infinite, bounce 2s ease-in-out infinite;
+  cursor: pointer; 
+  transition: transform 0.2s;
+}
+
+@keyframes gradientText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-5px); }
+  50% { transform: translateY(-7px); }
+  75% { transform: translateY(-5px); }
+}
+
+
+.discover-title a:active {
+  transform: scale(0.95);
+}
+
 .discover-title {
-  font-family: KBH, sans-serif;
+  
   font-size: 1.6rem;
   margin-bottom: 2rem;
   text-align: center;
@@ -1211,12 +1252,12 @@ a .test-QR{
 
 .ribbon {
   position: absolute;
-  top: 10px;
+  top: 28px;
   left: -48px;
   transform: rotate(-45deg);
   background: var(--accent-color);
   color: var(--background-color);
-  font-size: 0.4rem;
+  font-size: 0.7rem;
   padding: 4px 40px;
   font-weight: bold;
 }
