@@ -877,7 +877,13 @@ a .test-QR{
     }
 
 /*=============================  Mobile Individual Event Content setup ==========================================*/
-
+  .mobile-event-content {
+    width: 100%;
+    max-width: 400px; /* matches the mobile event look */
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
 
     .event-title-box {
       position: relative;
