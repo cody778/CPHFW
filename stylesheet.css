@@ -44,14 +44,23 @@
 }
 
 html, body {
-    height: 100%;
-    overflow: hidden;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  overflow-x: hidden; 
+  overflow-y: auto; 
+  font-family: KBH Tekst, sans-serif;
 }
 
 :root {
     --main-color:#1C1C1C;
     --accent-color:#67478C;
     --background-color:#FBFBFB;
+
+    --fs-h1: clamp(1.6rem, 4vw, 3.2rem);
+    --fs-h2: clamp(1rem, 3vw, 2rem);
+    --fs-h3: clamp(1rem, 2.6vw, 1.4rem);
+    --fs-body: clamp(0.9rem, 1.8vw, 1.2rem);
 }
 
 main {
@@ -69,6 +78,38 @@ main {
   background-color: var(--background-color);
   color: var(--main-color);
 }
+<<<<<<< HEAD
+=======
+.label-right {
+  position: fixed !important;
+  left: 50%;
+  transform: translateX(-50%) rotate(-20deg);
+  background: transparent;
+  color: rgba(0, 0, 0, 0.668);
+  font-family: KBH-Regular, sans-serif;
+  font-size: 1rem;
+  padding: 4px 40px;
+  font-weight: regular;
+  white-space: nowrap;
+  bottom: 2rem;
+  z-index: -1;
+}
+
+.label-left {
+  position: absolute;
+  left: 20%;
+  transform: translateX(-50%) rotate(60deg);
+  background: transparent;
+  color: black;
+  font-family: KBH-Regular, sans-serif;
+  font-size: 1rem;
+  padding: 4px 40px;
+  font-weight: regular;
+  white-space: nowrap;
+  bottom: 2rem;
+  z-index: -1;
+}
+>>>>>>> d298067207a7ba4f0d7a55cf1b25ac554290bdf3
 
 .active {
     color: var(--accent-color);
@@ -79,38 +120,38 @@ main {
 
 .h1 {
     font-family: KBH, sans-serif;
-    font-size: clamp(10px, 5vw, 40px);
+    font-size: var(--fs-h1);;
     color: var(--main-color);
 }
 
 .h1-color {
     font-family: KBH, sans-serif;
-    font-size: 30px;
+    font-size: var(--fs-h1);
     color: var(--accent-color);
 }
 
 .h2 {
     font-family: KBH, sans-serif;
-    font-size: 20px;
+    font-size: var(--fs-h2);
     color: var(--main-color);
 }
 
 .h2-color {
     font-family: KBH, sans-serif;
-    font-size: 20px;
+    font-size: var(--fs-h2);
     color: var(--accent-color);
 }
 
-.text {
+.text, p {
     font-family: KBH Tekst, sans-serif;
-    font-size: 16px;
+    font-size: var(--fs-body);
     color: var(--main-color);
     line-height: 1.5;
 }
 
 .text-color {
     font-family: KBH Tekst, sans-serif;
-    font-size: 16px;
+    font-size: var(--fs-body);
     color: var(--accent-color);
     line-height: 1.5;
 }
@@ -1111,16 +1152,15 @@ a .test-QR{
 
 /*=============================  Brands page Content setup  ==========================================*/
 
-.brands-page {
+.brand-page {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 140px); /* minus header + footer height */
-
-  align-items: flex-start;
-  gap: 3rem;
-  padding: 2rem;
-  overflow-y: auto;
+  flex-direction: row;
+  gap: 2rem; /* space between gallery and info */
+  justify-content: center; /* center content horizontally */
+  padding: 2rem; /* space from viewport edges */
+  box-sizing: border-box;
+  max-width: 1200px; /* limit content width */
+  margin: 0 auto;
 }
 
 
@@ -1199,25 +1239,30 @@ a .test-QR{
 .brand-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 1fr;
-  width: 35%;
-  
+  gap: 1rem;
+  max-width: 500px; /* prevents gallery from stretching too wide */
+  flex-shrink: 0; /* don’t let flex container shrink it */
 }
 
 .brand-gallery img {
   width: 100%;
   aspect-ratio: 1/1;
-  border-radius: 4px;
   object-fit: cover;
+  border-radius: 4px;
   display: block;
 }
 
 .brand-info {
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   justify-content: space-between;
   width: 35%;
+=======
+>>>>>>> d298067207a7ba4f0d7a55cf1b25ac554290bdf3
   gap: 1.5rem;
+  flex: 1; /* take remaining space */
+  max-width: 600px; /* optional constraint */
 }
 
 .brand-logo {
@@ -1280,6 +1325,7 @@ a .test-QR{
   border-radius: 3px;
 }
 
+<<<<<<< HEAD
 .brand-label-right {
   position: absolute;
   top: 80%;
@@ -1294,6 +1340,76 @@ a .test-QR{
   white-space: nowrap;
   bottom: 2rem;
   z-index: -1;
+=======
+/*===================Mobile Brand Page setup ===================*/
+
+
+@media (max-width: 900px) {
+
+  .brand-page {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .brand-gallery {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .brand-gallery img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+  }
+
+  .brand-info {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .brand-description {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5;
+    word-break: break-word; /* prevents text from pushing layout */
+  }
+
+  .brand-logo {
+    width: clamp(120px, 45vw, 230px);
+    height: auto;
+  }
+
+  .brand-ciff-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+
+  .brand-ciff-box img {
+    width: 70px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .brand-gallery {
+    grid-template-columns: 1fr; /* stack images fully */
+  }
+
+  .brand-ciff-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+>>>>>>> d298067207a7ba4f0d7a55cf1b25ac554290bdf3
 }
 
 /*=============================  404 Page  ==========================================*/
@@ -1521,6 +1637,55 @@ footer a.active {
   color: var(--accent-color)
 }
 
+/* ===== Mobile footer tweaks ===== */
+@media (max-width: 900px) {
+  .sticky-footer {
+    padding: 0.5rem 1rem; /* less padding on mobile */
+    gap: 0.5rem;
+    background-color: var(--background-color);
+  }
+
+  .back-btn-main {
+    position: absolute; /* allow flex to position it */
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 0; /* remove original huge font-size */
+    margin-right: 0.5rem;
+  }
+
+  .back-btn-main img.back-icon {
+    width: 100%;
+    height: auto;
+  }
+
+  .sticky-footer h1 {
+    font-size: 0.2rem; /* smaller text for mobile */
+    margin: 0;
+  }
+
+  .sticky-footer a {
+    font-size: var(--fs-h2);
+    margin-left: 0.2rem;
+  }
+}
+@media (max-width: 500px) {
+    
+.sticky-footer {
+    background-color: var(--background-color);
+}
+.back-btn-main {
+    color: var(--main-color);
+}
+
+.sticky-footer h1 {
+    color: var(--main-color);
+}
+
+.active {
+    color: var(--main-color);
+}
+}
+
 /*=============================  Responsive design  ==========================================*/
 
 @media (max-width: 768px) {
@@ -1530,3 +1695,4 @@ footer a.active {
     width: 100%;
   }
 }
+
