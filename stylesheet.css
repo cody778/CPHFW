@@ -78,38 +78,6 @@ main {
   background-color: var(--background-color);
   color: var(--main-color);
 }
-<<<<<<< HEAD
-=======
-.label-right {
-  position: fixed !important;
-  left: 50%;
-  transform: translateX(-50%) rotate(-20deg);
-  background: transparent;
-  color: rgba(0, 0, 0, 0.668);
-  font-family: KBH-Regular, sans-serif;
-  font-size: 1rem;
-  padding: 4px 40px;
-  font-weight: regular;
-  white-space: nowrap;
-  bottom: 2rem;
-  z-index: -1;
-}
-
-.label-left {
-  position: absolute;
-  left: 20%;
-  transform: translateX(-50%) rotate(60deg);
-  background: transparent;
-  color: black;
-  font-family: KBH-Regular, sans-serif;
-  font-size: 1rem;
-  padding: 4px 40px;
-  font-weight: regular;
-  white-space: nowrap;
-  bottom: 2rem;
-  z-index: -1;
-}
->>>>>>> d298067207a7ba4f0d7a55cf1b25ac554290bdf3
 
 .active {
     color: var(--accent-color);
@@ -1255,11 +1223,8 @@ a .test-QR{
 .brand-info {
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
   justify-content: space-between;
   width: 35%;
-=======
->>>>>>> d298067207a7ba4f0d7a55cf1b25ac554290bdf3
   gap: 1.5rem;
   flex: 1; /* take remaining space */
   max-width: 600px; /* optional constraint */
@@ -1325,7 +1290,6 @@ a .test-QR{
   border-radius: 3px;
 }
 
-<<<<<<< HEAD
 .brand-label-right {
   position: absolute;
   top: 80%;
@@ -1340,76 +1304,6 @@ a .test-QR{
   white-space: nowrap;
   bottom: 2rem;
   z-index: -1;
-=======
-/*===================Mobile Brand Page setup ===================*/
-
-
-@media (max-width: 900px) {
-
-  .brand-page {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .brand-gallery {
-    width: 100%;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
-  }
-
-  .brand-gallery img {
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    border-radius: 4px;
-    display: block;
-  }
-
-  .brand-info {
-    width: 100%;
-    margin-top: 1.5rem;
-  }
-
-  .brand-description {
-    width: 100%;
-    font-size: 1rem;
-    line-height: 1.5;
-    word-break: break-word; /* prevents text from pushing layout */
-  }
-
-  .brand-logo {
-    width: clamp(120px, 45vw, 230px);
-    height: auto;
-  }
-
-  .brand-ciff-box {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1rem;
-    border-radius: 6px;
-    box-sizing: border-box;
-  }
-
-  .brand-ciff-box img {
-    width: 70px;
-    flex-shrink: 0;
-  }
-}
-
-@media (max-width: 500px) {
-
-  .brand-gallery {
-    grid-template-columns: 1fr; /* stack images fully */
-  }
-
-  .brand-ciff-box {
-    flex-direction: column;
-    align-items: flex-start;
-  }
->>>>>>> d298067207a7ba4f0d7a55cf1b25ac554290bdf3
 }
 
 /*=============================  404 Page  ==========================================*/
