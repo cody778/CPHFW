@@ -69,35 +69,6 @@ main {
   background-color: var(--background-color);
   color: var(--main-color);
 }
-.label-right {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) rotate(-20deg);
-  background: transparent;
-  color: black;
-  font-family: KBH-Regular, sans-serif;
-  font-size: 1rem;
-  padding: 4px 40px;
-  font-weight: regular;
-  white-space: nowrap;
-  bottom: 2rem;
-  z-index: -1;
-}
-
-.label-left {
-  position: absolute;
-  left: 20%;
-  transform: translateX(-50%) rotate(60deg);
-  background: transparent;
-  color: black;
-  font-family: KBH-Regular, sans-serif;
-  font-size: 1rem;
-  padding: 4px 40px;
-  font-weight: regular;
-  white-space: nowrap;
-  bottom: 2rem;
-  z-index: -1;
-}
 
 .active {
     color: var(--accent-color);
@@ -175,8 +146,12 @@ header .powered span {
 /*=============================  Index.html (Home page) Content setup  ==========================================*/
 
 .home-menu{
+  display: inline-block;
   font-family: 'KBH-Regular', sans-serif;
-  font-size: 42px;
+  font-size: 62px;
+  background-color: #FEFFFE;
+  width: fit-content;
+  text-decoration: underline;
 }
 
 .logo-box{
@@ -197,17 +172,47 @@ header .powered span {
 
 .footer-box{
   position: absolute;
-  top: -200px; 
-  left: 68%;
-  transform: translateX(-50%);
+  width: 100%;
+  top: -160px; 
+  left: 45%;
+  transform: translateX(-50%);  
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 40px;
 }
 
-.home-menu{
-  text-decoration: underline;
+
+.label-right {
+  position: absolute;
+  left: 70%;
+  transform: translateX(-50%) rotate(-30deg);
+  background: transparent;
+  color: black;
+  font-family: KBH-Regular, sans-serif;
+  font-size: 0.7rem;
+  padding: 4px 40px;
+  font-weight: regular;
+  white-space: nowrap;
+  bottom: 2rem;
+  z-index: -1;
 }
+
+.label-left {
+  position: absolute;
+  left: 17%;
+  transform: translateX(-50%) rotate(60deg);
+  background: transparent;
+  color: black;
+  font-family: KBH-Regular, sans-serif;
+  font-size: 0.7rem;
+  padding: 4px 40px;
+  font-weight: regular;
+  white-space: nowrap;
+  bottom: 2rem;
+  z-index: -1;
+}
+
 /*=============================  Events page Content setup  ==========================================*/
 
 .sidebar {
@@ -228,6 +233,9 @@ header .powered span {
   margin-top: 120px;
 }
 
+.map{
+  position: relative;
+}
 
 aside{
   margin-left: 50px;
@@ -242,6 +250,24 @@ aside{
   border:1px solid var(--accent-color);
   width: 400px;
   height: 320px;
+}
+
+.you-are-here{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 60px;
+  height: auto;
+  pointer-events: none;
+  animation: bounce5s 5s ease-in-out infinite;
+  z-index: 10;
+}
+
+@keyframes bounce5s {
+  0%, 89%, 100% { transform: translate(-50%, -60%); }
+  90% { transform: translate(-50%, -68%); }
+  95% { transform: translate(-50%, -58%); }
 }
 
 .qr-section{
@@ -1163,6 +1189,12 @@ a .test-QR{
 }
 
 /*=========== Individual Brand Page setup =============*/
+.brand-page{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
 
 .brand-gallery {
   display: grid;
@@ -1183,13 +1215,13 @@ a .test-QR{
 .brand-info {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: 35%;
   gap: 1.5rem;
 }
 
 .brand-logo {
-  width: 150px;
+  width: 170px;
   height: auto;
 }
 
@@ -1205,8 +1237,12 @@ a .test-QR{
   border-radius: 6px;
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 2.5rem;
   background: var(--background-color);
+}
+
+.ciff-head-text{
+  font-size: 21px;
 }
 
 .brand-ciff-box img {
@@ -1214,6 +1250,16 @@ a .test-QR{
   height: auto;
   border-radius: 4px;
 }
+
+.brand-description .head{
+ font-family: 'KBH-Medium', sans-serif;
+ font-size: 18px;
+}
+.brand-description .ciff{
+  margin-bottom: 10px;
+}
+
+
 
 .brand-ciff-box p {
   margin: 0;
@@ -1232,6 +1278,22 @@ a .test-QR{
 .brand-page::-webkit-scrollbar-thumb {
   background-color: var(--accent-color);
   border-radius: 3px;
+}
+
+.brand-label-right {
+  position: absolute;
+  top: 80%;
+  left: 70%;
+  transform: translateX(-50%) rotate(-25deg);
+  background: transparent;
+  color: #1C1C1C;
+  font-family: KBH-Regular, sans-serif;
+  font-size: 0.7rem;
+  padding: 4px 40px;
+  font-weight: regular;
+  white-space: nowrap;
+  bottom: 2rem;
+  z-index: -1;
 }
 
 /*=============================  404 Page  ==========================================*/

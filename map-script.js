@@ -1,4 +1,4 @@
-// 핀 데이터
+// pin data
 const mapPinsData = [
   { id: 1, top: "35%", left: "60%", title: "Main Runway Hall", desc: "Nørregade 14, 1165 København K", img: "/map/runway.png" },
   { id: 2, top: "65%", left: "30%", title: "TikTok Creator Hub", desc: "Vesterbrogade 72, 1620 København", img: "/map/tiktok.png" },
@@ -7,13 +7,14 @@ const mapPinsData = [
   { id: 5, top: "27%", left: "20%", title: "CIFF", desc: "Studiestræde 45, 1554 København", img: "/map/ciff.png" }
 ];
 
-// URL 파라미터 확인 (예: ?pin=5)
+// confirm URL params
 const urlParams = new URLSearchParams(window.location.search);
 const highlightPinId = parseInt(urlParams.get("pin"), 10);
 
+
 const mapPinsContainer = document.querySelector(".map-pins");
 
-// 핀 생성
+// to create pin
 mapPinsData.forEach((pin) => {
   const pinEl = document.createElement("div");
   pinEl.classList.add("map-pin");
@@ -34,26 +35,28 @@ mapPinsData.forEach((pin) => {
 
   mapPinsContainer.appendChild(pinEl);
 
+  //declare to call popup div 
   const popup = pinEl.querySelector(".map-popup");
 
-  // 핀 클릭 시 팝업 토글
+  // toggle the popup
   pinEl.addEventListener("click", (e) => {
     e.stopPropagation();
-    // 다른 모든 팝업 닫기
+    // to close other popup when clicking new popup
     document.querySelectorAll(".map-popup.active").forEach(p => {
       if (p !== popup) p.classList.remove("active");
     });
     popup.classList.toggle("active");
   });
 
-  // 특정 핀 하이라이트 (예: ?pin=5)
+  // to highlight CIFF pin (id:5)
   if (highlightPinId === pin.id) {
     pinEl.classList.add("highlight");
     setTimeout(() => popup.classList.add("active"), 400);
   }
 });
 
-// 외부 클릭 시 팝업 닫기
+// make it close the popup when click anywhere in the map 
 document.addEventListener("click", () => {
   document.querySelectorAll(".map-popup.active").forEach(p => p.classList.remove("active"));
 });
+1
